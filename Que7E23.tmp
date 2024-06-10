@@ -1,0 +1,5 @@
+{
+  "sentence": "The sky is     and the grass is green",
+  "answers": ["blue", "red", "yellow"],
+  "correct_answer_index": 0
+}

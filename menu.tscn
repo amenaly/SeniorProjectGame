@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://bo3jbjmqtt0fu"]
+
+[ext_resource type="Script" path="res://Menu.gd" id="1_4d3hv"]
+[ext_resource type="Texture2D" uid="uid://8xw2usp5jq6p" path="res://Images/gradient-galaxy-background-free-vector.jpg" id="2_6pdem"]
+[ext_resource type="FontFile" uid="uid://b7n2neqcfe60n" path="res://fonts/FutureTech.ttf" id="3_a8u4f"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 0.758
+offset_bottom = 238.37
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4d3hv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_6pdem")
+metadata/_edit_use_anchors_ = true
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -418.0
+offset_top = 323.0
+offset_right = 420.0
+offset_bottom = 383.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.914733, 0.723172, 0.210425, 1)
+theme_override_colors/font_shadow_color = Color(0.941176, 0.752941, 0.247059, 1)
+theme_override_fonts/font = ExtResource("3_a8u4f")
+theme_override_font_sizes/font_size = 60
+text = "Code Your Way Home!"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -101.0
+offset_top = -50.0
+offset_right = 98.0
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PLayer" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../Exit")
+text = "Play"
+
+[node name="Option" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Help"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../PLayer")
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/PLayer" to="." method="_on_p_layer_pressed"]
+[connection signal="pressed" from="VBoxContainer/Option" to="." method="_on_option_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

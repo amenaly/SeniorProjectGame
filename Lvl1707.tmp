@@ -1,0 +1,36 @@
+{
+"questions": [
+{
+
+ 	"sentence": "BEGIN 
+		 print Step 1: Initialize system....
+			InitializedSystem()...
+	 print Step 2: Check Satellite Status...
+			status <- CheckSatelliteStatus()
+		IF status == "OK" THEN
+	 print  Step 3: Align Antenna
+			position <- GetSatellitePosition()
+			target <- GetGroundStationPosition()
+			AlignAntenna(position, target)
+		
+ 	print   Step 4: Establish Communication Link
+			success <- EstablishCommunicationLink()
+		
+	IF success THEN
+ 	print   Step 5: Authenticate Connection
+			authenticated <- AuthenticateConnection()
+			IF authenticated THEN
+ 	print   Step 6: Test Communication Link
+				linkTest <- TestCommunicationLink()
+				IF linkTest == "Success" THEN
+ 	print   Step 7: Activate Operational Mode
+					ActivateOperationalMode()
+	END", 
+	"answers" : ["CheckSatelliteStatus()"]
+},
+{
+	"sentence": "Question 2",
+	"answers": ["AnswersLvl2"]
+	}
+]
+}

@@ -1,0 +1,6 @@
+res://menu.tscn
+res://first_level.tscn
+res://texture_rect.tscn
+res://level1.tscn
+res://Lvl1Questions.json
+res://level1.gd

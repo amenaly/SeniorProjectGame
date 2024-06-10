@@ -1,0 +1,25 @@
+{
+"questions": [
+{
+  "sentence": "BEGIN // Declare variables
+	DECLARE
+	 
+	DECLARE variable2
+	// Initialize variables
+	variable1 TO 5
+	SET variable2 TO 10
+
+	// Process data
+	SET result TO variable1 + variable2
+
+	// Output result
+	PRINT The result is:  + 
+	END",
+  "answers": ["variable1", "SET", "result"],
+},
+{
+	"sentence": "Second Question!",
+	"answers": ["Answers1", "Answers2"]
+	}
+]
+}

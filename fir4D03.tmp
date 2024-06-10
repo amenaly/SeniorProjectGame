@@ -1,0 +1,99 @@
+[gd_scene load_steps=6 format=3 uid="uid://smpovrleexy8"]
+
+[ext_resource type="Script" path="res://first_level.gd" id="1_pwf77"]
+[ext_resource type="Texture2D" uid="uid://nsrpl16wqiol" path="res://realistic-galaxy-background_23-2148971567.jpg" id="1_rpi1h"]
+[ext_resource type="PackedScene" uid="uid://deyvy83bi0rnp" path="res://texture_rect.tscn" id="2_42g5j"]
+[ext_resource type="FontFile" uid="uid://dkppgt0hpuagh" path="res://Robot Go.ttf" id="3_77irf"]
+[ext_resource type="Texture2D" uid="uid://d4ibt6was4h5j" path="res://icon.svg" id="3_x62pm"]
+
+[node name="FirstLevel" type="Node2D"]
+script = ExtResource("1_pwf77")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1380.0
+offset_bottom = 920.0
+texture = ExtResource("1_rpi1h")
+
+[node name="LevelLabel" type="Label" parent="."]
+offset_left = 594.0
+offset_top = 37.0
+offset_right = 761.0
+offset_bottom = 77.0
+theme_override_fonts/font = ExtResource("3_77irf")
+theme_override_font_sizes/font_size = 33
+text = "Level 1"
+horizontal_alignment = 1
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Questionbox" type="ColorRect" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 456.0
+offset_right = 1382.0
+offset_bottom = 920.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.697253, 0.729613, 0.911949, 1)
+
+[node name="answersbox" type="ColorRect" parent="."]
+offset_left = 1070.0
+offset_top = 456.0
+offset_right = 1382.0
+offset_bottom = 919.0
+color = Color(0.620944, 0.498973, 0.685635, 1)
+
+[node name="SentenceLabel" type="Label" parent="."]
+offset_left = 18.0
+offset_top = 494.0
+offset_right = 936.0
+offset_bottom = 601.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_77irf")
+theme_override_font_sizes/font_size = 27
+text = "Testing"
+vertical_alignment = 3
+autowrap_mode = 3
+
+[node name="Answer1" parent="." instance=ExtResource("2_42g5j")]
+offset_left = 1108.0
+offset_top = 483.0
+offset_right = 1354.0
+offset_bottom = 573.0
+texture = ExtResource("3_x62pm")
+
+[node name="Answer2" parent="." instance=ExtResource("2_42g5j")]
+offset_left = 1109.0
+offset_top = 616.0
+offset_right = 1355.0
+offset_bottom = 706.0
+texture = ExtResource("3_x62pm")
+
+[node name="Answer3" parent="." instance=ExtResource("2_42g5j")]
+offset_left = 1106.0
+offset_top = 759.0
+offset_right = 1352.0
+offset_bottom = 849.0
+texture = ExtResource("3_x62pm")
+
+[node name="Text1" parent="." instance=ExtResource("2_42g5j")]
+offset_left = 197.0
+offset_top = 538.0
+offset_right = 443.0
+offset_bottom = 628.0
+
+[node name="Text2" parent="." instance=ExtResource("2_42g5j")]
+offset_left = 615.0
+offset_top = 662.0
+offset_right = 861.0
+offset_bottom = 752.0
+
+[node name="Text3" parent="." instance=ExtResource("2_42g5j")]
+offset_left = 180.0
+offset_top = 783.0
+offset_right = 426.0
+offset_bottom = 873.0
