@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=3 uid="uid://ehpjye6vivoo"]
+
+[ext_resource type="Script" path="res://input_box.gd" id="1_gflh4"]
+[ext_resource type="FontFile" uid="uid://dkppgt0hpuagh" path="res://fonts/Robot Go.ttf" id="2_3qk2h"]
+[ext_resource type="Texture2D" uid="uid://b7ken8h8qr7vj" path="res://icons8-x-24.png" id="3_7ojlo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nq8mf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6tu0r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_myop0"]
+
+[node name="InputBox" type="TextureRect"]
+offset_left = 5.0
+offset_top = 7.0
+offset_right = 259.0
+offset_bottom = 119.0
+expand_mode = 1
+script = ExtResource("1_gflh4")
+
+[node name="Panel" type="Panel" parent="."]
+show_behind_parent = true
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.005
+anchor_bottom = 0.869
+offset_left = -4.0
+offset_top = -8.0
+offset_right = -0.270004
+offset_bottom = 8.672
+mouse_filter = 2
+
+[node name="Input" type="LineEdit" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -123.63
+offset_top = -30.671
+offset_right = 119.37
+offset_bottom = 29.329
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_3qk2h")
+theme_override_font_sizes/font_size = 20
+theme_override_icons/clear = ExtResource("3_7ojlo")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nq8mf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6tu0r")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_myop0")
+placeholder_text = "Type Here"
+clear_button_enabled = true
+caret_blink = true
+
+[connection signal="text_submitted" from="Panel/Input" to="." method="_on_input_text_submitted"]

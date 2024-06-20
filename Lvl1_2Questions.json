@@ -1,0 +1,26 @@
+{
+"questions": [
+{
+ 	"sentence": "
+	Arrange the code to form the ACSII Text Image! 
+ 	BEGIN
+	printf( _ _/);
+	printf( / // //);
+	printf( / ///);
+		 	END", 
+	"answers": ["printf( | |/);
+			printf( | __ |);
+			printf( | |__| |);", 
+			"printf( /||||//);
+			printf( / |||| //);
+			printf( / |||| //);
+			printf( / |||| //);", 
+			"printf( / /);
+			printf( /__//__/);
+			printf(/ |||| /);
+			printf(/ |||| /);
+			printf(/ |||| /);"]
+}
+]
+}
+

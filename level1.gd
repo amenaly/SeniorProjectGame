@@ -1,6 +1,5 @@
-extends Node2D
-
-#testing resize 
+extends Node2D 
+#Level 1
 
 var questions = []
 var current_question_index : float = 0
@@ -9,12 +8,15 @@ var sentence = ""
 var answers = [] 
 var answer_labels = []
 
+var errorlabel : Label
 var sentence_label : Label 
 var drop_boxes = []
 
 func _ready():
 #Initialize reference 
 	sentence_label = $SentenceLabel1
+	errorlabel = $errorlabel
+	
 	#read to JSON file
 	load_level_data("res://Lvl1Questions.json")
 	load_question(0) #Call function
@@ -38,7 +40,9 @@ func load_question(index: int):
 	if index >= questions.size():
 		print("All questions completed!")
 		return
-	
+		
+	#clear out previous error message when next question loads 
+	display_error("")
 	
 	var question = questions[index]
 	sentence = question["sentence"]
@@ -46,17 +50,12 @@ func load_question(index: int):
 	
 	update_sentence()
 	create_answer_blocks()
-	#get_tree().change_scene_to_file("res://level1.tscn")
-	## Later add part to go to next scene here! 
+	 
 	
 	#Display Sentence from JSON to scene
 func update_sentence():
 	var display_sentence = sentence.replace("    ", "               ")
 	sentence_label.text = display_sentence
-	
-	
-func _on_button_pressed():
-	check_answers() # Call Check Function
 	
 func create_answer_blocks():
 	clear_previous_blocks() #Call Function
@@ -115,7 +114,15 @@ func check_answers():
 	else:
 		print("Incorrect! Try Again!")
 
+func _on_next_level_2_pressed():
+	#read the index, to see if user has completeled all questions before moving on
+	if current_question_index >= questions.size():
+		get_tree().change_scene_to_file("res://level1_2.tscn")
+	else:
+		display_error("Complete all questions before moving to the next level.")
+	
+func display_error(message: String):
+	errorlabel.text = message
 
-func _on_next_level_pressed():
-	pass
-	#get_tree().change_scene_to_file("res://level1.tscn")
+func _on_submit_button_pressed():
+	check_answers() # Call Check Function

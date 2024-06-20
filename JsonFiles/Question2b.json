@@ -1,0 +1,23 @@
+{
+  "questions": [
+	{
+	  "sentence": "Declare two integer variables: one for the distance Surveyor is from Earth (in billion miles) and another for the distance to Earth. 
+		   Calculate the distance between the two and then calculate how long it would take for a signal from Surveyor to reach Earth. 
+		   
+		   distance_orbit = 4.67 billion mi *From earth
+		   distance_totravelEarth  = 3.17 billion mi *To Earth
+		   distance_left = [      ]  - distance_totravelEarth
+
+		   printf(Distance between Surveyor and Earth: distance_left_to_travel)
+
+		   #Calculate Satellite Distance forumla time = distance/speed of light
+		   speed_of_light = 186000 miles per second
+		   time_to_reach_earth = [       ] * 16000 seconds /   [        ]
+		   
+		   printf(Time for Signal Reach Earth: [         ] seconds)
+		   
+		   ",
+	  "answers": ["distance_left", "speed_of_light", "time_to_reach_earth", "distance_orbit"]
+	}
+  ]
+}

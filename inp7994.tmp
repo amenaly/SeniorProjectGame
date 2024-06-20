@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://ehpjye6vivoo"]
+
+[ext_resource type="Script" path="res://input_box.gd" id="1_gflh4"]
+[ext_resource type="FontFile" uid="uid://dkppgt0hpuagh" path="res://fonts/Robot Go.ttf" id="2_3qk2h"]
+
+[node name="InputBox" type="TextureRect"]
+offset_left = 5.0
+offset_top = 7.0
+offset_right = 259.0
+offset_bottom = 119.0
+expand_mode = 1
+script = ExtResource("1_gflh4")
+
+[node name="Panel" type="Panel" parent="."]
+show_behind_parent = true
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.005
+anchor_bottom = 0.869
+offset_left = -4.0
+offset_top = -8.0
+offset_right = -0.270004
+offset_bottom = 8.672
+mouse_filter = 2
+
+[node name="Input" type="LineEdit" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.63
+offset_top = -30.671
+offset_right = 118.37
+offset_bottom = 29.329
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_3qk2h")
+theme_override_font_sizes/font_size = 20

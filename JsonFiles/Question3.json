@@ -1,0 +1,26 @@
+{
+  "questions": [
+    {
+      "sentence": "Form the C program to ask for, read in, and print back out one integer, one floating point value, and one character. 
+		   Print each out after reading it in.
+
+		   int 
+		   float
+		   char 
+
+
+		   printf(Enter number:)
+		   scanf([     ],      )
+		   
+
+		   print(Enter Float:)
+		
+
+		   printf(Enter Char)
+		   scanf([      ],     )
+		   ",
+
+      "answers": ["A","scanf()","C"]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyjpk0iwb3kpd"]
+
+[ext_resource type="Script" path="res://large_texture.gd" id="1_khw4q"]
+
+[node name="LargeText" type="TextureRect"]
+offset_right = 225.0
+offset_bottom = 163.0
+expand_mode = 1
+script = ExtResource("1_khw4q")
+
+[node name="Panel" type="Panel" parent="."]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.006
+anchor_bottom = 1.005
+offset_right = -0.280029
+offset_bottom = 0.0750122
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 14.0
+offset_right = 211.0
+offset_bottom = 147.0
+autowrap_mode = 3

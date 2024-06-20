@@ -1,0 +1,146 @@
+[gd_scene load_steps=5 format=3 uid="uid://dx0iq2jaeu1gp"]
+
+[ext_resource type="Script" path="res://Level2.gd" id="1_swatg"]
+[ext_resource type="Texture2D" uid="uid://bvfswxxeljugx" path="res://Images/gradient-galaxy-background_23-2148983655.jpg" id="2_0dvnr"]
+[ext_resource type="FontFile" uid="uid://dkppgt0hpuagh" path="res://fonts/Robot Go.ttf" id="3_ehwrx"]
+[ext_resource type="PackedScene" uid="uid://deyvy83bi0rnp" path="res://texture_rect.tscn" id="4_2g16j"]
+
+[node name="Level2" type="Node2D"]
+script = ExtResource("1_swatg")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1475.0
+offset_bottom = 1292.0
+texture = ExtResource("2_0dvnr")
+metadata/_edit_use_anchors_ = true
+
+[node name="LevelLabel" type="Label" parent="."]
+offset_left = 633.0
+offset_top = 44.0
+offset_right = 886.0
+offset_bottom = 82.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_ehwrx")
+theme_override_font_sizes/font_size = 33
+text = "Level 2"
+horizontal_alignment = 1
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Questionbox" type="ColorRect" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 404.0
+offset_right = 1382.0
+offset_bottom = 1258.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.563008, 0.783668, 0.841635, 1)
+
+[node name="answersbox" type="ColorRect" parent="."]
+offset_left = 1070.0
+offset_top = 402.0
+offset_right = 1382.0
+offset_bottom = 983.0
+color = Color(0.477058, 0.511252, 0.8841, 1)
+
+[node name="SentenceLabel" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 420.0
+offset_right = 876.0
+offset_bottom = 1141.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ehwrx")
+theme_override_font_sizes/font_size = 25
+text = "Testing"
+vertical_alignment = 3
+autowrap_mode = 3
+
+[node name="AnswerKeyLabel" type="Label" parent="."]
+offset_left = 1154.0
+offset_top = 426.0
+offset_right = 1287.0
+offset_bottom = 470.0
+theme_override_fonts/font = ExtResource("3_ehwrx")
+theme_override_font_sizes/font_size = 20
+text = "Answer Key:"
+metadata/_edit_use_anchors_ = true
+
+[node name="Text1" parent="." instance=ExtResource("4_2g16j")]
+offset_left = 270.0
+offset_top = 812.0
+offset_right = 448.0
+offset_bottom = 860.0
+
+[node name="Text2" parent="." instance=ExtResource("4_2g16j")]
+offset_left = 30.0
+offset_top = 683.0
+offset_right = 198.0
+offset_bottom = 727.0
+
+[node name="Text3" parent="." instance=ExtResource("4_2g16j")]
+offset_left = 60.0
+offset_top = 997.0
+offset_right = 299.0
+offset_bottom = 1091.0
+
+[node name="SubmitButton" type="Button" parent="."]
+offset_left = 903.0
+offset_top = 868.0
+offset_right = 1044.0
+offset_bottom = 918.0
+theme_override_colors/font_hover_color = Color(0.86605, 0.767793, 0.85492, 1)
+theme_override_fonts/font = ExtResource("3_ehwrx")
+theme_override_font_sizes/font_size = 20
+text = "Submit"
+metadata/_edit_use_anchors_ = true
+
+[node name="NextLevel" type="Button" parent="."]
+offset_left = 912.0
+offset_top = 414.0
+offset_right = 1053.0
+offset_bottom = 464.0
+theme_override_colors/font_hover_color = Color(0.702431, 0.717565, 0.977745, 1)
+theme_override_fonts/font = ExtResource("3_ehwrx")
+theme_override_font_sizes/font_size = 20
+text = "Next Level"
+metadata/_edit_use_anchors_ = true
+
+[node name="ErrorNext" type="Label" parent="."]
+offset_left = 878.0
+offset_top = 475.0
+offset_right = 1066.0
+offset_bottom = 594.0
+theme_override_colors/font_color = Color(0.815686, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ehwrx")
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="HelpButton" type="Button" parent="."]
+offset_left = 1270.0
+offset_top = 335.0
+offset_right = 1358.0
+offset_bottom = 385.0
+theme_override_fonts/font = ExtResource("3_ehwrx")
+theme_override_font_sizes/font_size = 20
+text = "Help"
+metadata/_edit_use_anchors_ = true
+
+[node name="PrintButton" type="Button" parent="."]
+offset_left = 631.0
+offset_top = 1167.0
+offset_right = 741.0
+offset_bottom = 1213.0
+theme_override_fonts/font = ExtResource("3_ehwrx")
+theme_override_font_sizes/font_size = 20
+text = "Print"
+
+[connection signal="pressed" from="SubmitButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="NextLevel" to="." method="_on_next_level_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]
+[connection signal="pressed" from="PrintButton" to="." method="_on_button_3_pressed"]

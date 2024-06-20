@@ -1,0 +1,108 @@
+[gd_scene load_steps=5 format=3 uid="uid://dh3djdbe1os5g"]
+
+[ext_resource type="Texture2D" uid="uid://ctc75pblwhkfl" path="res://Images/abstract-colorful-galaxy-space-background-free-vector.jpg" id="1_1ub56"]
+[ext_resource type="Script" path="res://Level1_2.gd" id="1_pit4b"]
+[ext_resource type="FontFile" uid="uid://dkppgt0hpuagh" path="res://fonts/Robot Go.ttf" id="2_sdl33"]
+[ext_resource type="PackedScene" uid="uid://dyjpk0iwb3kpd" path="res://large_texture.tscn" id="5_hb1y2"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_pit4b")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1536.0
+offset_bottom = 1315.0
+texture = ExtResource("1_1ub56")
+
+[node name="questionbox1_2" type="ColorRect" parent="."]
+offset_left = -1.0
+offset_top = 399.0
+offset_right = 1382.0
+offset_bottom = 1257.0
+color = Color(0.94902, 0.803922, 0.768627, 1)
+
+[node name="answerbox1_2" type="ColorRect" parent="."]
+offset_left = 1066.0
+offset_top = 404.0
+offset_right = 1378.0
+offset_bottom = 985.0
+color = Color(0.92549, 0.839216, 0.870588, 1)
+
+[node name="titlelabel" type="Label" parent="."]
+offset_left = 633.0
+offset_top = 44.0
+offset_right = 746.0
+offset_bottom = 82.0
+theme_override_fonts/font = ExtResource("2_sdl33")
+theme_override_font_sizes/font_size = 33
+text = "Level 1"
+
+[node name="sentencelabel" type="Label" parent="."]
+offset_left = 72.0
+offset_top = 421.0
+offset_right = 847.0
+offset_bottom = 963.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sdl33")
+theme_override_font_sizes/font_size = 25
+text = "Testing"
+autowrap_mode = 3
+
+[node name="answerkey" type="Label" parent="."]
+offset_left = 1154.0
+offset_top = 426.0
+offset_right = 1287.0
+offset_bottom = 470.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sdl33")
+theme_override_font_sizes/font_size = 20
+text = "Answer Key:"
+
+[node name="submitbutton" type="Button" parent="."]
+offset_left = 912.0
+offset_top = 864.0
+offset_right = 1053.0
+offset_bottom = 914.0
+theme_override_colors/font_hover_pressed_color = Color(0.894118, 0.701961, 0.886275, 1)
+theme_override_fonts/font = ExtResource("2_sdl33")
+theme_override_font_sizes/font_size = 20
+text = "Submit"
+
+[node name="nextquestion" type="Button" parent="."]
+offset_left = 917.0
+offset_top = 417.0
+offset_right = 1058.0
+offset_bottom = 467.0
+theme_override_colors/font_hover_pressed_color = Color(0.893361, 0.702652, 0.886268, 1)
+theme_override_fonts/font = ExtResource("2_sdl33")
+theme_override_font_sizes/font_size = 20
+text = "Next Level"
+
+[node name="TextBox1" parent="." instance=ExtResource("5_hb1y2")]
+offset_left = 42.0
+offset_top = 640.0
+offset_right = 206.0
+offset_bottom = 771.0
+
+[node name="LargeText" parent="." instance=ExtResource("5_hb1y2")]
+offset_left = 41.0
+offset_top = 798.0
+offset_right = 205.0
+offset_bottom = 934.0
+
+[node name="LargeText2" parent="." instance=ExtResource("5_hb1y2")]
+offset_left = 42.0
+offset_top = 959.0
+offset_right = 206.0
+offset_bottom = 1104.0
+
+[node name="errorlabel" type="Label" parent="."]
+offset_left = 878.0
+offset_top = 475.0
+offset_right = 1066.0
+offset_bottom = 594.0
+theme_override_colors/font_color = Color(0.937255, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sdl33")
+autowrap_mode = 3
+
+[connection signal="pressed" from="submitbutton" to="." method="_on_submitbutton_pressed"]
+[connection signal="pressed" from="nextquestion" to="." method="_on_nextquestion_pressed"]

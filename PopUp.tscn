@@ -1,0 +1,66 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4wrsi5hnlbp3"]
+
+[ext_resource type="Script" path="res://PopUp.gd" id="1_v0c7w"]
+[ext_resource type="FontFile" uid="uid://dkppgt0hpuagh" path="res://fonts/Robot Go.ttf" id="2_tcv2u"]
+
+[node name="PopUp" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v0c7w")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.232
+anchor_top = 0.165
+anchor_right = 0.232
+anchor_bottom = 0.165
+offset_left = -0.160004
+offset_top = -15.025
+offset_right = 739.84
+offset_bottom = 674.975
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="TextureRect"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+offset_left = 291.0
+offset_top = 51.0
+offset_right = 1170.0
+offset_bottom = 852.0
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect/Panel"]
+layout_mode = 0
+offset_right = 880.0
+offset_bottom = 799.0
+color = Color(0.697677, 0.794345, 0.999671, 1)
+
+[node name="Button" type="Button" parent="TextureRect/Panel"]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 708.5
+offset_right = 517.0
+offset_bottom = 751.5
+theme_override_colors/font_color = Color(0.407843, 0.921569, 0.713726, 1)
+theme_override_fonts/font = ExtResource("2_tcv2u")
+theme_override_font_sizes/font_size = 20
+text = "Close"
+
+[node name="Label" type="Label" parent="TextureRect/Panel"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 19.5
+offset_right = 824.0
+offset_bottom = 711.5
+theme_override_fonts/font = ExtResource("2_tcv2u")
+theme_override_font_sizes/font_size = 20
+autowrap_mode = 3
+
+[connection signal="pressed" from="TextureRect/Panel/Button" to="." method="_on_button_pressed"]

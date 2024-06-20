@@ -1,6 +1,10 @@
+res://input_box.tscn
+res://Level3.tscn
+res://Level3.gd
+res://input_box.gd
 res://menu.tscn
-res://first_level.tscn
-res://texture_rect.tscn
+res://Menu.gd
 res://level1.tscn
-res://Lvl1Questions.json
-res://level1.gd
+res://Level2b.tscn
+res://PopUp.tscn
+res://PopUp.gd

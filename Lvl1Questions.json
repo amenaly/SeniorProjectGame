@@ -1,8 +1,7 @@
 {
 "questions": [
 {
-
- 	"sentence": "BEGIN 
+ 	"sentence": " 
 		 print Step 1: Initialize system....
 			InitializedSystem()...
 	 print Step 2: Check Satellite Status...
@@ -21,15 +20,10 @@
  	print   Step 6: Test Communication Link
 				linkTest <- TestCommunicationLink()
 				
-				IF linkTest          THEN
+				IF linkTest IS          THEN
  	print   Step 7: Activate Operational Mode
-					ActivateOperationalMode()
-	END", 
-	"answers" : ["CheckSatelliteStatus()", "target", "success"]
-},
-{
-	"sentence": "Question 2",
-	"answers": ["AnswersLvl2"]
-	}
+					ActivateOperationalMode()", 
+	"answers" : ["SatelliteStatus()", "target", "success"]
+}
 ]
 }

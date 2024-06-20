@@ -1,31 +1,19 @@
 [gd_scene load_steps=5 format=3 uid="uid://b0dmgh0r34arg"]
 
 [ext_resource type="Script" path="res://level1.gd" id="1_fcjna"]
-[ext_resource type="Texture2D" uid="uid://ctc75pblwhkfl" path="res://Images/abstract-colorful-galaxy-space-background-free-vector.jpg" id="1_vaijj"]
 [ext_resource type="FontFile" uid="uid://dkppgt0hpuagh" path="res://fonts/Robot Go.ttf" id="2_ej3b7"]
+[ext_resource type="Texture2D" uid="uid://bw18i0qlsih4f" path="res://Images/darkgalaxy.jpg" id="2_kj60f"]
 [ext_resource type="PackedScene" uid="uid://deyvy83bi0rnp" path="res://texture_rect.tscn" id="4_g2mfi"]
 
 [node name="Lvl1" type="Node2D"]
 script = ExtResource("1_fcjna")
 
 [node name="Background" type="TextureRect" parent="."]
-offset_right = 1380.0
-offset_bottom = 1265.0
-texture = ExtResource("1_vaijj")
-
-[node name="questionbox1" type="ColorRect" parent="."]
-offset_left = -3.0
-offset_top = 405.0
-offset_right = 1380.0
-offset_bottom = 1263.0
-color = Color(0.947428, 0.804832, 0.769889, 1)
-
-[node name="answerbox1" type="ColorRect" parent="."]
-offset_left = 1068.0
-offset_top = 405.0
-offset_right = 1380.0
-offset_bottom = 986.0
-color = Color(0.926794, 0.838448, 0.871891, 1)
+offset_left = -76.0
+offset_right = 1451.0
+offset_bottom = 1328.0
+texture = ExtResource("2_kj60f")
+metadata/_edit_use_anchors_ = true
 
 [node name="TitleLabel1" type="Label" parent="."]
 offset_left = 622.0
@@ -38,16 +26,34 @@ theme_override_font_sizes/font_size = 33
 text = "Level 1"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="questionbox1" type="ColorRect" parent="."]
+offset_left = -3.0
+offset_top = 405.0
+offset_right = 1380.0
+offset_bottom = 1263.0
+color = Color(0.853037, 0.856444, 0.947764, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="answerbox1" type="ColorRect" parent="."]
+offset_left = 1068.0
+offset_top = 405.0
+offset_right = 1380.0
+offset_bottom = 986.0
+color = Color(0.246532, 0.221696, 0.4058, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="AnswerKey1" type="Label" parent="."]
-offset_left = 1167.0
-offset_top = 422.0
-offset_right = 1296.0
-offset_bottom = 445.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 1154.0
+offset_top = 426.0
+offset_right = 1283.0
+offset_bottom = 449.0
+theme_override_colors/font_color = Color(0.971335, 0.971335, 0.971335, 1)
 theme_override_fonts/font = ExtResource("2_ej3b7")
 theme_override_font_sizes/font_size = 20
 text = "Answer Key:"
+metadata/_edit_use_anchors_ = true
 
 [node name="SentenceLabel1" type="Label" parent="."]
 offset_left = 54.0
@@ -59,8 +65,9 @@ theme_override_fonts/font = ExtResource("2_ej3b7")
 theme_override_font_sizes/font_size = 25
 text = "Test"
 autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="."]
+[node name="SubmitButton" type="Button" parent="."]
 offset_left = 912.0
 offset_top = 864.0
 offset_right = 1053.0
@@ -69,6 +76,7 @@ theme_override_colors/font_hover_color = Color(0.739161, 0.52774, 0.623008, 1)
 theme_override_fonts/font = ExtResource("2_ej3b7")
 theme_override_font_sizes/font_size = 20
 text = "Submit"
+metadata/_edit_use_anchors_ = true
 
 [node name="NextLevel2" type="Button" parent="."]
 offset_left = 917.0
@@ -79,21 +87,38 @@ theme_override_colors/font_hover_pressed_color = Color(1, 0.682119, 0.631921, 1)
 theme_override_fonts/font = ExtResource("2_ej3b7")
 theme_override_font_sizes/font_size = 20
 text = "Next Level"
+metadata/_edit_use_anchors_ = true
 
 [node name="TextLvl1" parent="." instance=ExtResource("4_g2mfi")]
-offset_left = 188.0
-offset_top = 547.0
-offset_right = 390.0
-offset_bottom = 602.0
+offset_left = 178.0
+offset_top = 557.0
+offset_right = 380.0
+offset_bottom = 612.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TextLvl2" parent="." instance=ExtResource("4_g2mfi")]
 offset_left = 241.0
-offset_top = 1078.0
+offset_top = 1007.0
 offset_right = 443.0
-offset_bottom = 1137.0
+offset_bottom = 1066.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TextLvl3" parent="." instance=ExtResource("4_g2mfi")]
 offset_left = 400.0
 offset_top = 741.0
 offset_right = 602.0
 offset_bottom = 800.0
+metadata/_edit_use_anchors_ = true
+
+[node name="errorlabel" type="Label" parent="."]
+offset_left = 878.0
+offset_top = 475.0
+offset_right = 1066.0
+offset_bottom = 594.0
+theme_override_colors/font_color = Color(0.937255, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ej3b7")
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="SubmitButton" to="." method="_on_submit_button_pressed"]
+[connection signal="pressed" from="NextLevel2" to="." method="_on_next_level_2_pressed"]

@@ -9,9 +9,10 @@
 script = ExtResource("1_pwf77")
 
 [node name="Background" type="TextureRect" parent="."]
-offset_right = 1380.0
-offset_bottom = 985.0
+offset_right = 1475.0
+offset_bottom = 1292.0
 texture = ExtResource("1_rpi1h")
+metadata/_edit_use_anchors_ = true
 
 [node name="LevelLabel" type="Label" parent="."]
 offset_left = 540.0
@@ -24,6 +25,7 @@ theme_override_font_sizes/font_size = 33
 text = "Tutorial Level"
 horizontal_alignment = 1
 uppercase = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Questionbox" type="ColorRect" parent="."]
 anchors_preset = 7
@@ -38,6 +40,7 @@ offset_bottom = 984.0
 grow_horizontal = 2
 grow_vertical = 0
 color = Color(0.697253, 0.729613, 0.911949, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="answersbox" type="ColorRect" parent="."]
 offset_left = 1070.0
@@ -45,6 +48,7 @@ offset_top = 402.0
 offset_right = 1382.0
 offset_bottom = 983.0
 color = Color(0.620944, 0.498973, 0.685635, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="SentenceLabel" type="Label" parent="."]
 offset_left = 217.0
@@ -57,6 +61,7 @@ theme_override_font_sizes/font_size = 25
 text = "Testing"
 vertical_alignment = 3
 autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="AnswerKeyLabel" type="Label" parent="."]
 offset_left = 1168.0
@@ -66,24 +71,28 @@ offset_bottom = 456.0
 theme_override_fonts/font = ExtResource("3_77irf")
 theme_override_font_sizes/font_size = 20
 text = "Answer Key:"
+metadata/_edit_use_anchors_ = true
 
 [node name="Text1" parent="." instance=ExtResource("2_42g5j")]
 offset_left = 365.0
 offset_top = 447.0
 offset_right = 568.0
 offset_bottom = 501.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Text2" parent="." instance=ExtResource("2_42g5j")]
 offset_left = 10.0
 offset_top = 576.0
 offset_right = 213.0
 offset_bottom = 632.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Text3" parent="." instance=ExtResource("2_42g5j")]
 offset_left = 541.0
 offset_top = 832.0
 offset_right = 743.0
 offset_bottom = 887.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="."]
 offset_left = 903.0
@@ -94,6 +103,7 @@ theme_override_colors/font_hover_color = Color(0.86605, 0.767793, 0.85492, 1)
 theme_override_fonts/font = ExtResource("3_77irf")
 theme_override_font_sizes/font_size = 20
 text = "Submit"
+metadata/_edit_use_anchors_ = true
 
 [node name="NextLevel" type="Button" parent="."]
 offset_left = 912.0
@@ -104,6 +114,28 @@ theme_override_colors/font_hover_color = Color(0.702431, 0.717565, 0.977745, 1)
 theme_override_fonts/font = ExtResource("3_77irf")
 theme_override_font_sizes/font_size = 20
 text = "Next Level"
+metadata/_edit_use_anchors_ = true
+
+[node name="ErrorNext" type="Label" parent="."]
+offset_left = 878.0
+offset_top = 475.0
+offset_right = 1066.0
+offset_bottom = 594.0
+theme_override_colors/font_color = Color(0.815686, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_77irf")
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 1270.0
+offset_top = 335.0
+offset_right = 1358.0
+offset_bottom = 385.0
+theme_override_fonts/font = ExtResource("3_77irf")
+theme_override_font_sizes/font_size = 20
+text = "Help"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="NextLevel" to="." method="_on_next_level_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

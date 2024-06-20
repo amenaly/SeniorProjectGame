@@ -1,5 +1,5 @@
 extends Node2D
-
+#Tutorial Level
 var questions = []
 var current_question_index : float = 0
 
@@ -8,11 +8,16 @@ var answers = []
 var answer_labels = []
 
 var sentence_label : Label 
+var errorlabel : Label
 var drop_boxes = []
+
+#pop up test 
+var text_to_show : String = "Help Guide: "
 
 func _ready():
 #Initialize reference 
 	sentence_label = $SentenceLabel
+	errorlabel = $ErrorNext
 	
 	load_level_data("res://Questions.json") #read to JSON file
 	load_question(0) #Call function
@@ -36,16 +41,14 @@ func load_question(index: int):
 	if index >= questions.size():
 		print("All questions completed!")
 		return
-	
-	
+	#clear out previous error message when next question loads 
+	display_error("")
 	var question = questions[index]
 	sentence = question["sentence"]
 	answers = question["answers"]
 	
 	update_sentence()
 	create_answer_blocks()
-	#get_tree().change_scene_to_file("res://level1.tscn")
-	## Later add part to go to next scene here! 
 	
 	#Display Sentence from JSON to scene
 func update_sentence():
@@ -84,6 +87,12 @@ func create_answer_block(index: int, position: Vector2):
 	answer_block.position = position
 	add_child(answer_block)
 	print("Answer block created with answer:", answers[index])  # Debugging
+	
+##WIP testing pop up help guide!!!
+func help_guide(): 
+	var new_pop_up = preload("res://PopUp.tscn").instantiate()
+	new_pop_up.text_to_show = text_to_show
+	add_child(new_pop_up)
 
 #clear text drop box
 func clear_drop_boxes():
@@ -115,4 +124,16 @@ func check_answers():
 
 
 func _on_next_level_pressed():
-	get_tree().change_scene_to_file("res://level1.tscn")
+	#read the index, to see if user has completeled all questions before moving on
+	if current_question_index >= questions.size():
+		get_tree().change_scene_to_file("res://level1.tscn")
+	else:
+		display_error("Complete all questions before moving to the next level.")
+	#get_tree().change_scene_to_file("res://level1.tscn")
+	
+func display_error(message: String):
+	errorlabel.text = message
+
+##WIP Testing help pop up guide
+func _on_button_2_pressed():
+	help_guide()

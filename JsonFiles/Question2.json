@@ -1,0 +1,28 @@
+{
+  "questions": [
+	{
+	  "sentence": "Declare three variables: a character array for the satellite name, an integer for the number of years it has been traveling, 
+	and a double for the distance in billion mi from Earth. 
+	
+	Then Assign the variables. Print these values.
+
+		char satellite_Name;
+		
+		[     ]years_Travel;
+		
+		double distanceFromEarth; 
+		
+		satellite_Name =        
+		years_Travel   =  15
+		distanceFromEarth = 3.17
+		
+		printf(Satellite:, satellite_Name)
+		
+			  
+	
+		printf(Distance from Earth:, distanceFromEarth,billion mi)",
+		
+	  "answers": ["int", "Surveyor", "printf(Years in Space, years_Travel)"]
+			}
+  ]
+}
