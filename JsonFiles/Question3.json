@@ -1,8 +1,8 @@
 {
   "questions": [
-    {
-      "sentence": "Form the C program to ask for, read in, and print back out one integer, one floating point value, and one character. 
-		   Print each out after reading it in.
+	{
+	  "sentence": "Form the C program to ask for, read in, and print back out one integer, one floating point value, and one character. 
+		   Select the Print button once your done.
 
 		   int 
 		   float
@@ -10,17 +10,17 @@
 
 
 		   printf(Enter number:)
-		   scanf([     ],      )
+		   GET([        ],      )
 		   
 
 		   print(Enter Float:)
 		
 
 		   printf(Enter Char)
-		   scanf([      ],     )
+		   GET([        ],     )
 		   ",
 
-      "answers": ["A","scanf()","C"]
-    }
+	  "answers": ["A","GET()","C"]
+	}
   ]
 }

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dh3djdbe1os5g"]
 
-[ext_resource type="Texture2D" uid="uid://ctc75pblwhkfl" path="res://Images/abstract-colorful-galaxy-space-background-free-vector.jpg" id="1_1ub56"]
 [ext_resource type="Script" path="res://Level1_2.gd" id="1_pit4b"]
+[ext_resource type="Texture2D" uid="uid://bw18i0qlsih4f" path="res://Images/darkgalaxy.jpg" id="2_q4xli"]
 [ext_resource type="FontFile" uid="uid://dkppgt0hpuagh" path="res://fonts/Robot Go.ttf" id="2_sdl33"]
 [ext_resource type="PackedScene" uid="uid://dyjpk0iwb3kpd" path="res://large_texture.tscn" id="5_hb1y2"]
 
@@ -9,23 +9,24 @@
 script = ExtResource("1_pit4b")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -115.0
 offset_right = 1536.0
 offset_bottom = 1315.0
-texture = ExtResource("1_1ub56")
+texture = ExtResource("2_q4xli")
 
 [node name="questionbox1_2" type="ColorRect" parent="."]
 offset_left = -1.0
 offset_top = 399.0
 offset_right = 1382.0
 offset_bottom = 1257.0
-color = Color(0.94902, 0.803922, 0.768627, 1)
+color = Color(0.854902, 0.854902, 0.94902, 1)
 
 [node name="answerbox1_2" type="ColorRect" parent="."]
-offset_left = 1066.0
-offset_top = 404.0
-offset_right = 1378.0
-offset_bottom = 985.0
-color = Color(0.92549, 0.839216, 0.870588, 1)
+offset_left = 1068.0
+offset_top = 399.0
+offset_right = 1385.0
+offset_bottom = 986.0
+color = Color(0.247059, 0.223529, 0.403922, 1)
 
 [node name="titlelabel" type="Label" parent="."]
 offset_left = 633.0
@@ -104,5 +105,16 @@ theme_override_colors/font_color = Color(0.937255, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_sdl33")
 autowrap_mode = 3
 
+[node name="HelpButton" type="Button" parent="."]
+offset_left = 1270.0
+offset_top = 335.0
+offset_right = 1358.0
+offset_bottom = 385.0
+theme_override_fonts/font = ExtResource("2_sdl33")
+theme_override_font_sizes/font_size = 20
+text = "Help"
+metadata/_edit_use_anchors_ = true
+
 [connection signal="pressed" from="submitbutton" to="." method="_on_submitbutton_pressed"]
 [connection signal="pressed" from="nextquestion" to="." method="_on_nextquestion_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]

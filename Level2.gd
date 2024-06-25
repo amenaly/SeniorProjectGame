@@ -9,16 +9,23 @@ var answers = []
 var answer_labels = []
 
 var errorlabel : Label
+var errorlabel2: Label
 var sentence_label : Label 
 var drop_boxes = []
 
 #pop up test 
-var text_to_show : String = "Help Guide: "
+var text_to_show : String = "Help Guide: \nVariables are used to store data that can be manipulated by the program.
+\n To declare a variable in C, specify the type followed by the variable name. Here are the syntax rules for declaring a character, an integer, and a double:
+\nchar variableName;   // For character variables
+int variableName;    // For integer variables
+double variableName; // For double (floating-point) variables 
+\nTo assign a value to a variable, use the assignment operator =: Example: variableName = value"
 
 func _ready():
 #Initialize reference 
 	sentence_label = $SentenceLabel
 	errorlabel = $ErrorNext
+	errorlabel2 = $errorlabel2
 	#read to JSON file
 	load_level_data("res://JsonFiles/Question2.json")
 	load_question(0) #Call function
@@ -143,17 +150,24 @@ func _on_next_level_pressed():
 func display_error(message: String):
 	errorlabel.text = message
 	
+func display_PrintError(message: String):
+	errorlabel2.text = message
+	
 func _on_button_pressed():
 	check_answers()
 
 #when click print after finish, display print output 
 func _on_button_3_pressed():
-	var text_to_show : String = "Satellite: Surveyor
-								Years in Space: 15 years
-								Distance from Earth: 3.17 billion mi"
-	var new_pop_up = preload("res://PopUp.tscn").instantiate()
-	new_pop_up.text_to_show = text_to_show
-	add_child(new_pop_up)
+	if text_to_show == "":
+		display_PrintError("Input cannot be empty!")
+	else:
+		display_PrintError("")
+		var text_to_show : String = "Satellite: Surveyor
+									Years in Space: 15 years
+									Distance from Earth: 3.17 billion mi"
+		var new_pop_up = preload("res://PopUp.tscn").instantiate()
+		new_pop_up.text_to_show = text_to_show
+		add_child(new_pop_up)
 	
 func _on_help_button_pressed():
 	help_guide()

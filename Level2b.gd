@@ -9,16 +9,32 @@ var answers = []
 var answer_labels = []
 
 var errorlabel : Label
+var errorlabel2 : Label
 var sentence_label : Label 
 var drop_boxes = []
 
 #pop up test 
-var text_to_show : String = "Help Guide: "
+var text_to_show : String = "Help Guide:\n you can perform arithmetic operations such as calculating the difference between two integers using basic operators. 
+\nTo declare variables in C, specify the type followed by the variable name:
+	Example:
+int variableName1
+int variableName2
+int result
+\nAssign values to the variables using the assignment operator =:
+	Example: 
+	variableName1 = value1
+	variableName2 = value2
+\nUse the subtraction operator - to calculate the difference between two integers:
+	result = variableName1 - variableName2
+\n To print the value of a variable, use the printf function with the format specifier %d for integers:
+printf(The result is: %d, result)
+"
 
 func _ready():
 #Initialize reference 
 	sentence_label = $SentenceLabel
 	errorlabel = $ErrorNext
+	errorlabel2 = $errorlabel2
 	#read to JSON file
 	load_level_data("res://JsonFiles/Question2b.json")
 	load_question(0) #Call function
@@ -52,8 +68,6 @@ func load_question(index: int):
 	
 	update_sentence()
 	create_answer_blocks()
-	#get_tree().change_scene_to_file("res://level1.tscn")
-	## Later add part to go to next scene here! 
 
 ##WIP testing pop up help guide!!!
 func help_guide(): 
@@ -142,15 +156,22 @@ func _on_next_level_pressed():
 func display_error(message: String):
 	errorlabel.text = message
 
+func display_PrintError(message: String):
+	errorlabel2.text = message
+	
 func _on_submit_button_pressed():
 	check_answers()
 
 func _on_print_button_pressed():
-	var text_to_show : String = "Distance between Surveyor and Earth: 1.5 billion mi
-								Time for Signal Reach Earth: 2.24 hours"
-	var new_pop_up = preload("res://PopUp.tscn").instantiate()
-	new_pop_up.text_to_show = text_to_show
-	add_child(new_pop_up)
+	if drop_boxes == "": 
+		display_PrintError("Input cannot be empty!")
+	else:
+		display_PrintError("")
+		var text_to_show : String = "Distance between Surveyor and Earth: 1.5 billion mi
+									Time for Signal Reach Earth: 2.24 hours"
+		var new_pop_up = preload("res://PopUp.tscn").instantiate()
+		new_pop_up.text_to_show = text_to_show
+		add_child(new_pop_up)
 
 func _on_help_button_pressed():
 	help_guide()

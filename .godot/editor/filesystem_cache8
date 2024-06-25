@@ -1,38 +1,45 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1718858277
+::res://::1719291448
 first_level.gd::GDScript::-1::1718682600::0::1::::<>Node2D<>::
 first_level.tscn::PackedScene::1289108604296813485::1718767878::0::1::::<><>::res://first_level.gd<>uid://nsrpl16wqiol::::res://Images/realistic-galaxy-background_23-2148971567.jpg<>uid://deyvy83bi0rnp::::res://texture_rect.tscn<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf
 icons8-x-24.png::CompressedTexture2D::4653375286548206523::1718850187::1718850188::1::::<><>::
-input_box.gd::GDScript::-1::1718855403::0::1::::<>TextureRect<>::
-input_box.tscn::PackedScene::296134114043710510::1718858271::0::1::::<><>::res://input_box.gd<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://b7ken8h8qr7vj::::res://icons8-x-24.png
+input_box.gd::GDScript::-1::1719291316::0::1::::<>TextureRect<>::
+input_box.tscn::PackedScene::296134114043710510::1719275550::0::1::::<><>::res://input_box.gd<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://b7ken8h8qr7vj::::res://icons8-x-24.png
 large_texture.gd::GDScript::-1::1718249850::0::1::::<>TextureRect<>::
 large_texture.tscn::PackedScene::8863303637453381465::1718682555::0::1::::<><>::res://large_texture.gd
-level1.gd::GDScript::-1::1718682882::0::1::::<>Node2D<>::
-level1.tscn::PackedScene::4148074633677238352::1718858277::0::1::::<><>::res://level1.gd<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://bw18i0qlsih4f::::res://Images/darkgalaxy.jpg<>uid://deyvy83bi0rnp::::res://texture_rect.tscn
-Level1_2.gd::GDScript::-1::1718683308::0::1::::<>Node2D<>::
-Level1_2.tscn::PackedScene::7708584916114560410::1718767846::0::1::::<><>::uid://ctc75pblwhkfl::::res://Images/abstract-colorful-galaxy-space-background-free-vector.jpg<>res://Level1_2.gd<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://dyjpk0iwb3kpd::::res://large_texture.tscn
-Level2.gd::GDScript::-1::1718768354::0::1::::<>Node2D<>::
-Level2.tscn::PackedScene::8825730639290007779::1718774665::0::1::::<><>::res://Level2.gd<>uid://bvfswxxeljugx::::res://Images/gradient-galaxy-background_23-2148983655.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://deyvy83bi0rnp::::res://texture_rect.tscn
-Level2b.gd::GDScript::-1::1718774575::0::1::::<>Node2D<>::
-Level2b.tscn::PackedScene::7403306283466474121::1718856564::0::1::::<><>::res://Level2b.gd<>uid://bvfswxxeljugx::::res://Images/gradient-galaxy-background_23-2148983655.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://deyvy83bi0rnp::::res://texture_rect.tscn
-Level3.gd::GDScript::-1::1718857830::0::1::::<>Node2D<>::
-Level3.tscn::PackedScene::4723729611811416034::1718858271::0::1::::<><>::res://Level3.gd<>uid://nsrpl16wqiol::::res://Images/realistic-galaxy-background_23-2148971567.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://ehpjye6vivoo::::res://input_box.tscn<>uid://deyvy83bi0rnp::::res://texture_rect.tscn
+level1.gd::GDScript::-1::1719088580::0::1::::<>Node2D<>::
+level1.tscn::PackedScene::4148074633677238352::1719088580::0::1::::<><>::res://level1.gd<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://bw18i0qlsih4f::::res://Images/darkgalaxy.jpg<>uid://deyvy83bi0rnp::::res://texture_rect.tscn
+Level1_2.gd::GDScript::-1::1719088412::0::1::::<>Node2D<>::
+Level1_2.tscn::PackedScene::7708584916114560410::1719088580::0::1::::<><>::res://Level1_2.gd<>uid://bw18i0qlsih4f::::res://Images/darkgalaxy.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://dyjpk0iwb3kpd::::res://large_texture.tscn
+Level2.gd::GDScript::-1::1719089719::0::1::::<>Node2D<>::
+Level2.tscn::PackedScene::8825730639290007779::1719267177::0::1::::<><>::res://Level2.gd<>uid://bvfswxxeljugx::::res://Images/gradient-galaxy-background_23-2148983655.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://deyvy83bi0rnp::::res://texture_rect.tscn
+Level2b.gd::GDScript::-1::1719095839::0::1::::<>Node2D<>::
+Level2b.tscn::PackedScene::7403306283466474121::1719289049::0::1::::<><>::res://Level2b.gd<>uid://bvfswxxeljugx::::res://Images/gradient-galaxy-background_23-2148983655.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://deyvy83bi0rnp::::res://texture_rect.tscn
+Level3.gd::GDScript::-1::1719267731::0::1::::<>Node2D<>::
+Level3.tscn::PackedScene::4723729611811416034::1719287367::0::1::::<><>::res://Level3.gd<>uid://clrs13uj6be1n::::res://Images/obernotest.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://ehpjye6vivoo::::res://input_box.tscn<>uid://deyvy83bi0rnp::::res://texture_rect.tscn
+Level4.gd::GDScript::-1::1719287363::0::1::::<>Node2D<>::
+Level4.tscn::PackedScene::6863304366660900597::1719291316::0::1::::<><>::res://Level4.gd<>uid://c6mk1elxijdyk::::res://Images/science-fiction-landscape-illustration-orange-hot-planet-landscape-space-view-yellow-galaxy-with-sun-and-moon-science-fiction-for-background-wallpaper-or-illustration-free-vector.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://deyvy83bi0rnp::::res://texture_rect.tscn<>uid://ehpjye6vivoo::::res://input_box.tscn
+Level5.gd::GDScript::-1::1719287156::0::1::::<>Node2D<>::
+Level5.tscn::PackedScene::6275213561685628171::1719290647::0::1::::<><>::res://Level5.gd<>uid://d1cb8bwllvjyq::::res://Images/Rhealevel.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://deyvy83bi0rnp::::res://texture_rect.tscn
+Level6.gd::GDScript::-1::1719290606::0::1::::<>Node2D<>::
+Level6.tscn::PackedScene::1910764432911471751::1719291062::0::1::::<><>::res://Level6.gd<>uid://cxqs82jkt15qn::::res://Images/ceres.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://deyvy83bi0rnp::::res://texture_rect.tscn
 Lvl1Questions.json::JSON::-1::1718766108::0::1::::<><>::
-Lvl1_2Questions.json::JSON::-1::1718166902::0::1::::<><>::
-Menu.gd::GDScript::-1::1718858222::0::1::::<>Control<>::
-menu.tscn::PackedScene::3427415802468968554::1718858271::0::1::::<><>::res://Menu.gd<>uid://8xw2usp5jq6p::::res://Images/gradient-galaxy-background-free-vector.jpg<>uid://b7n2neqcfe60n::::res://fonts/FutureTech.ttf
+Lvl1_2Questions.json::JSON::-1::1719087902::0::1::::<><>::
+Menu.gd::GDScript::-1::1719289531::0::1::::<>Control<>::
+menu.tscn::PackedScene::3427415802468968554::1719290647::0::1::::<><>::res://Menu.gd<>uid://8xw2usp5jq6p::::res://Images/gradient-galaxy-background-free-vector.jpg<>uid://b7n2neqcfe60n::::res://fonts/FutureTech.ttf
 PopUp.gd::GDScript::-1::1718856418::0::1::::<>Control<>::
-PopUp.tscn::PackedScene::6854798943512562342::1718858271::0::1::::<><>::res://PopUp.gd<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf
+PopUp.tscn::PackedScene::6854798943512562342::1719088333::0::1::::<><>::res://PopUp.gd<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf
 Questions.json::JSON::-1::1717732610::0::1::::<><>::
 texture_rect.gd::GDScript::-1::1717737128::0::1::::<>TextureRect<>::
-texture_rect.tscn::PackedScene::7490882184212887797::1718769898::0::1::::<><>::res://texture_rect.gd<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf
+texture_rect.tscn::PackedScene::7490882184212887797::1719005827::0::1::::<><>::res://texture_rect.gd<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf
 ::res://fonts/::1718060354
 FutureTech.ttf::FontFile::4660963399946390283::1717040562::1718060169::1::::<><>::
 Robot Go.ttf::FontFile::7893038660328092419::1717040544::1718060172::1::::<><>::
-::res://Images/::1718858454
+::res://Images/::1719291632
 abstract-colorful-galaxy-space-background-free-vector.jpg::CompressedTexture2D::6112555459527143189::1718057795::1718057795::1::::<><>::
 answertest.png::CompressedTexture2D::4119919946478831867::1717469919::1718057758::1::::<><>::
 cartoon-space-background-with-glow-galaxy-nebula-vector-43421600.jpg::CompressedTexture2D::3134002310258252154::1718857765::1718857765::1::::<><>::
+ceres.jpg::CompressedTexture2D::6421368084709056677::1719289302::1719289303::1::::<><>::
 darkgalaxy.jpg::CompressedTexture2D::3986268350772691643::1718858147::1718858148::1::::<><>::
 gradient-galaxy-background-free-vector.jpg::CompressedTexture2D::2365097597670215029::1716853415::1718057738::1::::<><>::
 gradient-galaxy-background_23-2148983655.jpg::CompressedTexture2D::3871841725962157419::1718682776::1718682776::1::::<><>::
@@ -41,7 +48,12 @@ icon.svg::CompressedTexture2D::9211349847926434601::1716850650::1718057773::1:::
 image0_0.jpg::CompressedTexture2D::4846386082045674472::1718858454::1718858455::1::::<><>::
 obernotest.jpg::CompressedTexture2D::5581153907735180585::1718858449::1718858450::1::::<><>::
 realistic-galaxy-background_23-2148971567.jpg::CompressedTexture2D::950673362013402823::1716866215::1718057751::1::::<><>::
-::res://JsonFiles/::1718857790
+Rhealevel.jpg::CompressedTexture2D::8988420476392266012::1719270098::1719270114::1::::<><>::
+saturn.jpg::CompressedTexture2D::9182565429582087271::1719291632::1719291632::1::::<><>::
+::res://JsonFiles/::1719290630
 Question2.json::JSON::-1::1718773538::0::1::::<><>::
 Question2b.json::JSON::-1::1718774575::0::1::::<><>::
-Question3.json::JSON::-1::1718857773::0::1::::<><>::
+Question3.json::JSON::-1::1719267270::0::1::::<><>::
+Question4.json::JSON::-1::1719274884::0::1::::<><>::
+Question5.json::JSON::-1::1719274892::0::1::::<><>::
+Question6.json::JSON::-1::1719290630::0::1::::<><>::

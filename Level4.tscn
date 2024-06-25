@@ -1,0 +1,166 @@
+[gd_scene load_steps=6 format=3 uid="uid://c41vvc6pvwi6x"]
+
+[ext_resource type="Script" path="res://Level4.gd" id="1_yfyic"]
+[ext_resource type="Texture2D" uid="uid://d33drm00j78k6" path="res://Images/saturn.jpg" id="2_ed1bj"]
+[ext_resource type="FontFile" uid="uid://dkppgt0hpuagh" path="res://fonts/Robot Go.ttf" id="3_m7oq0"]
+[ext_resource type="PackedScene" uid="uid://deyvy83bi0rnp" path="res://texture_rect.tscn" id="4_o1rem"]
+[ext_resource type="PackedScene" uid="uid://ehpjye6vivoo" path="res://input_box.tscn" id="5_l3202"]
+
+[node name="Level4" type="Node2D"]
+script = ExtResource("1_yfyic")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -136.0
+offset_right = 1475.0
+offset_bottom = 1292.0
+texture = ExtResource("2_ed1bj")
+metadata/_edit_use_anchors_ = true
+
+[node name="LevelLabel" type="Label" parent="."]
+offset_left = 633.0
+offset_top = 44.0
+offset_right = 886.0
+offset_bottom = 82.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_m7oq0")
+theme_override_font_sizes/font_size = 33
+text = "Level 4"
+horizontal_alignment = 1
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Questionbox" type="ColorRect" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 404.0
+offset_right = 1382.0
+offset_bottom = 1258.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.931315, 0.677526, 0.520818, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="answersbox" type="ColorRect" parent="."]
+offset_left = 1070.0
+offset_top = 402.0
+offset_right = 1382.0
+offset_bottom = 1026.0
+color = Color(0.929164, 0.77324, 0.6805, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="SentenceLabel" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 420.0
+offset_right = 876.0
+offset_bottom = 1141.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_m7oq0")
+theme_override_font_sizes/font_size = 25
+text = "Testing"
+vertical_alignment = 3
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="AnswerKeyLabel" type="Label" parent="."]
+offset_left = 1154.0
+offset_top = 426.0
+offset_right = 1287.0
+offset_bottom = 470.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_m7oq0")
+theme_override_font_sizes/font_size = 20
+text = "Answer Key:"
+metadata/_edit_use_anchors_ = true
+
+[node name="Text1" parent="." instance=ExtResource("4_o1rem")]
+offset_left = 122.0
+offset_top = 767.0
+offset_right = 300.0
+offset_bottom = 815.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Text4" parent="." instance=ExtResource("4_o1rem")]
+offset_left = 27.0
+offset_top = 1090.0
+offset_right = 205.0
+offset_bottom = 1138.0
+metadata/_edit_use_anchors_ = true
+
+[node name="InputBox" parent="." instance=ExtResource("5_l3202")]
+offset_left = 108.0
+offset_top = 704.0
+offset_right = 284.0
+offset_bottom = 744.0
+
+[node name="SubmitButton" type="Button" parent="."]
+offset_left = 903.0
+offset_top = 868.0
+offset_right = 1044.0
+offset_bottom = 918.0
+theme_override_colors/font_hover_color = Color(0.86605, 0.767793, 0.85492, 1)
+theme_override_fonts/font = ExtResource("3_m7oq0")
+theme_override_font_sizes/font_size = 20
+text = "Submit"
+metadata/_edit_use_anchors_ = true
+
+[node name="NextLevel" type="Button" parent="."]
+offset_left = 912.0
+offset_top = 414.0
+offset_right = 1053.0
+offset_bottom = 464.0
+theme_override_colors/font_hover_color = Color(0.702431, 0.717565, 0.977745, 1)
+theme_override_fonts/font = ExtResource("3_m7oq0")
+theme_override_font_sizes/font_size = 20
+text = "Next Level"
+metadata/_edit_use_anchors_ = true
+
+[node name="errorlabel2" type="Label" parent="."]
+offset_left = 757.0
+offset_top = 1123.0
+offset_right = 945.0
+offset_bottom = 1242.0
+theme_override_colors/font_color = Color(0.172167, 0.278619, 0.122815, 1)
+theme_override_fonts/font = ExtResource("3_m7oq0")
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="ErrorNext" type="Label" parent="."]
+offset_left = 878.0
+offset_top = 475.0
+offset_right = 1066.0
+offset_bottom = 594.0
+theme_override_colors/font_color = Color(0.815686, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_m7oq0")
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="HelpButton" type="Button" parent="."]
+offset_left = 1270.0
+offset_top = 335.0
+offset_right = 1358.0
+offset_bottom = 385.0
+theme_override_fonts/font = ExtResource("3_m7oq0")
+theme_override_font_sizes/font_size = 20
+text = "Help"
+metadata/_edit_use_anchors_ = true
+
+[node name="PrintButton" type="Button" parent="."]
+offset_left = 631.0
+offset_top = 1167.0
+offset_right = 741.0
+offset_bottom = 1213.0
+theme_override_fonts/font = ExtResource("3_m7oq0")
+theme_override_font_sizes/font_size = 20
+text = "Print"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="SubmitButton" to="." method="_on_submit_button_pressed"]
+[connection signal="pressed" from="SubmitButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="NextLevel" to="." method="_on_next_level_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]
+[connection signal="pressed" from="PrintButton" to="." method="_on_print_button_pressed"]

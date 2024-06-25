@@ -12,6 +12,11 @@ var errorlabel : Label
 var sentence_label : Label 
 var drop_boxes = []
 
+#pop up test 
+var text_to_show : String = "Help Guide: \nTo Drag and Drop, click on the answer and while holding the mouse down drag over to the correct box.
+\n If the answer disappear, reclick on the empty answer key box to repopulate the answer. 
+\n Once done, click Submit and then Next Level to continue "
+
 func _ready():
 #Initialize reference 
 	sentence_label = $SentenceLabel1
@@ -50,7 +55,12 @@ func load_question(index: int):
 	
 	update_sentence()
 	create_answer_blocks()
-	 
+	
+##WIP testing pop up help guide!!!
+func help_guide(): 
+	var new_pop_up = preload("res://PopUp.tscn").instantiate()
+	new_pop_up.text_to_show = text_to_show
+	add_child(new_pop_up)
 	
 	#Display Sentence from JSON to scene
 func update_sentence():
@@ -126,3 +136,7 @@ func display_error(message: String):
 
 func _on_submit_button_pressed():
 	check_answers() # Call Check Function
+
+
+func _on_help_button_pressed():
+	help_guide()

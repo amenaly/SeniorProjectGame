@@ -91,10 +91,10 @@ text = "Next Level"
 metadata/_edit_use_anchors_ = true
 
 [node name="Input1" parent="." instance=ExtResource("4_5xq2i")]
-offset_left = 125.0
-offset_top = 557.0
-offset_right = 379.0
-offset_bottom = 669.0
+offset_left = 191.0
+offset_top = 778.0
+offset_right = 438.0
+offset_bottom = 836.0
 
 [node name="Text3" parent="." instance=ExtResource("4_110nl")]
 offset_left = 241.0
@@ -104,10 +104,10 @@ offset_bottom = 1066.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Text2" parent="." instance=ExtResource("4_110nl")]
-offset_left = 400.0
-offset_top = 741.0
-offset_right = 602.0
-offset_bottom = 800.0
+offset_left = 96.0
+offset_top = 909.0
+offset_right = 298.0
+offset_bottom = 968.0
 metadata/_edit_use_anchors_ = true
 
 [node name="errorlabel" type="Label" parent="."]
@@ -115,7 +115,17 @@ offset_left = 878.0
 offset_top = 475.0
 offset_right = 1066.0
 offset_bottom = 594.0
-theme_override_colors/font_color = Color(0.937255, 0, 0, 1)
+theme_override_colors/font_color = Color(0.172549, 0.278431, 0.121569, 1)
+theme_override_fonts/font = ExtResource("3_s832m")
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="errorlabel2" type="Label" parent="."]
+offset_left = 757.0
+offset_top = 1123.0
+offset_right = 945.0
+offset_bottom = 1242.0
+theme_override_colors/font_color = Color(0.172167, 0.278619, 0.122815, 1)
 theme_override_fonts/font = ExtResource("3_s832m")
 autowrap_mode = 3
 metadata/_edit_use_anchors_ = true

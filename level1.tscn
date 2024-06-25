@@ -120,5 +120,16 @@ theme_override_fonts/font = ExtResource("2_ej3b7")
 autowrap_mode = 3
 metadata/_edit_use_anchors_ = true
 
+[node name="HelpButton" type="Button" parent="."]
+offset_left = 1270.0
+offset_top = 335.0
+offset_right = 1358.0
+offset_bottom = 385.0
+theme_override_fonts/font = ExtResource("2_ej3b7")
+theme_override_font_sizes/font_size = 20
+text = "Help"
+metadata/_edit_use_anchors_ = true
+
 [connection signal="pressed" from="SubmitButton" to="." method="_on_submit_button_pressed"]
 [connection signal="pressed" from="NextLevel2" to="." method="_on_next_level_2_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]

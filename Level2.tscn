@@ -9,10 +9,10 @@
 script = ExtResource("1_swatg")
 
 [node name="Background" type="TextureRect" parent="."]
+offset_left = -124.0
 offset_right = 1475.0
 offset_bottom = 1292.0
 texture = ExtResource("2_0dvnr")
-metadata/_edit_use_anchors_ = true
 
 [node name="LevelLabel" type="Label" parent="."]
 offset_left = 633.0
@@ -139,8 +139,18 @@ theme_override_fonts/font = ExtResource("3_ehwrx")
 theme_override_font_sizes/font_size = 20
 text = "Print"
 
+[node name="errorlabel2" type="Label" parent="."]
+offset_left = 757.0
+offset_top = 1123.0
+offset_right = 945.0
+offset_bottom = 1242.0
+theme_override_colors/font_color = Color(0.172167, 0.278619, 0.122815, 1)
+theme_override_fonts/font = ExtResource("3_ehwrx")
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
 [connection signal="pressed" from="SubmitButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="NextLevel" to="." method="_on_next_level_pressed"]
-[connection signal="pressed" from="HelpButton" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="PrintButton" to="." method="_on_button_3_pressed"]

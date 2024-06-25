@@ -1,10 +1,2 @@
-res://input_box.tscn
-res://Level3.tscn
-res://Level3.gd
+res://Level4.tscn
 res://input_box.gd
-res://menu.tscn
-res://Menu.gd
-res://level1.tscn
-res://Level2b.tscn
-res://PopUp.tscn
-res://PopUp.gd

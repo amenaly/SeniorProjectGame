@@ -51,6 +51,7 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_nq8mf")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6tu0r")
 theme_override_styles/read_only = SubResource("StyleBoxEmpty_myop0")
 placeholder_text = "Type Here"
+alignment = 1
 clear_button_enabled = true
 caret_blink = true
 

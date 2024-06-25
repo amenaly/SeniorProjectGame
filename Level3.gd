@@ -9,15 +9,24 @@ var answers = []
 var answer_labels = []
 
 var errorlabel : Label
+var errorlabel2 : Label
 var sentence_label : Label 
 var drop_boxes = []
 #popup
-var text_to_show : String = "Help Guide: "
+var text_to_show : String = "Help Guide:\nTo read values from a user, we can use the GET function with the format specifiers.
+\nint for an integer -> use %d or %i to print or read in
+double for a numbers with decimals -> use %lf to print or read in 
+char for a character (letters, digits, and others) -> use %c to print or read in 
+
+\n Example: GET(%d, Varaible1). 
+\nTo print the values we use the PRINT function with the format specifiers.
+\nExample: print(The integer is: %d, variableName1)"
 
 func _ready():
 #Initialize reference 
 	sentence_label = $SentenceLabel1
 	errorlabel = $errorlabel
+	errorlabel2 = $errorlabel2
 	
 	#read to JSON file
 	load_level_data("res://JsonFiles/Question3.json")
@@ -126,22 +135,29 @@ func check_answers():
 func display_error(message: String):
 	errorlabel.text = message
 
+func display_PrintError(message: String):
+	errorlabel2.text = message
+	
 func _on_submit_button_pressed():
 	check_answers()
 
 func _on_next_level_2_pressed():
 	#read the index, to see if user has completeled all questions before moving on
 	if current_question_index >= questions.size():
-		get_tree().change_scene_to_file("res://Level3b.tscn")
+		get_tree().change_scene_to_file("res://Level4.tscn")
 	else:
 		display_error("Complete all questions before moving to the next level.")
 
 func _on_print_button_pressed():
 	#Get the text from the LineEdit 
 	var text_to_show = $Input1/Panel/Input.text 
-	var new_pop_up = preload("res://PopUp.tscn").instantiate()
-	new_pop_up.text_to_show = text_to_show
-	add_child(new_pop_up)
+	if text_to_show == "":
+		display_PrintError("Input cannot be empty!")
+	else:
+		display_PrintError("")
+		var new_pop_up = preload("res://PopUp.tscn").instantiate()
+		new_pop_up.text_to_show = text_to_show
+		add_child(new_pop_up)
 
 func _on_help_button_pressed():
 	help_guide()

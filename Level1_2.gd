@@ -11,6 +11,14 @@ var errorlabel : Label
 var sentence_label : Label 
 var drop_boxes = []
 
+#pop up test 
+var text_to_show : String = "Help Guide:\nYou can create ASCII art by using print statements with newline characters 
+backslash n to print the graphic to the output window/screen.
+\nThe printf function is used to output text to the console. It is included in the <stdio.h> library. 
+Example: printf(Text to be printed);
+\nTo move to the next line in the output, use the newline character backslash n within the printf function.
+Example: printf(First line backslash n Second line);"
+
 func _ready():
 #Initialize reference 
 	sentence_label = $sentencelabel
@@ -49,8 +57,12 @@ func load_question(index: int):
 	
 	update_sentence()
 	create_answer_blocks()
-	#get_tree().change_scene_to_file("res://level1.tscn")
-	## Later add part to go to next scene here! 
+
+##WIP testing pop up help guide!!!
+func help_guide(): 
+	var new_pop_up = preload("res://PopUp.tscn").instantiate()
+	new_pop_up.text_to_show = text_to_show
+	add_child(new_pop_up)
 	
 	#Display Sentence from JSON to scene
 func update_sentence():
@@ -136,3 +148,7 @@ func display_error(message: String):
 
 func _on_submitbutton_pressed():
 	check_answers() # Call Check Function
+
+
+func _on_help_button_pressed():
+	help_guide()
