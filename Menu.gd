@@ -5,7 +5,7 @@ func _ready():
 	$VBoxContainer/PLayer.grab_focus()
 	
 func _on_p_layer_pressed():
-	get_tree().change_scene_to_file("res://Level6.tscn")
+	get_tree().change_scene_to_file("res://Level11.tscn")
 
 func _on_option_pressed():
 	pass # Replace with function body.

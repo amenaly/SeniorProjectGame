@@ -1,6 +1,5 @@
 extends TextureRect
 
-
 signal dropped(answers: String)
 signal get_input(new_text: String) #signal for text change
 

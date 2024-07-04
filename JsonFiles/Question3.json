@@ -4,23 +4,23 @@
 	  "sentence": "Form the C program to ask for, read in, and print back out one integer, one floating point value, and one character. 
 		   Select the Print button once your done.
 
-		   int 
-		   float
-		   char 
+		   int variable1
+		   float  variable2
+		   char  variable3
 
 
 		   printf(Enter number:)
-		   GET([        ],      )
+		   GET([        ],variable1 )
 		   
 
 		   print(Enter Float:)
-		
+		   [      ]([         ],variable2)
 
 		   printf(Enter Char)
-		   GET([        ],     )
+		   GET([        ],[       ])
 		   ",
 
-	  "answers": ["A","GET()","C"]
+	  "answers": ["variable3","GET()","-"]
 	}
   ]
 }

@@ -1,8 +1,9 @@
-LineEdit
 TextureRect
+RichTextLabel
+ColorRect
+LineEdit
 Button
 Control
-ColorRect
 Label
 Popup
 Panel
@@ -11,5 +12,3 @@ ItemList
 TextEdit
 VBoxContainer
 HBoxContainer
-RichTextLabel
-CollisionShape2D

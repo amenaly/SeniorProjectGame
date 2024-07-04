@@ -1,0 +1,176 @@
+[gd_scene load_steps=13 format=3 uid="uid://b8g623sjv0che"]
+
+[ext_resource type="Script" path="res://Level12.gd" id="1_qtplu"]
+[ext_resource type="Texture2D" uid="uid://d0t5v3msdw436" path="res://Images/image0_0 (3).jpg" id="2_cfe0a"]
+[ext_resource type="FontFile" uid="uid://dkppgt0hpuagh" path="res://fonts/Robot Go.ttf" id="3_h4b4w"]
+[ext_resource type="FontFile" uid="uid://dh03pk2mxd65v" path="res://fonts/BruceForeverRegular-X3jd2.ttf" id="4_2imyh"]
+[ext_resource type="PackedScene" uid="uid://ehpjye6vivoo" path="res://input_box.tscn" id="4_ye3e7"]
+[ext_resource type="Texture2D" uid="uid://dh7b7ql5650hw" path="res://Images/logo_large_color_light.png" id="5_dnx72"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c50m0"]
+bg_color = Color(0.135636, 0.292295, 0.331735, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7m4ox"]
+bg_color = Color(0.462745, 0.619608, 0.760784, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6cvlu"]
+bg_color = Color(0.483528, 0.222421, 0.420953, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_grnom"]
+bg_color = Color(0.463183, 0.618738, 0.760467, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7qtd4"]
+bg_color = Color(0.482353, 0.223529, 0.419608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_chmhn"]
+bg_color = Color(0.629165, 0.726153, 0.831994, 1)
+
+[node name="Level12" type="Node2D"]
+script = ExtResource("1_qtplu")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -136.0
+offset_right = 1650.0
+offset_bottom = 1337.0
+texture = ExtResource("2_cfe0a")
+metadata/_edit_use_anchors_ = true
+
+[node name="LevelLabel" type="Label" parent="."]
+offset_left = 633.0
+offset_top = 44.0
+offset_right = 886.0
+offset_bottom = 82.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_h4b4w")
+theme_override_font_sizes/font_size = 33
+text = "Level 10
+Home: Earth"
+horizontal_alignment = 1
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Questionbox" type="ColorRect" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 117.0
+offset_top = 414.0
+offset_right = 1500.0
+offset_bottom = 1268.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.616155, 0.781581, 0.756736, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="answersbox" type="ColorRect" parent="."]
+visible = false
+offset_left = 1188.0
+offset_top = 412.0
+offset_right = 1500.0
+offset_bottom = 1036.0
+color = Color(0.862229, 0.764956, 0.939748, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="SentenceLabel" type="RichTextLabel" parent="."]
+offset_left = 160.0
+offset_top = 440.0
+offset_right = 1458.0
+offset_bottom = 733.0
+theme_override_colors/default_color = Color(0.0878203, 0.334341, 0.304992, 1)
+theme_override_fonts/normal_font = ExtResource("4_2imyh")
+theme_override_font_sizes/normal_font_size = 25
+text = "Congratulations on completing the game! Thanks to your incredible effort, Surveyor has successfully restored communications with Earth. You've played a vital role in this mission!
+
+For your records, please input your name and click submit."
+
+[node name="SubmitButton" type="Button" parent="."]
+offset_left = 677.0
+offset_top = 820.0
+offset_right = 818.0
+offset_bottom = 870.0
+theme_override_fonts/font = ExtResource("3_h4b4w")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_c50m0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7m4ox")
+text = "Submit"
+metadata/_edit_use_anchors_ = true
+
+[node name="InputBox" parent="." instance=ExtResource("4_ye3e7")]
+offset_left = 627.0
+offset_top = 645.0
+offset_right = 881.0
+offset_bottom = 757.0
+
+[node name="AnswerKeyLabel" type="Label" parent="."]
+visible = false
+offset_left = 1272.0
+offset_top = 436.0
+offset_right = 1405.0
+offset_bottom = 480.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_h4b4w")
+theme_override_font_sizes/font_size = 20
+text = "Answer Key:"
+metadata/_edit_use_anchors_ = true
+
+[node name="NextLevel" type="Button" parent="."]
+visible = false
+offset_left = 1030.0
+offset_top = 424.0
+offset_right = 1171.0
+offset_bottom = 474.0
+theme_override_fonts/font = ExtResource("3_h4b4w")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_6cvlu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_grnom")
+text = "Next Level"
+metadata/_edit_use_anchors_ = true
+
+[node name="ErrorNext" type="Label" parent="."]
+visible = false
+offset_left = 996.0
+offset_top = 485.0
+offset_right = 1184.0
+offset_bottom = 604.0
+theme_override_colors/font_color = Color(0.815686, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_h4b4w")
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="HelpButton" type="Button" parent="."]
+visible = false
+offset_left = 1388.0
+offset_top = 345.0
+offset_right = 1476.0
+offset_bottom = 395.0
+theme_override_fonts/font = ExtResource("3_h4b4w")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_7qtd4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_chmhn")
+text = "Help"
+metadata/_edit_use_anchors_ = true
+
+[node name="errorlabel2" type="Label" parent="."]
+offset_left = 899.0
+offset_top = 798.0
+offset_right = 1064.0
+offset_bottom = 884.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_h4b4w")
+autowrap_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 974.0
+offset_top = 1044.0
+offset_right = 1459.0
+offset_bottom = 1248.0
+texture = ExtResource("5_dnx72")
+expand_mode = 1
+
+[connection signal="pressed" from="SubmitButton" to="." method="_on_submit_button_pressed"]
+[connection signal="pressed" from="SubmitButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="NextLevel" to="." method="_on_next_level_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_button_2_pressed"]

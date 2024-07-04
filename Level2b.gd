@@ -14,7 +14,7 @@ var sentence_label : Label
 var drop_boxes = []
 
 #pop up test 
-var text_to_show : String = "Help Guide:\n you can perform arithmetic operations such as calculating the difference between two integers using basic operators. 
+var text_to_show : String = "Help Guide:\nTo perform arithmetic operations such as calculating the difference between two integers using basic operators. 
 \nTo declare variables in C, specify the type followed by the variable name:
 	Example:
 int variableName1
@@ -86,10 +86,10 @@ func create_answer_blocks():
 	clear_drop_boxes()
 	#Set poisition for answer key blocks
 	var positions = [
-		Vector2(1108, 483),
-		Vector2(1108, 655),
-		Vector2(1108, 826),
-		Vector2(1108, 1000)
+		Vector2(1220, 483),
+		Vector2(1220, 655),
+		Vector2(1220, 826),
+		Vector2(1220, 1000)
 	]
 	for i in range(answers.size()):
 		create_answer_block(i, positions[i])
@@ -163,7 +163,7 @@ func _on_submit_button_pressed():
 	check_answers()
 
 func _on_print_button_pressed():
-	if drop_boxes == "": 
+	if text_to_show == "":
 		display_PrintError("Input cannot be empty!")
 	else:
 		display_PrintError("")

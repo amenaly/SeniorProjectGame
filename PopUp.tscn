@@ -53,15 +53,13 @@ theme_override_fonts/font = ExtResource("2_tcv2u")
 theme_override_font_sizes/font_size = 20
 text = "Close"
 
-[node name="Label" type="Label" parent="TextureRect/Panel"]
+[node name="Label" type="RichTextLabel" parent="TextureRect/Panel"]
 layout_mode = 0
 offset_left = 65.0
 offset_top = 19.5
 offset_right = 824.0
 offset_bottom = 711.5
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_tcv2u")
-theme_override_font_sizes/font_size = 20
-autowrap_mode = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
 
 [connection signal="pressed" from="TextureRect/Panel/Button" to="." method="_on_button_pressed"]

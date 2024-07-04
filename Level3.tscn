@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b8khev4nm7yr7"]
+[gd_scene load_steps=14 format=3 uid="uid://b8khev4nm7yr7"]
 
 [ext_resource type="Script" path="res://Level3.gd" id="1_7j2kk"]
 [ext_resource type="Texture2D" uid="uid://clrs13uj6be1n" path="res://Images/obernotest.jpg" id="2_nb3gj"]
@@ -6,50 +6,75 @@
 [ext_resource type="PackedScene" uid="uid://ehpjye6vivoo" path="res://input_box.tscn" id="4_5xq2i"]
 [ext_resource type="PackedScene" uid="uid://deyvy83bi0rnp" path="res://texture_rect.tscn" id="4_110nl"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eotqq"]
+bg_color = Color(0.180392, 0.329412, 0.239216, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5x2fi"]
+bg_color = Color(0.478431, 0.698039, 0.541176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5g73l"]
+bg_color = Color(0.180506, 0.33043, 0.239777, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y8nf8"]
+bg_color = Color(0.478431, 0.698039, 0.541176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_na45d"]
+bg_color = Color(0.130994, 0.327572, 0.297996, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7kea7"]
+bg_color = Color(0.478431, 0.698039, 0.541176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wpf7b"]
+bg_color = Color(0.379352, 0.609609, 0.560034, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fom7i"]
+bg_color = Color(0.478754, 0.696663, 0.539276, 1)
+
 [node name="Level3" type="Node2D"]
 script = ExtResource("1_7j2kk")
 
 [node name="Background" type="TextureRect" parent="."]
 offset_left = -76.0
-offset_right = 1451.0
-offset_bottom = 1328.0
+offset_right = 1673.0
+offset_bottom = 1356.0
 texture = ExtResource("2_nb3gj")
 metadata/_edit_use_anchors_ = true
 
 [node name="TitleLabel1" type="Label" parent="."]
-offset_left = 622.0
-offset_top = 37.0
-offset_right = 735.0
-offset_bottom = 75.0
+offset_left = 748.0
+offset_top = 36.0
+offset_right = 874.0
+offset_bottom = 115.0
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("3_s832m")
 theme_override_font_sizes/font_size = 33
-text = "Level 3"
+text = "Level 3
+Oberon"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="questionbox1" type="ColorRect" parent="."]
-offset_left = -3.0
-offset_top = 405.0
-offset_right = 1380.0
-offset_bottom = 1263.0
+offset_left = 117.0
+offset_top = 414.0
+offset_right = 1500.0
+offset_bottom = 1272.0
 color = Color(0.478497, 0.618528, 0.455444, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="answerbox1" type="ColorRect" parent="."]
-offset_left = 1068.0
-offset_top = 405.0
-offset_right = 1380.0
-offset_bottom = 986.0
+offset_left = 1188.0
+offset_top = 414.0
+offset_right = 1500.0
+offset_bottom = 995.0
 color = Color(0.820338, 0.899285, 0.723391, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="AnswerKey1" type="Label" parent="."]
-offset_left = 1154.0
-offset_top = 426.0
-offset_right = 1283.0
-offset_bottom = 449.0
+offset_left = 1274.0
+offset_top = 435.0
+offset_right = 1403.0
+offset_bottom = 458.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_s832m")
 theme_override_font_sizes/font_size = 20
@@ -57,10 +82,10 @@ text = "Answer Key:"
 metadata/_edit_use_anchors_ = true
 
 [node name="SentenceLabel1" type="Label" parent="."]
-offset_left = 54.0
-offset_top = 426.0
-offset_right = 883.0
-offset_bottom = 899.0
+offset_left = 174.0
+offset_top = 435.0
+offset_right = 1003.0
+offset_bottom = 908.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_s832m")
 theme_override_font_sizes/font_size = 25
@@ -69,74 +94,78 @@ autowrap_mode = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="SubmitButton" type="Button" parent="."]
-offset_left = 912.0
-offset_top = 864.0
-offset_right = 1053.0
-offset_bottom = 914.0
-theme_override_colors/font_hover_color = Color(0.739161, 0.52774, 0.623008, 1)
+offset_left = 1032.0
+offset_top = 873.0
+offset_right = 1173.0
+offset_bottom = 923.0
 theme_override_fonts/font = ExtResource("3_s832m")
 theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_eotqq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5x2fi")
 text = "Submit"
 metadata/_edit_use_anchors_ = true
 
 [node name="NextLevel2" type="Button" parent="."]
-offset_left = 917.0
-offset_top = 417.0
-offset_right = 1058.0
-offset_bottom = 467.0
-theme_override_colors/font_hover_pressed_color = Color(1, 0.682119, 0.631921, 1)
+offset_left = 1037.0
+offset_top = 426.0
+offset_right = 1178.0
+offset_bottom = 476.0
 theme_override_fonts/font = ExtResource("3_s832m")
 theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_5g73l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y8nf8")
 text = "Next Level"
 metadata/_edit_use_anchors_ = true
 
 [node name="Input1" parent="." instance=ExtResource("4_5xq2i")]
-offset_left = 191.0
-offset_top = 778.0
-offset_right = 438.0
-offset_bottom = 836.0
+offset_left = 278.0
+offset_top = 787.0
+offset_right = 516.0
+offset_bottom = 842.0
 
 [node name="Text3" parent="." instance=ExtResource("4_110nl")]
-offset_left = 241.0
-offset_top = 1007.0
-offset_right = 443.0
-offset_bottom = 1066.0
+offset_left = 588.0
+offset_top = 1003.0
+offset_right = 790.0
+offset_bottom = 1062.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Text2" parent="." instance=ExtResource("4_110nl")]
-offset_left = 96.0
-offset_top = 909.0
-offset_right = 298.0
-offset_bottom = 968.0
+offset_left = 196.0
+offset_top = 918.0
+offset_right = 398.0
+offset_bottom = 977.0
 metadata/_edit_use_anchors_ = true
 
 [node name="errorlabel" type="Label" parent="."]
-offset_left = 878.0
-offset_top = 475.0
-offset_right = 1066.0
-offset_bottom = 594.0
+offset_left = 998.0
+offset_top = 484.0
+offset_right = 1186.0
+offset_bottom = 603.0
 theme_override_colors/font_color = Color(0.172549, 0.278431, 0.121569, 1)
 theme_override_fonts/font = ExtResource("3_s832m")
 autowrap_mode = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="errorlabel2" type="Label" parent="."]
-offset_left = 757.0
-offset_top = 1123.0
-offset_right = 945.0
-offset_bottom = 1242.0
+offset_left = 877.0
+offset_top = 1165.0
+offset_right = 1042.0
+offset_bottom = 1251.0
 theme_override_colors/font_color = Color(0.172167, 0.278619, 0.122815, 1)
 theme_override_fonts/font = ExtResource("3_s832m")
 autowrap_mode = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="PrintButton" type="Button" parent="."]
-offset_left = 631.0
-offset_top = 1167.0
-offset_right = 741.0
-offset_bottom = 1213.0
+offset_left = 751.0
+offset_top = 1176.0
+offset_right = 861.0
+offset_bottom = 1222.0
 theme_override_fonts/font = ExtResource("3_s832m")
 theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_na45d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7kea7")
 text = "Print"
 metadata/_edit_use_anchors_ = true
 
@@ -146,14 +175,28 @@ anchor_left = -0.5
 anchor_top = -5.09821
 anchor_right = -0.5
 anchor_bottom = -5.09821
-offset_left = 1268.0
-offset_top = 321.0
-offset_right = 1356.0
-offset_bottom = 371.0
+offset_left = 1388.0
+offset_top = 330.0
+offset_right = 1476.0
+offset_bottom = 380.0
 theme_override_fonts/font = ExtResource("3_s832m")
 theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_wpf7b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fom7i")
 text = "Help"
 metadata/_edit_use_anchors_ = true
+
+[node name="InputBox" parent="." instance=ExtResource("4_5xq2i")]
+offset_left = 434.0
+offset_top = 911.0
+offset_right = 672.0
+offset_bottom = 966.0
+
+[node name="InputBox2" parent="." instance=ExtResource("4_5xq2i")]
+offset_left = 306.0
+offset_top = 1007.0
+offset_right = 544.0
+offset_bottom = 1062.0
 
 [connection signal="pressed" from="SubmitButton" to="." method="_on_submit_button_pressed"]
 [connection signal="pressed" from="NextLevel2" to="." method="_on_next_level_2_pressed"]

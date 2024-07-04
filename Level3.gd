@@ -18,7 +18,7 @@ var text_to_show : String = "Help Guide:\nTo read values from a user, we can use
 double for a numbers with decimals -> use %lf to print or read in 
 char for a character (letters, digits, and others) -> use %c to print or read in 
 
-\n Example: GET(%d, Varaible1). 
+\nExample: GET(%d, Varaible1). 
 \nTo print the values we use the PRINT function with the format specifiers.
 \nExample: print(The integer is: %d, variableName1)"
 
@@ -79,9 +79,9 @@ func create_answer_blocks():
 	clear_drop_boxes()
 	#Set poisition for answer key blocks
 	var positions = [
-		Vector2(1108, 483),
-		Vector2(1109, 616),
-		Vector2(1106, 759)
+		Vector2(1220, 483),
+		Vector2(1220, 616),
+		Vector2(1220, 759)
 	]
 	for i in range(answers.size()):
 		create_answer_block(i, positions[i])
@@ -150,13 +150,44 @@ func _on_next_level_2_pressed():
 
 func _on_print_button_pressed():
 	#Get the text from the LineEdit 
-	var text_to_show = $Input1/Panel/Input.text 
-	if text_to_show == "":
+	var text_to_show = {
+		"int": $Input1/Panel/Input.text,
+		"float": $InputBox/Panel/Input.text, 
+		"char": $InputBox2/Panel/Input.text
+		}
+	
+	var has_empty_input = false
+	for key in text_to_show.keys():
+		if text_to_show[key] == "":
+			has_empty_input = true
+			break
+
+	if has_empty_input:
 		display_PrintError("Input cannot be empty!")
 	else:
 		display_PrintError("")
 		var new_pop_up = preload("res://PopUp.tscn").instantiate()
-		new_pop_up.text_to_show = text_to_show
+		var text_to_display = ""
+		#Process each inputbox
+		for key in text_to_show.keys():
+			match key:
+				"int":
+					if text_to_show[key].is_valid_int():
+						text_to_display += "Integer input: " + str(text_to_show[key].to_int()) + "\n"
+					else:
+						text_to_display += "Invalid integer input!\n"
+				"float":
+					if text_to_show[key].is_valid_float():
+						text_to_display += "Float input: " + str(text_to_show[key].to_float()) + "\n"
+					else:
+						text_to_display += "Invalid float input!\n"
+				"char":
+					if text_to_show[key].length():
+						text_to_display += "Char input: " + text_to_show[key] + "\n"
+					else:
+						text_to_display += "Invalid char input!\n"
+
+		new_pop_up.text_to_show = text_to_display
 		add_child(new_pop_up)
 
 func _on_help_button_pressed():

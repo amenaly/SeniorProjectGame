@@ -14,7 +14,7 @@ var sentence_label : Label
 var drop_boxes = []
 
 #pop up test 
-var text_to_show : String = "Help Guide: \nVariables are used to store data that can be manipulated by the program.
+var text_to_show : String = "Help Guide:\nVariables are used to store data that can be manipulated by the program.
 \n To declare a variable in C, specify the type followed by the variable name. Here are the syntax rules for declaring a character, an integer, and a double:
 \nchar variableName;   // For character variables
 int variableName;    // For integer variables
@@ -79,9 +79,9 @@ func create_answer_blocks():
 	clear_drop_boxes()
 	#Set poisition for answer key blocks
 	var positions = [
-		Vector2(1108, 483),
-		Vector2(1108, 655),
-		Vector2(1108, 826)
+		Vector2(1222, 483),
+		Vector2(1222, 655),
+		Vector2(1222, 826)
 	]
 	for i in range(answers.size()):
 		create_answer_block(i, positions[i])

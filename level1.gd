@@ -13,9 +13,9 @@ var sentence_label : Label
 var drop_boxes = []
 
 #pop up test 
-var text_to_show : String = "Help Guide: \nTo Drag and Drop, click on the answer and while holding the mouse down drag over to the correct box.
-\n If the answer disappear, reclick on the empty answer key box to repopulate the answer. 
-\n Once done, click Submit and then Next Level to continue "
+var text_to_show : String = "Help Guide:\nTo Drag and Drop, click on the answer and while holding the mouse down drag over to the correct box.
+\nIf the answer disappear, reclick on the empty answer key box to repopulate the answer. 
+\nOnce done, click Submit and then Next Level to continue."
 
 func _ready():
 #Initialize reference 
@@ -72,9 +72,9 @@ func create_answer_blocks():
 	clear_drop_boxes()
 	#Set poisition for answer key blocks
 	var positions = [
-		Vector2(1108, 483),
-		Vector2(1109, 616),
-		Vector2(1106, 759)
+		Vector2(1230, 483),
+		Vector2(1230, 616),
+		Vector2(1230, 759)
 	]
 	for i in range(answers.size()):
 		create_answer_block(i, positions[i])

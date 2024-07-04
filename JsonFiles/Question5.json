@@ -1,8 +1,7 @@
 {
   "questions": [
 	{
-	  "sentence":"Form a C program to check the nearest Satellite Cassini. If Cassini is Active, connect for communication. 
-		  Else Surveyor needs to get closer. 
+	  "sentence":"Complete the program to check the nearest Satellite Cassini using the IF/ELSE statements.If Cassini is Active, connect for communication. Else Surveyor needs to get closer. 
 
 		  char satelliteStatus = A
 		

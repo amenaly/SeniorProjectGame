@@ -75,9 +75,9 @@ func create_answer_blocks():
 	clear_drop_boxes()
 	#Set poisition for answer key blocks
 	var positions = [
-		Vector2(1108, 483),
-		Vector2(1108, 655),
-		Vector2(1108, 826)
+		Vector2(1230, 440),
+		Vector2(1230, 620),
+		Vector2(1230, 800)
 	]
 	for i in range(answers.size()):
 		create_answer_block(i, positions[i])

@@ -1,0 +1,175 @@
+[gd_scene load_steps=10 format=3 uid="uid://b0qmc0tqpyth2"]
+
+[ext_resource type="Script" path="res://EndCertificate.gd" id="1_nxhmc"]
+[ext_resource type="Texture2D" uid="uid://8xw2usp5jq6p" path="res://Images/gradient-galaxy-background-free-vector.jpg" id="2_lyj5i"]
+[ext_resource type="Texture2D" uid="uid://dh7b7ql5650hw" path="res://Images/logo_large_color_light.png" id="3_w32s0"]
+[ext_resource type="FontFile" uid="uid://dkppgt0hpuagh" path="res://fonts/Robot Go.ttf" id="3_wknm3"]
+[ext_resource type="FontFile" uid="uid://dh03pk2mxd65v" path="res://fonts/BruceForeverRegular-X3jd2.ttf" id="4_iaukb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6cvlu"]
+bg_color = Color(0.483528, 0.222421, 0.420953, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_grnom"]
+bg_color = Color(0.463183, 0.618738, 0.760467, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7qtd4"]
+bg_color = Color(0.482353, 0.223529, 0.419608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_chmhn"]
+bg_color = Color(0.629165, 0.726153, 0.831994, 1)
+
+[node name="EndGame" type="Node2D"]
+script = ExtResource("1_nxhmc")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -256.0
+offset_top = -4.0
+offset_right = 1664.0
+offset_bottom = 1333.0
+texture = ExtResource("2_lyj5i")
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 102.0
+offset_top = 442.0
+offset_right = 1592.0
+offset_bottom = 698.0
+theme_override_colors/default_color = Color(0.84743, 0.791979, 0.456319, 1)
+theme_override_fonts/normal_font = ExtResource("4_iaukb")
+theme_override_font_sizes/normal_font_size = 82
+text = "Thank you for Playing!"
+
+[node name="NameLabel" type="RichTextLabel" parent="."]
+offset_left = 525.0
+offset_top = 662.0
+offset_right = 1574.0
+offset_bottom = 762.0
+theme_override_colors/default_color = Color(0.682353, 0.768627, 0.937255, 1)
+theme_override_fonts/normal_font = ExtResource("4_iaukb")
+theme_override_font_sizes/normal_font_size = 70
+text = "Name"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 40.0
+offset_top = 644.0
+offset_right = 486.0
+offset_bottom = 818.0
+theme_override_colors/default_color = Color(0.402574, 0.73482, 0.886969, 1)
+theme_override_fonts/normal_font = ExtResource("4_iaukb")
+theme_override_font_sizes/normal_font_size = 100
+text = "Name:"
+
+[node name="LevelLabel" type="Label" parent="."]
+visible = false
+offset_left = 633.0
+offset_top = 44.0
+offset_right = 886.0
+offset_bottom = 82.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_wknm3")
+theme_override_font_sizes/font_size = 33
+text = "Level 12
+Home: Earth"
+horizontal_alignment = 1
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="answersbox" type="ColorRect" parent="."]
+visible = false
+offset_left = 1188.0
+offset_top = 412.0
+offset_right = 1500.0
+offset_bottom = 1036.0
+color = Color(0.862229, 0.764956, 0.939748, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="AnswerKeyLabel" type="Label" parent="."]
+visible = false
+offset_left = 1272.0
+offset_top = 436.0
+offset_right = 1405.0
+offset_bottom = 480.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_wknm3")
+theme_override_font_sizes/font_size = 20
+text = "Answer Key:"
+metadata/_edit_use_anchors_ = true
+
+[node name="NextLevel" type="Button" parent="."]
+visible = false
+offset_left = 1030.0
+offset_top = 424.0
+offset_right = 1171.0
+offset_bottom = 474.0
+theme_override_fonts/font = ExtResource("3_wknm3")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_6cvlu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_grnom")
+text = "Next Level"
+metadata/_edit_use_anchors_ = true
+
+[node name="ErrorNext" type="Label" parent="."]
+visible = false
+offset_left = 996.0
+offset_top = 485.0
+offset_right = 1184.0
+offset_bottom = 604.0
+theme_override_colors/font_color = Color(0.815686, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_wknm3")
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="HelpButton" type="Button" parent="."]
+visible = false
+offset_left = 1388.0
+offset_top = 345.0
+offset_right = 1476.0
+offset_bottom = 395.0
+theme_override_fonts/font = ExtResource("3_wknm3")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_7qtd4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_chmhn")
+text = "Help"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 1104.0
+offset_top = 1098.0
+offset_right = 1589.0
+offset_bottom = 1302.0
+texture = ExtResource("3_w32s0")
+expand_mode = 1
+
+[node name="DateLabel" type="RichTextLabel" parent="."]
+offset_left = 48.0
+offset_top = 870.0
+offset_right = 494.0
+offset_bottom = 1044.0
+theme_override_colors/default_color = Color(0.382217, 0.717902, 0.872519, 1)
+theme_override_fonts/normal_font = ExtResource("4_iaukb")
+theme_override_font_sizes/normal_font_size = 100
+text = "Date:"
+
+[node name="DateInsertLabel" type="RichTextLabel" parent="."]
+offset_left = 467.0
+offset_top = 884.0
+offset_right = 928.0
+offset_bottom = 1048.0
+theme_override_colors/default_color = Color(0.682353, 0.768627, 0.937255, 1)
+theme_override_fonts/normal_font = ExtResource("3_wknm3")
+theme_override_font_sizes/normal_font_size = 80
+text = "Test"
+
+[node name="TimeInsertLabel" type="RichTextLabel" parent="."]
+offset_left = 979.0
+offset_top = 884.0
+offset_right = 1440.0
+offset_bottom = 1048.0
+theme_override_colors/default_color = Color(0.82281, 0.882457, 0.979315, 1)
+theme_override_fonts/normal_font = ExtResource("3_wknm3")
+theme_override_font_sizes/normal_font_size = 80
+text = "Test"
+
+[connection signal="pressed" from="NextLevel" to="." method="_on_next_level_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_button_2_pressed"]

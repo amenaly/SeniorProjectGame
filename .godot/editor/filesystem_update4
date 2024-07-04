@@ -1,2 +1,15 @@
-res://Level4.tscn
+res://EndCertificate.tscn
 res://input_box.gd
+res://EndCertificate.gd
+res://menu.tscn
+res://Level12.gd
+res://Level12.tscn
+res://input_box.tscn
+res://PopUp.tscn
+res://Level4.tscn
+res://Menu.gd
+res://Level1_2.tscn
+res://level1.tscn
+res://Level2b.tscn
+res://Level1_2.gd
+res://Level7.tscn

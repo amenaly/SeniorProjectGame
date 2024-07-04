@@ -13,7 +13,7 @@ var sentence_label : Label
 var drop_boxes = []
 
 #pop up test 
-var text_to_show : String = "Help Guide:\n While Loops are used to repeatedly execute a block of code as long as a condition is met. 
+var text_to_show : String = "Help Guide:\nWhile Loops are used to repeatedly execute a block of code as long as a condition is met. 
 \nwhile (condition) {
 	// code to be executed as long as the condition is true
 }
@@ -83,9 +83,9 @@ func create_answer_blocks():
 	clear_drop_boxes()
 	#Set poisition for answer key blocks
 	var positions = [
-		Vector2(1108, 483),
-		Vector2(1108, 655),
-		Vector2(1108, 826),
+		Vector2(1220, 483),
+		Vector2(1220, 655),
+		Vector2(1220, 826),
 	]
 	for i in range(answers.size()):
 		create_answer_block(i, positions[i])
