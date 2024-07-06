@@ -183,5 +183,4 @@ func _on_print_button_pressed():
 		else:
 			new_pop_up.text_to_show = "Satellite not in range. Please get closer!"
 		
-		#new_pop_up.text_to_show = text_to_show
 		add_child(new_pop_up)

@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://xui8ncwtfyf6"]
+[gd_scene load_steps=14 format=3 uid="uid://xui8ncwtfyf6"]
 
 [ext_resource type="Script" path="res://Level7.gd" id="1_va1f3"]
 [ext_resource type="Texture2D" uid="uid://blee70cmnk0m6" path="res://Images/image1_0 (2).jpg" id="2_tmyu4"]
 [ext_resource type="FontFile" uid="uid://dkppgt0hpuagh" path="res://fonts/Robot Go.ttf" id="3_r4hha"]
 [ext_resource type="PackedScene" uid="uid://deyvy83bi0rnp" path="res://texture_rect.tscn" id="4_3wqfa"]
+[ext_resource type="PackedScene" uid="uid://ehpjye6vivoo" path="res://input_box.tscn" id="5_uo0mr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c50m0"]
 bg_color = Color(0.482353, 0.223529, 0.419608, 1)
@@ -22,6 +23,12 @@ bg_color = Color(0.482353, 0.223529, 0.419608, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_chmhn"]
 bg_color = Color(0.629165, 0.726153, 0.831994, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3y3tn"]
+bg_color = Color(0.482353, 0.223529, 0.419608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s7p5n"]
+bg_color = Color(0.462745, 0.619608, 0.760784, 1)
 
 [node name="Level7" type="Node2D"]
 script = ExtResource("1_va1f3")
@@ -95,25 +102,17 @@ text = "Answer Key:"
 metadata/_edit_use_anchors_ = true
 
 [node name="Text1" parent="." instance=ExtResource("4_3wqfa")]
-offset_left = 175.0
-offset_top = 1102.0
-offset_right = 353.0
-offset_bottom = 1150.0
+offset_left = 235.0
+offset_top = 1034.0
+offset_right = 413.0
+offset_bottom = 1082.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Text2" parent="." instance=ExtResource("4_3wqfa")]
-offset_left = 154.0
-offset_top = 739.0
-offset_right = 332.0
-offset_bottom = 787.0
-metadata/_edit_use_anchors_ = true
-
-[node name="Text3" parent="." instance=ExtResource("4_3wqfa")]
-offset_left = 140.0
-offset_top = 507.0
-offset_right = 318.0
-offset_bottom = 555.0
-metadata/_edit_use_anchors_ = true
+[node name="ObjectsInput" parent="." instance=ExtResource("5_uo0mr")]
+offset_left = 199.0
+offset_top = 841.0
+offset_right = 481.0
+offset_bottom = 887.0
 
 [node name="SubmitButton" type="Button" parent="."]
 offset_left = 1021.0
@@ -161,8 +160,29 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_chmhn")
 text = "Help"
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="SubmitButton" to="." method="_on_submit_button_pressed"]
+[node name="errorlabel2" type="Label" parent="."]
+offset_left = 875.0
+offset_top = 1166.0
+offset_right = 1040.0
+offset_bottom = 1252.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_r4hha")
+autowrap_mode = 3
+
+[node name="PrintButton" type="Button" parent="."]
+offset_left = 749.0
+offset_top = 1177.0
+offset_right = 859.0
+offset_bottom = 1223.0
+theme_override_fonts/font = ExtResource("3_r4hha")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y3tn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s7p5n")
+text = "Print"
+
 [connection signal="pressed" from="SubmitButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="SubmitButton" to="." method="_on_submit_button_pressed"]
 [connection signal="pressed" from="NextLevel" to="." method="_on_next_level_pressed"]
-[connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]
 [connection signal="pressed" from="HelpButton" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]
+[connection signal="pressed" from="PrintButton" to="." method="_on_print_button_pressed"]

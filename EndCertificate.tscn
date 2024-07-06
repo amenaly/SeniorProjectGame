@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b0qmc0tqpyth2"]
+[gd_scene load_steps=12 format=3 uid="uid://b0qmc0tqpyth2"]
 
 [ext_resource type="Script" path="res://EndCertificate.gd" id="1_nxhmc"]
 [ext_resource type="Texture2D" uid="uid://8xw2usp5jq6p" path="res://Images/gradient-galaxy-background-free-vector.jpg" id="2_lyj5i"]
@@ -18,6 +18,12 @@ bg_color = Color(0.482353, 0.223529, 0.419608, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_chmhn"]
 bg_color = Color(0.629165, 0.726153, 0.831994, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kw1oi"]
+bg_color = Color(0.819304, 0.501037, 0.8525, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ieko8"]
+bg_color = Color(0.830905, 0.710994, 0.89284, 1)
+
 [node name="EndGame" type="Node2D"]
 script = ExtResource("1_nxhmc")
 
@@ -34,7 +40,7 @@ offset_left = 102.0
 offset_top = 442.0
 offset_right = 1592.0
 offset_bottom = 698.0
-theme_override_colors/default_color = Color(0.84743, 0.791979, 0.456319, 1)
+theme_override_colors/default_color = Color(0.929412, 0.87451, 0.364706, 1)
 theme_override_fonts/normal_font = ExtResource("4_iaukb")
 theme_override_font_sizes/normal_font_size = 82
 text = "Thank you for Playing!"
@@ -170,6 +176,19 @@ theme_override_fonts/normal_font = ExtResource("3_wknm3")
 theme_override_font_sizes/normal_font_size = 80
 text = "Test"
 
+[node name="Button" type="Button" parent="."]
+offset_left = 1404.0
+offset_top = 56.0
+offset_right = 1579.0
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_wknm3")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_kw1oi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ieko8")
+text = "Main Menu"
+
 [connection signal="pressed" from="NextLevel" to="." method="_on_next_level_pressed"]
-[connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]
 [connection signal="pressed" from="HelpButton" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

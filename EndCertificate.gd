@@ -11,7 +11,7 @@ func _ready():
 	$TimeInsertLabel.text = current_time
 	
 func _on_button_pressed():
-	self.hide()
+	get_tree().change_scene_to_file("res://menu.tscn")
 	
 #Pass the text from LineEdit User Input, set to main text 
 func update_text(new_text: String):

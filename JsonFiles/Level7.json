@@ -1,0 +1,24 @@
+{
+  "questions": [
+	{
+	  "sentence": "Complete the program to store the char[name] of at least 5 planetary objects encountered as an array and print out the values. 
+
+	  char planetary[5][20]
+	  int i
+
+	  PRINT(Enter the names of 5 objects:)
+	  
+	  FOR (i = 0; i < 5; i++) {
+		PRINT(Enter name of objects [i+1]: )
+		GET([        ], objects[i])
+		
+	  }
+	  PRINT(Names of object entered)
+	  FOR (i = 0; i < 5; i++) {
+		PRINT([      ])
+	  }
+	  ",
+	  "answers": ["objects[i]", "-"]
+	}
+  ]
+}

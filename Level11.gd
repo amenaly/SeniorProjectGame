@@ -32,11 +32,11 @@ func _ready():
 	sentence_label = $SentenceLabel
 	errorlabel = $ErrorNext
 	#read to JSON file
-	load_level_data("res://JsonFiles/Question2.json")
+	load_level_data("res://JsonFiles/Level11.json")
 	load_question(0) #Call function
 	
 	# Initialize drop boxes
-	drop_boxes = [$Text1/Panel/Label, $Text2/Panel/Label, $Text3/Panel/Label]
+	drop_boxes = [$WriteInput/Panel/Input, $Text2/Panel/Label, $Text3/Panel/Label]
 	
 	#Load from JSON file
 func load_level_data(file_path: String):

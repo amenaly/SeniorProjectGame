@@ -161,7 +161,6 @@ func _on_print_button_pressed():
 		if text_to_show[key] == "":
 			has_empty_input = true
 			break
-
 	if has_empty_input:
 		display_PrintError("Input cannot be empty!")
 	else:

@@ -27,7 +27,7 @@ func _ready():
 	sentence_label = $SentenceLabel
 	errorlabel = $ErrorNext
 	#read to JSON file
-	load_level_data("res://JsonFiles/Question2.json")
+	load_level_data("res://JsonFiles/Level10.json")
 	load_question(0) #Call function
 	
 	# Initialize drop boxes

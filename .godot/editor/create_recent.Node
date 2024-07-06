@@ -1,8 +1,8 @@
+Button
 TextureRect
 RichTextLabel
 ColorRect
 LineEdit
-Button
 Control
 Label
 Popup

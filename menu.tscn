@@ -1,9 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://bo3jbjmqtt0fu"]
+[gd_scene load_steps=12 format=3 uid="uid://bo3jbjmqtt0fu"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_4d3hv"]
 [ext_resource type="Texture2D" uid="uid://8xw2usp5jq6p" path="res://Images/gradient-galaxy-background-free-vector.jpg" id="2_6pdem"]
 [ext_resource type="FontFile" uid="uid://b7n2neqcfe60n" path="res://fonts/FutureTech.ttf" id="3_a8u4f"]
+[ext_resource type="FontFile" uid="uid://dkppgt0hpuagh" path="res://fonts/Robot Go.ttf" id="4_a17vx"]
 [ext_resource type="Texture2D" uid="uid://dh7b7ql5650hw" path="res://Images/logo_large_color_light.png" id="4_uwdmx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_34nyf"]
+bg_color = Color(0.219493, 0.409617, 0.221936, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gs5f7"]
+bg_color = Color(0.683767, 0.890082, 0.687473, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8fwi2"]
+bg_color = Color(0.328403, 0.612706, 0.931134, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tkg0o"]
+bg_color = Color(0.611031, 0.719378, 0.917746, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iooq7"]
+bg_color = Color(0.918405, 0.40915, 0.505906, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0e36p"]
+bg_color = Color(0.929842, 0.695396, 0.704009, 1)
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -51,25 +70,37 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -101.0
-offset_top = -50.0
-offset_right = 98.0
-offset_bottom = 51.0
+offset_left = -100.5
+offset_top = -49.877
+offset_right = 98.5
+offset_bottom = 29.123
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="PLayer" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../Exit")
+theme_override_fonts/font = ExtResource("4_a17vx")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_34nyf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gs5f7")
 text = "Play"
 
 [node name="Option" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_a17vx")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_8fwi2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tkg0o")
 text = "Help"
 
 [node name="Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_neighbor_bottom = NodePath("../PLayer")
+theme_override_fonts/font = ExtResource("4_a17vx")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_iooq7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0e36p")
 text = "Exit"
 
 [node name="TextureRect2" type="TextureRect" parent="."]
