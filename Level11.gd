@@ -8,6 +8,7 @@ var answers = []
 var answer_labels = []
 
 var errorlabel : Label
+var errorlabel2 : Label
 var sentence_label : Label 
 var drop_boxes = []
 
@@ -31,6 +32,7 @@ func _ready():
 #Initialize reference 
 	sentence_label = $SentenceLabel
 	errorlabel = $ErrorNext
+	errorlabel2 = $errorlabel2
 	#read to JSON file
 	load_level_data("res://JsonFiles/Level11.json")
 	load_question(0) #Call function
@@ -140,11 +142,11 @@ func check_answers():
 func display_error(message: String):
 	errorlabel.text = message
 	
-
-
+func display_PrintError(message: String):
+	errorlabel2.text = message
+	
 func _on_submit_button_pressed():
 	check_answers()
-
 
 func _on_next_level_pressed():
 	if current_question_index >= questions.size():
@@ -152,6 +154,15 @@ func _on_next_level_pressed():
 	else:
 		display_error("Complete all questions before moving to the next level.")
 
-
 func _on_help_button_pressed():
 	help_guide()
+
+func _on_print_button_pressed():
+	var text_to_show = $WriteInput/Panel/Input.text 
+	if text_to_show == "":
+		display_PrintError("Input cannot be empty!")
+	else:
+		display_PrintError("")
+		var new_pop_up = preload("res://PopUp.tscn").instantiate()
+		new_pop_up.text_to_show = text_to_show + " Surveyor"
+		add_child(new_pop_up)

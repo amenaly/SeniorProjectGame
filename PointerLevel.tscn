@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3 uid="uid://dbn5ql0m7l7jg"]
+
+[ext_resource type="Script" path="res://PointerLevel.gd" id="1_fgvvl"]
+[ext_resource type="Texture2D" uid="uid://1s3h5ou5d2ya" path="res://Images/marsidea.png" id="1_wdbyj"]
+[ext_resource type="FontFile" uid="uid://dkppgt0hpuagh" path="res://fonts/Robot Go.ttf" id="3_cv85n"]
+[ext_resource type="FontFile" uid="uid://chcvdgavpvgw3" path="res://fonts/sofachrome rg.otf" id="4_ky0ol"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ttn8g"]
+bg_color = Color(0.839242, 0.501847, 0.326166, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w30i8"]
+bg_color = Color(0.955991, 0.794563, 0.709773, 1)
+
+[node name="PointerImage" type="Node2D"]
+script = ExtResource("1_fgvvl")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1664.0
+offset_bottom = 1370.0
+texture = ExtResource("1_wdbyj")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1382.0
+offset_top = 1246.0
+offset_right = 1562.0
+offset_bottom = 1312.0
+theme_override_fonts/font = ExtResource("3_cv85n")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ttn8g")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w30i8")
+text = "Next"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 64.0
+offset_top = 1206.0
+offset_right = 424.0
+offset_bottom = 1271.0
+theme_override_colors/font_color = Color(0.346923, 0.139345, 0.0617326, 1)
+theme_override_fonts/font = ExtResource("4_ky0ol")
+theme_override_font_sizes/font_size = 50
+text = "Jupiter"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 1044.0
+offset_top = 646.0
+offset_right = 1280.0
+offset_bottom = 699.0
+theme_override_colors/font_color = Color(0.208358, 0.110647, 0.00342098, 1)
+theme_override_fonts/font = ExtResource("4_ky0ol")
+theme_override_font_sizes/font_size = 30
+text = "Saturn"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 826.0
+offset_top = 428.0
+offset_right = 1072.0
+offset_bottom = 481.0
+theme_override_colors/font_color = Color(0.61158, 0.945338, 0.807413, 1)
+theme_override_fonts/font = ExtResource("4_ky0ol")
+theme_override_font_sizes/font_size = 30
+text = "Uranus"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 1162.0
+offset_top = 220.0
+offset_right = 1408.0
+offset_bottom = 273.0
+theme_override_colors/font_color = Color(0.550099, 0.945482, 0.909562, 1)
+theme_override_fonts/font = ExtResource("4_ky0ol")
+theme_override_font_sizes/font_size = 30
+text = "Neptune"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

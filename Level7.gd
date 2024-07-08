@@ -145,7 +145,7 @@ func _on_submit_button_pressed():
 
 func _on_next_level_pressed():
 	if current_question_index >= questions.size():
-		get_tree().change_scene_to_file("res://Level10.tscn")
+		get_tree().change_scene_to_file("res://PointerLevel.tscn")
 	else:
 		display_error("Complete all questions before moving to the next level.")
 

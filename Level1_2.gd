@@ -8,6 +8,7 @@ var answers = []
 var answer_labels = []
 
 var errorlabel : Label
+var errorlabel2 : Label
 var sentence_label : Label 
 var drop_boxes = []
 
@@ -23,6 +24,7 @@ func _ready():
 #Initialize reference 
 	sentence_label = $sentencelabel
 	errorlabel = $errorlabel
+	errorlabel2 = $errorlabel2
 	
 	#read to JSON file
 	load_level_data("res://Lvl1_2Questions.json")
@@ -100,11 +102,6 @@ func create_answer_block(index: int, position: Vector2):
 	add_child(answer_block)
 	print("Answer block created with answer:", answers[index])  # Debugging
 	
-#func display_image():
-	#var new_pop_up = preload("res://PopUp.tscn").instantiate()
-	##new_pop_up.text_to_show = text_to_show
-	#new_pop_up.TextureRect = load("res://Images/GreenBackground.png")
-	#add_child(new_pop_up)
 
 #clear text drop box
 func clear_drop_boxes():
@@ -145,10 +142,38 @@ func _on_nextquestion_pressed():
 
 func display_error(message: String):
 	errorlabel.text = message
-
+	
+func display_PrintError(message: String):
+	errorlabel2.text = message
+	
 func _on_submitbutton_pressed():
 	check_answers() # Call Check Function
 
-
 func _on_help_button_pressed():
 	help_guide()
+
+func _on_print_button_pressed():
+	if text_to_show == "":
+		display_PrintError("Input cannot be empty!")
+	else:
+		display_PrintError("")
+		var text_to_show : String = "   
+			 _  _
+			/  //  //
+		   /        //
+		  /          /
+		  /          /
+		  /    __    /
+		  /   |__|   /
+		   /        /
+			/__//__/
+			  ||||
+			  ||||
+			  ||||
+			 /||||//
+			/ |||| /
+		   /  ||||  /
+		  /   ||||   /"
+		var new_pop_up = preload("res://PopUp.tscn").instantiate()
+		new_pop_up.text_to_show = text_to_show
+		add_child(new_pop_up)

@@ -168,7 +168,7 @@ func _on_print_button_pressed():
 	else:
 		display_PrintError("")
 		var text_to_show : String = "Distance between Surveyor and Earth: 1.5 billion mi
-									Time for Signal Reach Earth: 2.24 hours"
+Time for Signal Reach Earth: 2.24 hours"
 		var new_pop_up = preload("res://PopUp.tscn").instantiate()
 		new_pop_up.text_to_show = text_to_show
 		add_child(new_pop_up)

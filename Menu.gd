@@ -10,7 +10,6 @@ func _on_p_layer_pressed():
 func _on_option_pressed():
 	pass # Replace with function body.
 
-
 func _on_exit_pressed():
 	get_tree().quit()
 	

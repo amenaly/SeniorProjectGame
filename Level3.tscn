@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://b8khev4nm7yr7"]
+[gd_scene load_steps=15 format=3 uid="uid://b8khev4nm7yr7"]
 
 [ext_resource type="Script" path="res://Level3.gd" id="1_7j2kk"]
 [ext_resource type="Texture2D" uid="uid://clrs13uj6be1n" path="res://Images/obernotest.jpg" id="2_nb3gj"]
 [ext_resource type="FontFile" uid="uid://dkppgt0hpuagh" path="res://fonts/Robot Go.ttf" id="3_s832m"]
 [ext_resource type="PackedScene" uid="uid://ehpjye6vivoo" path="res://input_box.tscn" id="4_5xq2i"]
 [ext_resource type="PackedScene" uid="uid://deyvy83bi0rnp" path="res://texture_rect.tscn" id="4_110nl"]
+[ext_resource type="Texture2D" uid="uid://bb38s1lo7shr1" path="res://Images/oberon1.png" id="6_ys5xv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eotqq"]
 bg_color = Color(0.180392, 0.329412, 0.239216, 1)
@@ -197,6 +198,13 @@ offset_left = 306.0
 offset_top = 1007.0
 offset_right = 544.0
 offset_bottom = 1062.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 126.0
+offset_top = 101.0
+offset_right = 423.0
+offset_bottom = 413.0
+texture = ExtResource("6_ys5xv")
 
 [connection signal="pressed" from="SubmitButton" to="." method="_on_submit_button_pressed"]
 [connection signal="pressed" from="NextLevel2" to="." method="_on_next_level_2_pressed"]

@@ -163,8 +163,8 @@ func _on_button_3_pressed():
 	else:
 		display_PrintError("")
 		var text_to_show : String = "Satellite: Surveyor
-									Years in Space: 15 years
-									Distance from Earth: 3.17 billion mi"
+Years in Space: 15 years
+Distance from Earth: 3.17 billion mi"
 		var new_pop_up = preload("res://PopUp.tscn").instantiate()
 		new_pop_up.text_to_show = text_to_show
 		add_child(new_pop_up)

@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://dx0iq2jaeu1gp"]
+[gd_scene load_steps=14 format=3 uid="uid://dx0iq2jaeu1gp"]
 
 [ext_resource type="Script" path="res://Level2.gd" id="1_swatg"]
 [ext_resource type="Texture2D" uid="uid://bvfswxxeljugx" path="res://Images/gradient-galaxy-background_23-2148983655.jpg" id="2_0dvnr"]
 [ext_resource type="FontFile" uid="uid://dkppgt0hpuagh" path="res://fonts/Robot Go.ttf" id="3_ehwrx"]
 [ext_resource type="PackedScene" uid="uid://deyvy83bi0rnp" path="res://texture_rect.tscn" id="4_2g16j"]
+[ext_resource type="Texture2D" uid="uid://cvaickdcfw1eo" path="res://Images/Neptune1.png" id="5_85uw7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_puj8m"]
 bg_color = Color(0.235294, 0.231373, 0.521569, 1)
@@ -199,6 +200,13 @@ theme_override_colors/font_color = Color(0.172167, 0.278619, 0.122815, 1)
 theme_override_fonts/font = ExtResource("3_ehwrx")
 autowrap_mode = 3
 metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 126.0
+offset_top = 128.0
+offset_right = 405.0
+offset_bottom = 413.0
+texture = ExtResource("5_85uw7")
 
 [connection signal="pressed" from="SubmitButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="NextLevel" to="." method="_on_next_level_pressed"]

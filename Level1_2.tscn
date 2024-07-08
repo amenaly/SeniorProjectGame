@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://dh3djdbe1os5g"]
+[gd_scene load_steps=14 format=3 uid="uid://dh3djdbe1os5g"]
 
 [ext_resource type="Script" path="res://Level1_2.gd" id="1_pit4b"]
 [ext_resource type="Texture2D" uid="uid://bw18i0qlsih4f" path="res://Images/darkgalaxy.jpg" id="2_q4xli"]
 [ext_resource type="FontFile" uid="uid://dkppgt0hpuagh" path="res://fonts/Robot Go.ttf" id="2_sdl33"]
+[ext_resource type="Texture2D" uid="uid://b6ho0naut2het" path="res://Images/charon1.png" id="5_ft43v"]
 [ext_resource type="PackedScene" uid="uid://dyjpk0iwb3kpd" path="res://large_texture.tscn" id="5_hb1y2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3tr0j"]
@@ -22,6 +23,12 @@ bg_color = Color(0.47451, 0.466667, 0.756863, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ng2hm"]
 bg_color = Color(0.662745, 0.513726, 0.878431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xem0j"]
+bg_color = Color(0.249467, 0.228224, 0.573496, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0qo5k"]
+bg_color = Color(0.618468, 0.588719, 0.919688, 1)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_pit4b")
@@ -140,6 +147,36 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ng2hm")
 text = "Help"
 metadata/_edit_use_anchors_ = true
 
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 137.0
+offset_top = 95.0
+offset_right = 416.0
+offset_bottom = 380.0
+texture = ExtResource("5_ft43v")
+
+[node name="errorlabel2" type="Label" parent="."]
+offset_left = 700.0
+offset_top = 1097.0
+offset_right = 865.0
+offset_bottom = 1183.0
+theme_override_colors/font_color = Color(0.195503, 0.107108, 0.305513, 1)
+theme_override_fonts/font = ExtResource("2_sdl33")
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="PrintButton" type="Button" parent="."]
+offset_left = 574.0
+offset_top = 1108.0
+offset_right = 684.0
+offset_bottom = 1154.0
+theme_override_fonts/font = ExtResource("2_sdl33")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_xem0j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0qo5k")
+text = "Print"
+metadata/_edit_use_anchors_ = true
+
 [connection signal="pressed" from="submitbutton" to="." method="_on_submitbutton_pressed"]
 [connection signal="pressed" from="nextquestion" to="." method="_on_nextquestion_pressed"]
 [connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]
+[connection signal="pressed" from="PrintButton" to="." method="_on_print_button_pressed"]

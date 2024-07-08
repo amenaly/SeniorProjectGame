@@ -1,8 +1,12 @@
-res://EndCertificate.gd
-res://EndCertificate.tscn
-res://input_box.gd
 res://menu.tscn
+res://input_box.gd
 res://Menu.gd
+res://level1.tscn
+res://Level1_2.tscn
+res://Level2b.tscn
+res://Level3.tscn
+res://JsonFiles/Level7.json
 res://Level7.tscn
-res://Level10.tscn
+res://Level11.gd
 res://Level11.tscn
+res://EndCertificate.tscn

@@ -48,14 +48,17 @@ metadata/_edit_use_anchors_ = true
 
 [node name="TitleLabel" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-offset_left = -418.0
-offset_top = 323.0
-offset_right = 420.0
-offset_bottom = 383.0
+anchor_bottom = 0.5
+offset_left = -430.5
+offset_top = -299.877
+offset_right = 407.5
+offset_bottom = -239.877
 grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0.914733, 0.723172, 0.210425, 1)
 theme_override_colors/font_shadow_color = Color(0.941176, 0.752941, 0.247059, 1)
 theme_override_fonts/font = ExtResource("3_a8u4f")
@@ -65,15 +68,15 @@ horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -100.5
-offset_top = -49.877
-offset_right = 98.5
-offset_bottom = 29.123
+anchors_preset = -1
+anchor_left = 0.476
+anchor_top = 0.491
+anchor_right = 0.476
+anchor_bottom = 0.491
+offset_left = -116.236
+offset_top = -39.8553
+offset_right = 112.764
+offset_bottom = 41.1447
 grow_horizontal = 2
 grow_vertical = 2
 

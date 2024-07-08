@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://b0dmgh0r34arg"]
+[gd_scene load_steps=12 format=3 uid="uid://b0dmgh0r34arg"]
 
 [ext_resource type="Script" path="res://level1.gd" id="1_fcjna"]
 [ext_resource type="FontFile" uid="uid://dkppgt0hpuagh" path="res://fonts/Robot Go.ttf" id="2_ej3b7"]
 [ext_resource type="Texture2D" uid="uid://bw18i0qlsih4f" path="res://Images/darkgalaxy.jpg" id="2_kj60f"]
 [ext_resource type="PackedScene" uid="uid://deyvy83bi0rnp" path="res://texture_rect.tscn" id="4_g2mfi"]
+[ext_resource type="Texture2D" uid="uid://b6ho0naut2het" path="res://Images/charon1.png" id="5_qpsjc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ummwk"]
 bg_color = Color(0.47451, 0.466667, 0.756863, 1)
@@ -151,6 +152,13 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_u66bd")
 theme_override_styles/hover = SubResource("StyleBoxFlat_tcqil")
 text = "Help"
 metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 131.0
+offset_top = 100.0
+offset_right = 410.0
+offset_bottom = 385.0
+texture = ExtResource("5_qpsjc")
 
 [connection signal="pressed" from="SubmitButton" to="." method="_on_submit_button_pressed"]
 [connection signal="pressed" from="NextLevel2" to="." method="_on_next_level_2_pressed"]
