@@ -2,19 +2,21 @@
   "questions": [
 	{
 	  "sentence": "Complete the program where Surveyor stores Earth coordinates using pointers and prints out the direction to point towards Earth.
+		
 		int main()
 		double earthLatitude, earthLongitude
 		double ptrLatitude, ptrLongitude
 	 
-		ptrLatitude = [       ]
-		ptrLongitude = earthLongitude
+		   ptrLatitude =        
+		   ptrLongitude = earthLongitude
 
-	ptrLatitude = 34°
-		ptrLongitude = 180°
+		   ptrLatitude = 34°
+		   ptrLongitude = 180°
 
 	PRINT(Earth Coordinates:)
-		PRINT(Latitude:,ptrLatitude)
-		PRINT(Longitude:,[       ])
+	PRINT(Latitude:,ptrLatitude)
+	
+	PRINT(Longitude:,       )
 	PRINT(Direction to point towards Earth: Straight ahead)
 
 	return 0",

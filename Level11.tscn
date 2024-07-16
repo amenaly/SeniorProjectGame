@@ -102,18 +102,17 @@ text = "Answer Key:"
 metadata/_edit_use_anchors_ = true
 
 [node name="Text2" parent="." instance=ExtResource("4_3q73h")]
-offset_left = 154.0
-offset_top = 739.0
-offset_right = 332.0
-offset_bottom = 787.0
+offset_left = 160.0
+offset_top = 771.0
+offset_right = 338.0
+offset_bottom = 819.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Text3" parent="." instance=ExtResource("4_3q73h")]
-offset_left = 164.0
-offset_top = 1013.0
-offset_right = 342.0
-offset_bottom = 1061.0
-metadata/_edit_use_anchors_ = true
+offset_left = 198.0
+offset_top = 1039.0
+offset_right = 492.0
+offset_bottom = 1087.0
 
 [node name="SubmitButton" type="Button" parent="."]
 offset_left = 1021.0
@@ -163,9 +162,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="WriteInput" parent="." instance=ExtResource("5_rtxho")]
 offset_left = 426.0
-offset_top = 1065.0
+offset_top = 1089.0
 offset_right = 706.0
-offset_bottom = 1113.0
+offset_bottom = 1137.0
 
 [node name="errorlabel2" type="Label" parent="."]
 offset_left = 875.0
@@ -187,8 +186,8 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_s8dc7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3ldlq")
 text = "Print"
 
-[connection signal="pressed" from="SubmitButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="SubmitButton" to="." method="_on_submit_button_pressed"]
+[connection signal="pressed" from="SubmitButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="NextLevel" to="." method="_on_next_level_pressed"]
 [connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]
 [connection signal="pressed" from="HelpButton" to="." method="_on_button_2_pressed"]

@@ -1,29 +1,31 @@
 {
 "questions": [
 {
- 	"sentence":"Complete the Task list below by filling in the blanks. 
-		 print Step 1: Initialize system....
-			InitializedSystem()...
-	 print Step 2: Check Satellite Status...
-			status <- 
+"sentence":"Complete the Task list below by filling in the blanks. 
+ 
+int SatelliteStatus()
+	IF status == OK THEN
+	   PRINT (Step 1: Initialize system....)
+	  	   InitializedSystem()...
+	   PRINT (Step 2: Check Satellite Status...)
+	  	   status =
 			
-			IF status == OK THEN
-	print  Step 3: Align Antenna
-			position <- Get
-			target <- Get
-			AlignAntenna(position,          )
+	   PRINT (Step 3: AlignAntenna)
+	  	   position = Get[position]
+	  	   target = Get[target]
+	  	   AlignAntenna(position,        )
 		
- 	print   Step 4: Establish Communication Link
-			success <- EstablishCommunicationLink()
-			IF success THEN
- 	print   Step 5: Authenticate Connection
- 	print   Step 6: Test Communication Link
-				linkTest <- TestCommunicationLink()
+	   PRINT (Step 4: Establish Communication Link)
+	  	   success = EstablishCommunicationLink()
+		
+	   PRINT (Step 5: Authenticate Connection)
+	   PRINT (Step 6: Test Communication Link)
+	  	   linkTest = TestCommunicationLink()
 				
-				IF linkTest IS          THEN
- 	print   Step 7: Activate Operational Mode
-					ActivateOperationalMode()", 
-	"answers" : ["SatelliteStatus()", "target", "success"]
+	IF linkTest IS        THEN
+		   PRINT (Step 7: Activate Operational Mode)
+		  	   ActivateOperationalMode()", 
+	"answers" : ["OK", "SatelliteStatus()", "target"]
 }
 ]
 }

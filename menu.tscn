@@ -108,12 +108,13 @@ text = "Exit"
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 718.0
+offset_left = 667.0
 offset_top = 786.0
-offset_right = 1059.0
+offset_right = 1008.0
 offset_bottom = 923.0
 texture = ExtResource("4_uwdmx")
 expand_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="VBoxContainer/PLayer" to="." method="_on_p_layer_pressed"]
 [connection signal="pressed" from="VBoxContainer/Option" to="." method="_on_option_pressed"]

@@ -9,15 +9,15 @@
 		   char  variable3
 
 
-		   printf(Enter number:)
-		   GET([        ],variable1 )
+		   PRINT(Enter number:)
+		   GET[        ],variable1 
 		   
 
-		   print(Enter Float:)
-		   [      ]([         ],variable2)
+		   PRINT(Enter Float:)
+		   [      ] [        ],variable2
 
-		   printf(Enter Char)
-		   GET([        ],[       ])
+		   PRINT(Enter Char)
+		   GET[        ],[       ]
 		   ",
 
 	  "answers": ["variable3","GET()","-"]

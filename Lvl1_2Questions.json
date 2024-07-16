@@ -3,22 +3,22 @@
 {
  	"sentence": "
 	Arrange the code to form the ACSII Text Image!
-	printf( _ _/);
-	printf( / // //);
-	printf( / ///);
+	PRINT( _ _/);
+	PRINT( / // //);
+	PRINT( / ///);
 		 	END", 
 	"answers": ["printf( | |/);
-			printf( | __ |);
-			printf( | |__| |);", 
-			"printf( /||||//);
-			printf( / |||| //);
-			printf( / |||| //);
-			printf( / |||| //);", 
-			"printf( / /);
-			printf( /__//__/);
-			printf(/ |||| /);
-			printf(/ |||| /);
-			printf(/ |||| /);"]
+			PRINT( | __ |);
+			PRINT( | |__| |);", 
+			"PRINT( /||||//);
+			PRINT( / |||| //);
+			PRINT( / |||| //);
+			PRINT( / |||| //);", 
+			"PRINT( / /);
+			PRINT( /__//__/);
+			PRINT(/ |||| /);
+			PRINT(/ |||| /);
+			PRINT(/ |||| /);"]
 }
 ]
 }

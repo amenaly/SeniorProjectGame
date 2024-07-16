@@ -95,17 +95,17 @@ text = "Answer Key:"
 metadata/_edit_use_anchors_ = true
 
 [node name="Text1" parent="." instance=ExtResource("4_wntba")]
-offset_left = 338.0
+offset_left = 356.0
 offset_top = 684.0
-offset_right = 516.0
+offset_right = 534.0
 offset_bottom = 732.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Text2" parent="." instance=ExtResource("4_wntba")]
-offset_left = 377.0
-offset_top = 983.0
-offset_right = 555.0
-offset_bottom = 1031.0
+offset_left = 366.0
+offset_top = 1008.0
+offset_right = 544.0
+offset_bottom = 1056.0
 metadata/_edit_use_anchors_ = true
 
 [node name="SubmitButton" type="Button" parent="."]
@@ -154,8 +154,8 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_chmhn")
 text = "Help"
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="SubmitButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="SubmitButton" to="." method="_on_submit_button_pressed"]
+[connection signal="pressed" from="SubmitButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="NextLevel" to="." method="_on_next_level_pressed"]
-[connection signal="pressed" from="HelpButton" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_button_2_pressed"]

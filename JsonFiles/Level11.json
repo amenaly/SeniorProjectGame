@@ -2,6 +2,7 @@
   "questions": [
 	{
 	  "sentence": "Complete the program where Surveyor communicates with Mars orbiters (Maven + Tianwen-1). The Surveyor should read a file held by these orbiters containing the status  information. The program should read the file, process the data, and then display the status. 
+	  
 	  FILE *file
 	  char line[256]
 	  char SurveyorName[50]
@@ -9,16 +10,16 @@
 	
 	  [      ] = OPEN(mars_orbiter_message.txt,r)
 	
-	  if (file == NULL) {
-	  error(Error opening file)
-	  return EXIT_FAILURE
- }
-	 while
-	 (GETS(line, sizeof(line), file)) {
-	 [       ](line)
+	  IF file == NULL 
+	  	   ERROR(Error opening file)
+	  	   RETURN EXIT_FAILURE
+ 
+	  WHILE
+	  	   (GETS(line, sizeof(line), file)) 
+	  	   [        ](line)
 
 	 WRITE(file,datetime,[        ],SurveyorName)
-}
+
 	 CLOSE(file)",
 	  "answers":["FILE","process_line(line)"]
 	}

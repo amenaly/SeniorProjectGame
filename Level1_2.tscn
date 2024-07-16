@@ -118,7 +118,7 @@ offset_bottom = 752.0
 offset_left = 173.0
 offset_top = 779.0
 offset_right = 337.0
-offset_bottom = 915.0
+offset_bottom = 926.0
 
 [node name="LargeText2" parent="." instance=ExtResource("5_hb1y2")]
 offset_left = 174.0
@@ -131,7 +131,7 @@ offset_left = 1010.0
 offset_top = 456.0
 offset_right = 1198.0
 offset_bottom = 575.0
-theme_override_colors/font_color = Color(0.937255, 0, 0, 1)
+theme_override_colors/font_color = Color(0.243137, 0.172549, 0.388235, 1)
 theme_override_fonts/font = ExtResource("2_sdl33")
 autowrap_mode = 3
 

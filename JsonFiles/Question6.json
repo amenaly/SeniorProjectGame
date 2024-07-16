@@ -4,28 +4,27 @@
 	  "sentence":"Form a function to check the Satellite Cassini status and manage operations.
 	 
 		[       ]satelliteStatus(status)
-			// satelliteStatus   
+			// satelliteStatus CODE  
 			
 		FUNCTION manageSatellite
 		  WHILE TRUE
 			SET status = I
 			
-			[     ]satelliteStatus(status)
+			[      ]satelliteStatus(status)
 			IF status == 'A' THEN
-					SET active = 1
+			  SET active = 1
 				ELSE
-					SET active = 0
+				   SET active = 0
 			  SET inRange = 1  
-	   			 IF Active == 0 THEN
-					PRINT(Rebooting satellite...)
-				 SET status = 'A'  
-				 IF inRange == 0 THEN
-				
-		   		 [     ](Getting closer to the satellite...)
-				 SET inRange = 1  
-
-			 IF active == 1 AND inRange == 1 THEN
-			PRINT(Satellite is active and in range)",	
+			IF Active == 0 
+			   PRINT Rebooting satellite...
+			   SET status = 'A'  
+			IF inRange == 0 
+			
+			[      ]Getting closer to the satellite...
+			  SET inRange = 1  
+			IF active == 1 AND inRange == 1 THEN
+			   PRINT Satellite is active and in range ",	
 		  
 	  "answers": ["PRINT","CALL","FUNCTION"]
 	}

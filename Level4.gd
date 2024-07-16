@@ -40,7 +40,7 @@ func _ready():
 	load_question(0) #Call function
 	
 	# Initialize drop boxes
-	drop_boxes = [$InputBox/Panel/Label, $Text1/Panel/Label, $Text4/Panel/Label]
+	drop_boxes = [$InputBox/Panel/Label, $Text1/Panel/Label, $Text4/Panel/Label, $Text5/Panel/Label]
 	
 	#Load from JSON file
 func load_level_data(file_path: String):

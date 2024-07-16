@@ -111,24 +111,24 @@ text = "Next Level"
 metadata/_edit_use_anchors_ = true
 
 [node name="TextLvl1" parent="." instance=ExtResource("4_g2mfi")]
-offset_left = 310.0
-offset_top = 538.0
-offset_right = 512.0
-offset_bottom = 593.0
+offset_left = 371.0
+offset_top = 629.0
+offset_right = 573.0
+offset_bottom = 684.0
 metadata/_edit_use_anchors_ = true
 
 [node name="TextLvl2" parent="." instance=ExtResource("4_g2mfi")]
-offset_left = 373.0
-offset_top = 988.0
-offset_right = 575.0
-offset_bottom = 1047.0
+offset_left = 396.0
+offset_top = 1065.0
+offset_right = 598.0
+offset_bottom = 1124.0
 metadata/_edit_use_anchors_ = true
 
 [node name="TextLvl3" parent="." instance=ExtResource("4_g2mfi")]
-offset_left = 532.0
-offset_top = 722.0
-offset_right = 734.0
-offset_bottom = 781.0
+offset_left = 552.0
+offset_top = 780.0
+offset_right = 754.0
+offset_bottom = 839.0
 metadata/_edit_use_anchors_ = true
 
 [node name="errorlabel" type="Label" parent="."]
@@ -136,7 +136,7 @@ offset_left = 1010.0
 offset_top = 456.0
 offset_right = 1198.0
 offset_bottom = 575.0
-theme_override_colors/font_color = Color(0.937255, 0, 0, 1)
+theme_override_colors/font_color = Color(0.244065, 0.170878, 0.387159, 1)
 theme_override_fonts/font = ExtResource("2_ej3b7")
 autowrap_mode = 3
 metadata/_edit_use_anchors_ = true

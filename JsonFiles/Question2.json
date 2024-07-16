@@ -12,17 +12,17 @@
 		
 		double distanceFromEarth; 
 		
-		satellite_Name =        
-		years_Travel   =  15
-		distanceFromEarth = 3.17
+		   satellite_Name =        
+		   years_Travel   =  15
+		   distanceFromEarth = 3.17
 		
-		printf(Satellite:, satellite_Name)
+		PRINT Satellite:, satellite_Name
 		
 			  
 	
-		printf(Distance from Earth:, distanceFromEarth,billion mi)",
+		PRINT(Distance from Earth:, distanceFromEarth,billion mi)",
 		
-	  "answers": ["int", "Surveyor", "printf(Years in Space, years_Travel)"]
+	  "answers": ["int", "Surveyor", "PRINT Years in Space, years_Travel"]
 			}
   ]
 }

@@ -5,17 +5,18 @@
 
 		  char satelliteStatus = A
 		
-		  PRINT(Enter the satellite's status (A for Active, I for Inactive)
-		  GET([       ], &satelliteStatus)
+		 PRINT(Enter the satellite's status (A for Active, I for Inactive)
+		  GET[       ], &satelliteStatus
 		  
-		  IF(satelliteStatus == A)
-		  	PRINT(Satellite is active and operational! Communication Restore!)
+		  IF satelliteStatus == A
+		  	   PRINT(Satellite is active and operational! 
+				   	   Communication Restore!)
 		  	
-		  ELSE IF([       ] == I)
-			PRINT(Satellite is inactive, starting rebooting!)
+		  ELSE IF[       ] == I
+		  	   PRINT(Satellite is inactive, starting rebooting!)
 		  
 		  ELSE 
-		   [       ](Satellite is NOT IN RANGE! Please get closer)",
+		  	   [       ](Satellite is NOT IN RANGE! Please get closer)",
 
 	  "answers": ["%c","satelliteStatus","PRINT"]
 	}

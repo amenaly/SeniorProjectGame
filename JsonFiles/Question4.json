@@ -6,24 +6,25 @@
 		  char satelliteStatus
 		  int active 
 		
-		  PRINT(Enter the satellite's status (A for Active, I for Inactive)
-		  GET([       ], &satelliteStatus)
+		 PRINT(Enter the satellite's status (A for Active, I for Inactive)
+		  GET [       ], &satelliteStatus
 		  
 		SWITCH [      ]
-				CASE 'A':
-					PRINT(Satellite is active and operational)
-					SET active = 1
-					BREAK
-				CASE 'I':
-					PRINT(Satellite is inactive. Rebooting...)
-					SET active = 0
-					BREAK
-				DEFAULT:
-					[     ](Satellite not in range. Please get closer!)
-					SET active = 0
-					BREAK",
+			 CASE A:
+				   PRINT(Satellite is active and operational)
+					   SET active = 1
+					   BREAK
+			 [       ]
+				   PRINT(Satellite is inactive. Rebooting...)
+					   SET active = 0
+					   BREAK
+			 DEFAULT:
+				
+				   [      ](Satellite not in range. Please get closer!)
+					   SET active = 0
+					   BREAK",
 
-	  "answers": ["-","satelliteStatus","PRINT"]
+	  "answers": ["PRINT","Case I:","satelliteStatus"]
 	}
   ]
 }

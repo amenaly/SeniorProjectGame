@@ -8,13 +8,13 @@
 		   distance_totravelEarth  = 3.17 billion mi *To Earth
 		   distance_left = [      ]  - distance_totravelEarth
 
-		   printf(Distance between Surveyor and Earth: distance_left_to_travel)
+		   PRINT(Distance between Surveyor and Earth: distance_left_to_travel)
 
 		   #Calculate Satellite Distance forumla time = distance/speed of light
 		   speed_of_light = 186000 miles per second
 		   time_to_reach_earth = [       ] * 16000 seconds /   [        ]
 		   
-		   printf(Time for Signal Reach Earth: [         ] seconds)
+		   PRINT(Time for Signal Reach Earth: [         ] seconds)
 		   
 		   ",
 	  "answers": ["distance_left", "speed_of_light", "time_to_reach_earth", "distance_orbit"]

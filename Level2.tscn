@@ -104,28 +104,27 @@ text = "Answer Key:"
 metadata/_edit_use_anchors_ = true
 
 [node name="Text1" parent="." instance=ExtResource("4_2g16j")]
-offset_left = 388.0
-offset_top = 822.0
-offset_right = 566.0
-offset_bottom = 870.0
+offset_left = 405.0
+offset_top = 830.0
+offset_right = 583.0
+offset_bottom = 878.0
 size_flags_horizontal = 4
 metadata/_edit_use_anchors_ = true
 
 [node name="Text2" parent="." instance=ExtResource("4_2g16j")]
-offset_left = 148.0
-offset_top = 693.0
-offset_right = 316.0
-offset_bottom = 737.0
+offset_left = 144.0
+offset_top = 710.0
+offset_right = 312.0
+offset_bottom = 754.0
 size_flags_horizontal = 4
 metadata/_edit_use_anchors_ = true
 
 [node name="Text3" parent="." instance=ExtResource("4_2g16j")]
 offset_left = 178.0
 offset_top = 1007.0
-offset_right = 417.0
+offset_right = 483.0
 offset_bottom = 1101.0
 size_flags_horizontal = 4
-metadata/_edit_use_anchors_ = true
 
 [node name="SubmitButton" type="Button" parent="."]
 offset_left = 1021.0
