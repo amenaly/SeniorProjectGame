@@ -1,49 +1,49 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1722015417
+::res://::1722036384
 EndCertificate.gd::GDScript::-1::1720226099::0::1::::<>Node2D<>::
 EndCertificate.tscn::PackedScene::4174905337392889285::1721784183::0::1::::<><>::res://EndCertificate.gd<>uid://8xw2usp5jq6p::::res://Images/gradient-galaxy-background-free-vector.jpg<>uid://dh7b7ql5650hw::::res://Images/logo_large_color_light.png<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://dh03pk2mxd65v::::res://fonts/BruceForeverRegular-X3jd2.ttf<>uid://b7n2neqcfe60n::::res://fonts/FutureTech.ttf
-export_presets.cfg::TextFile::-1::1722014857::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1722036245::0::1::::<><>::
 first_level.gd::GDScript::-1::1718682600::0::1::::<>Node2D<>::
 first_level.tscn::PackedScene::1289108604296813485::1718767878::0::1::::<><>::res://first_level.gd<>uid://nsrpl16wqiol::::res://Images/realistic-galaxy-background_23-2148971567.jpg<>uid://deyvy83bi0rnp::::res://texture_rect.tscn<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf
 icons8-x-24.png::CompressedTexture2D::4653375286548206523::1718850187::1718850188::1::::<><>::
-input_box.gd::GDScript::-1::1722014601::0::1::::<>TextureRect<>::
+input_box.gd::GDScript::-1::1722035338::0::1::::<>TextureRect<>::
 input_box.tscn::PackedScene::296134114043710510::1721781019::0::1::::<><>::res://input_box.gd<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://b7ken8h8qr7vj::::res://icons8-x-24.png
 large_texture.gd::GDScript::-1::1718249850::0::1::::<>TextureRect<>::
 large_texture.tscn::PackedScene::8863303637453381465::1718682555::0::1::::<><>::res://large_texture.gd
-level1.gd::GDScript::-1::1721266546::0::1::::<>Node2D<>::
-Level1.tscn::PackedScene::4148074633677238352::1721783061::0::1::::<><>::res://level1.gd<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://bw18i0qlsih4f::::res://Images/darkgalaxy.jpg<>uid://deyvy83bi0rnp::::res://texture_rect.tscn<>uid://b6ho0naut2het::::res://Images/charon1.png
-Level1_2.gd::GDScript::-1::1722013935::0::1::::<>Node2D<>::
-Level1_2.tscn::PackedScene::7708584916114560410::1722014677::0::1::::<><>::res://Level1_2.gd<>uid://bw18i0qlsih4f::::res://Images/darkgalaxy.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://b6ho0naut2het::::res://Images/charon1.png<>uid://dyjpk0iwb3kpd::::res://large_texture.tscn
-Level2.gd::GDScript::-1::1721862330::0::1::::<>Node2D<>::
-Level2.tscn::PackedScene::8825730639290007779::1722013755::0::1::::<><>::res://Level2.gd<>uid://bvfswxxeljugx::::res://Images/gradient-galaxy-background_23-2148983655.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://deyvy83bi0rnp::::res://texture_rect.tscn<>uid://cvaickdcfw1eo::::res://Images/Neptune1.png
-Level2_2.gd::GDScript::-1::1722013935::0::1::::<>Node2D<>::
-Level2_2.tscn::PackedScene::7403306283466474121::1722014677::0::1::::<><>::res://Level2_2.gd<>uid://bvfswxxeljugx::::res://Images/gradient-galaxy-background_23-2148983655.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://deyvy83bi0rnp::::res://texture_rect.tscn<>uid://cvaickdcfw1eo::::res://Images/Neptune1.png
-Level3.gd::GDScript::-1::1721951691::0::1::::<>Node2D<>::
-Level3.tscn::PackedScene::4723729611811416034::1722014603::0::1::::<><>::res://Level3.gd<>uid://clrs13uj6be1n::::res://Images/obernotest.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://ehpjye6vivoo::::res://input_box.tscn<>uid://deyvy83bi0rnp::::res://texture_rect.tscn<>uid://bb38s1lo7shr1::::res://Images/oberon1.png
-Level4.gd::GDScript::-1::1721951782::0::1::::<>Node2D<>::
-Level4.tscn::PackedScene::6863304366660900597::1721951783::0::1::::<><>::res://Level4.gd<>uid://d33drm00j78k6::::res://Images/saturn.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://deyvy83bi0rnp::::res://texture_rect.tscn<>uid://ehpjye6vivoo::::res://input_box.tscn
-Level5.gd::GDScript::-1::1721951882::0::1::::<>Node2D<>::
-Level5.tscn::PackedScene::6275213561685628171::1721952067::0::1::::<><>::res://Level5.gd<>uid://d1cb8bwllvjyq::::res://Images/Rhealevel.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://deyvy83bi0rnp::::res://texture_rect.tscn
-Level6.gd::GDScript::-1::1721951929::0::1::::<>Node2D<>::
-Level6.tscn::PackedScene::1910764432911471751::1721952067::0::1::::<><>::res://Level6.gd<>uid://b5mkpvyfkqbmf::::res://Images/image1_0 (3).jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://deyvy83bi0rnp::::res://texture_rect.tscn
-Level7.gd::GDScript::-1::1721952642::0::1::::<>Node2D<>::
-Level7.tscn::PackedScene::1656176312815288513::1721953069::0::1::::<><>::res://Level7.gd<>uid://blee70cmnk0m6::::res://Images/image1_0 (2).jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://deyvy83bi0rnp::::res://texture_rect.tscn<>uid://ehpjye6vivoo::::res://input_box.tscn
-Level8.gd::GDScript::-1::1721952238::0::1::::<>Node2D<>::
-Level8.tscn::PackedScene::1030021398861706338::1721952241::0::1::::<><>::res://Level8.gd<>uid://c8m5hepu2kk6h::::res://Images/ebe8f5585eb204c342090dd735ac1498.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://deyvy83bi0rnp::::res://texture_rect.tscn
-Level9.gd::GDScript::-1::1720461110::0::1::::<>Node2D<>::
-Level9.tscn::PackedScene::2411333016736404489::1721952241::0::1::::<><>::res://Level9.gd<>uid://c8m5hepu2kk6h::::res://Images/ebe8f5585eb204c342090dd735ac1498.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://deyvy83bi0rnp::::res://texture_rect.tscn<>uid://ehpjye6vivoo::::res://input_box.tscn
+Level1.gd::GDScript::-1::1722036102::0::1::::<>Node2D<>::
+Level1.tscn::PackedScene::4148074633677238352::1722036102::0::1::::<><>::res://Level1.gd<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://bw18i0qlsih4f::::res://Images/darkgalaxy.jpg<>uid://deyvy83bi0rnp::::res://texture_rect.tscn<>uid://b6ho0naut2het::::res://Images/charon1.png
+Level1_2.gd::GDScript::-1::1722033970::0::1::::<>Node2D<>::
+Level1_2.tscn::PackedScene::7708584916114560410::1722034037::0::1::::<><>::res://Level1_2.gd<>uid://bw18i0qlsih4f::::res://Images/darkgalaxy.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://b6ho0naut2het::::res://Images/charon1.png<>uid://dyjpk0iwb3kpd::::res://large_texture.tscn
+Level2.gd::GDScript::-1::1722034032::0::1::::<>Node2D<>::
+Level2.tscn::PackedScene::8825730639290007779::1722034100::0::1::::<><>::res://Level2.gd<>uid://bvfswxxeljugx::::res://Images/gradient-galaxy-background_23-2148983655.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://deyvy83bi0rnp::::res://texture_rect.tscn<>uid://cvaickdcfw1eo::::res://Images/Neptune1.png
+Level2_2.gd::GDScript::-1::1722034098::0::1::::<>Node2D<>::
+Level2_2.tscn::PackedScene::7403306283466474121::1722034097::0::1::::<><>::res://Level2_2.gd<>uid://bvfswxxeljugx::::res://Images/gradient-galaxy-background_23-2148983655.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://deyvy83bi0rnp::::res://texture_rect.tscn<>uid://cvaickdcfw1eo::::res://Images/Neptune1.png
+Level3.gd::GDScript::-1::1722034197::0::1::::<>Node2D<>::
+Level3.tscn::PackedScene::4723729611811416034::1722034197::0::1::::<><>::res://Level3.gd<>uid://clrs13uj6be1n::::res://Images/obernotest.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://ehpjye6vivoo::::res://input_box.tscn<>uid://deyvy83bi0rnp::::res://texture_rect.tscn<>uid://bb38s1lo7shr1::::res://Images/oberon1.png
+Level4.gd::GDScript::-1::1722034714::0::1::::<>Node2D<>::
+Level4.tscn::PackedScene::6863304366660900597::1722034294::0::1::::<><>::res://Level4.gd<>uid://d33drm00j78k6::::res://Images/saturn.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://deyvy83bi0rnp::::res://texture_rect.tscn<>uid://ehpjye6vivoo::::res://input_box.tscn
+Level5.gd::GDScript::-1::1722034377::0::1::::<>Node2D<>::
+Level5.tscn::PackedScene::6275213561685628171::1722034377::0::1::::<><>::res://Level5.gd<>uid://d1cb8bwllvjyq::::res://Images/Rhealevel.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://deyvy83bi0rnp::::res://texture_rect.tscn
+Level6.gd::GDScript::-1::1722034423::0::1::::<>Node2D<>::
+Level6.tscn::PackedScene::1910764432911471751::1722034423::0::1::::<><>::res://Level6.gd<>uid://b5mkpvyfkqbmf::::res://Images/image1_0 (3).jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://deyvy83bi0rnp::::res://texture_rect.tscn
+Level7.gd::GDScript::-1::1722034568::0::1::::<>Node2D<>::
+Level7.tscn::PackedScene::1656176312815288513::1722034568::0::1::::<><>::res://Level7.gd<>uid://blee70cmnk0m6::::res://Images/image1_0 (2).jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://deyvy83bi0rnp::::res://texture_rect.tscn<>uid://ehpjye6vivoo::::res://input_box.tscn
+Level8.gd::GDScript::-1::1722034622::0::1::::<>Node2D<>::
+Level8.tscn::PackedScene::1030021398861706338::1722034622::0::1::::<><>::res://Level8.gd<>uid://c8m5hepu2kk6h::::res://Images/ebe8f5585eb204c342090dd735ac1498.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://deyvy83bi0rnp::::res://texture_rect.tscn
+Level9.gd::GDScript::-1::1722034656::0::1::::<>Node2D<>::
+Level9.tscn::PackedScene::2411333016736404489::1722034833::0::1::::<><>::res://Level9.gd<>uid://c8m5hepu2kk6h::::res://Images/ebe8f5585eb204c342090dd735ac1498.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://deyvy83bi0rnp::::res://texture_rect.tscn<>uid://ehpjye6vivoo::::res://input_box.tscn
 Level12.gd::GDScript::-1::1720053375::0::1::::<>Node2D<>::
 Level12.tscn::PackedScene::4716970732381971506::1720057449::0::1::::<><>::res://Level12.gd<>uid://d0t5v3msdw436::::res://Images/image0_0 (3).jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://dh03pk2mxd65v::::res://fonts/BruceForeverRegular-X3jd2.ttf<>uid://ehpjye6vivoo::::res://input_box.tscn<>uid://dh7b7ql5650hw::::res://Images/logo_large_color_light.png
-LevelSelection.gd::GDScript::-1::1722015357::0::1::::<>Control<>::
-LevelSelection.tscn::PackedScene::1507109060590146137::1722015360::0::1::::<><>::res://LevelSelection.gd<>uid://8xw2usp5jq6p::::res://Images/gradient-galaxy-background-free-vector.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://b7n2neqcfe60n::::res://fonts/FutureTech.ttf
+LevelSelection.gd::GDScript::-1::1722036121::0::1::::<>Control<>::
+LevelSelection.tscn::PackedScene::1507109060590146137::1722036356::0::1::::<><>::res://LevelSelection.gd<>uid://8xw2usp5jq6p::::res://Images/gradient-galaxy-background-free-vector.jpg<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://b7n2neqcfe60n::::res://fonts/FutureTech.ttf
 Lvl1Questions.json::JSON::-1::1721170984::0::1::::<><>::
 Lvl1_2Questions.json::JSON::-1::1721167999::0::1::::<><>::
-Menu.gd::GDScript::-1::1721953081::0::1::::<>Control<>::
-menu.tscn::PackedScene::3427415802468968554::1722015360::0::1::::<><>::res://Menu.gd<>uid://8xw2usp5jq6p::::res://Images/gradient-galaxy-background-free-vector.jpg<>uid://b7n2neqcfe60n::::res://fonts/FutureTech.ttf<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://dh7b7ql5650hw::::res://Images/logo_large_color_light.png
+Menu.gd::GDScript::-1::1722028827::0::1::::<>Control<>::
+menu.tscn::PackedScene::3427415802468968554::1722036102::0::1::::<><>::res://Menu.gd<>uid://8xw2usp5jq6p::::res://Images/gradient-galaxy-background-free-vector.jpg<>uid://b7n2neqcfe60n::::res://fonts/FutureTech.ttf<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://dh7b7ql5650hw::::res://Images/logo_large_color_light.png<>uid://dh03pk2mxd65v::::res://fonts/BruceForeverRegular-X3jd2.ttf
 PointerLevel.gd::GDScript::-1::1721952012::0::1::::<>Node2D<>::
 PointerLevel.tscn::PackedScene::7258138504971004368::1721952067::0::1::::<><>::res://PointerLevel.gd<>uid://1s3h5ou5d2ya::::res://Images/marsidea.png<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf<>uid://chcvdgavpvgw3::::res://fonts/sofachrome rg.otf
 PopUp.gd::GDScript::-1::1718856418::0::1::::<>Control<>::
-PopUp.tscn::PackedScene::6854798943512562342::1720051815::0::1::::<><>::res://PopUp.gd<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf
+PopUp.tscn::PackedScene::6854798943512562342::1722034037::0::1::::<><>::res://PopUp.gd<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf
 Questions.json::JSON::-1::1717732610::0::1::::<><>::
 texture_rect.gd::GDScript::-1::1717737128::0::1::::<>TextureRect<>::
 texture_rect.tscn::PackedScene::7490882184212887797::1719005827::0::1::::<><>::res://texture_rect.gd<>uid://dkppgt0hpuagh::::res://fonts/Robot Go.ttf

@@ -13,21 +13,19 @@ var sentence_label : Label
 var drop_boxes = []
 
 #pop up test 
-var text_to_show : String = "Help Guide:\nFile Input/Output allows you to read from and write to files. You first must open the file using the fopen function. This function returns a pointer to a FILE object. 
-\nExample: 
+var text_to_show : String = "[b]Help Guide:[/b]\nFile Input/Output allows you to read from and write to files. You first must open the file using the fopen function. This function returns a pointer to a FILE object. 
+\n[b]Example:[/b] 
 \nFILE *filepointer
 filePointer = fopen('filename','mode') /*mode = w for write, r for read , or a for append
 \nFor every fopen, the file can be closed with fclose
 \nfclose('filename')
 To write to a file open the file and write using either fscanf, fputs, fgetc or fputc.
-\nExample: fprintf(file, 'Hello, World!') or 
+\n[b]Example:[/b] fprintf(file, 'Hello, World!') or 
 
 fputc(character, filePointer);        // Write a single character
 fputs(string, filePointer);           // Write a string
 fprintf(filePointer, 'format', variables); // Write formatted output
 "
-
-
 func _ready():
 #Initialize reference 
 	sentence_label = $SentenceLabel
@@ -66,13 +64,22 @@ func load_question(index: int):
 	
 	update_sentence()
 	create_answer_blocks()
-	#get_tree().change_scene_to_file("res://level1.tscn")
-	## Later add part to go to next scene here! 
-
-##WIP testing pop up help guide!!!
+	
 func help_guide(): 
 	var new_pop_up = preload("res://PopUp.tscn").instantiate()
 	new_pop_up.text_to_show = text_to_show
+	add_child(new_pop_up)
+
+func help_guide2(): 
+	var new_pop_up = preload("res://PopUp.tscn").instantiate()
+	var help_text = "[b]List of Commands:[/b] 
+Input- User inputs command into the code to be executed. 
+Output- Prints out Code
+Call- Calls a specific code to be executed 
+Function(def function)- Creates a function to be executed within the code
+If/Then/Else/EndIf- Test a condition with 2 options or determines if code is executed
+For/While- Creats a specialized loop for a specific number of times if conditions are met"
+	new_pop_up.text_to_show = help_text
 	add_child(new_pop_up)
 	
 	#Display Sentence from JSON to scene
@@ -166,3 +173,7 @@ func _on_print_button_pressed():
 		var new_pop_up = preload("res://PopUp.tscn").instantiate()
 		new_pop_up.text_to_show = text_to_show + " Surveyor"
 		add_child(new_pop_up)
+
+
+func _on_help_button_2_pressed():
+	help_guide2()

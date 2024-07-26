@@ -13,9 +13,10 @@ var sentence_label : Label
 var drop_boxes = []
 
 #pop up test 
-var text_to_show : String = "Help Guide:\nTo Drag and Drop, click on the answer and while holding the mouse down drag over to the correct box.
+var text_to_show : String = "[b]Help Guide:[/b]\nTo Drag and Drop, click on the answer and while holding the mouse down drag over to the correct box.
 \nIf the answer disappear, reclick on the empty answer key box to repopulate the answer. 
 \nOnce done, click Submit and then Next Level to continue."
+
 
 func _ready():
 #Initialize reference 
@@ -56,10 +57,22 @@ func load_question(index: int):
 	update_sentence()
 	create_answer_blocks()
 	
-##WIP testing pop up help guide!!!
+
 func help_guide(): 
 	var new_pop_up = preload("res://PopUp.tscn").instantiate()
 	new_pop_up.text_to_show = text_to_show
+	add_child(new_pop_up)
+	
+func help_guide2(): 
+	var new_pop_up = preload("res://PopUp.tscn").instantiate()
+	var help_text = "[b]List of Commands:[/b] 
+Input- User inputs command into the code to be executed. 
+Output- Prints out Code
+Call- Calls a specific code to be executed 
+Function(def function)- Creates a function to be executed within the code
+If/Then/Else/EndIf- Test a condition with 2 options or determines if code is executed
+For/While- Creats a specialized loop for a specific number of times if conditions are met"
+	new_pop_up.text_to_show = help_text
 	add_child(new_pop_up)
 	
 	#Display Sentence from JSON to scene
@@ -137,6 +150,8 @@ func display_error(message: String):
 func _on_submit_button_pressed():
 	check_answers() # Call Check Function
 
-
 func _on_help_button_pressed():
 	help_guide()
+
+func _on_help_button_2_pressed():
+	help_guide2()

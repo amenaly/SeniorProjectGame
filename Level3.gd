@@ -13,14 +13,14 @@ var errorlabel2 : Label
 var sentence_label : Label 
 var drop_boxes = []
 #popup
-var text_to_show : String = "Help Guide:\nTo read values from a user, we can use the GET function with the format specifiers.
+var text_to_show : String = "[b]Help Guide:[/b]\nTo read values from a user, we can use the GET function with the format specifiers.
 \nint for an integer -> use %d or %i to print or read in
 double for a numbers with decimals -> use %lf to print or read in 
 char for a character (letters, digits, and others) -> use %c to print or read in 
 
-\nExample: GET(%d, Varaible1). 
+\n[b]Example:[/b] GET(%d, Varaible1). 
 \nTo print the values we use the PRINT function with the format specifiers.
-\nExample: print(The integer is: %d, variableName1)"
+\n[b]Example:[/b] print(The integer is: %d, variableName1)"
 
 func _ready():
 #Initialize reference 
@@ -63,12 +63,23 @@ func load_question(index: int):
 	update_sentence()
 	create_answer_blocks()
 	 
-##WIP testing pop up help guide!!!
 func help_guide(): 
 	var new_pop_up = preload("res://PopUp.tscn").instantiate()
 	new_pop_up.text_to_show = text_to_show
 	add_child(new_pop_up)
 
+func help_guide2(): 
+	var new_pop_up = preload("res://PopUp.tscn").instantiate()
+	var help_text = "[b]List of Commands:[/b] 
+Input- User inputs command into the code to be executed. 
+Output- Prints out Code
+Call- Calls a specific code to be executed 
+Function(def function)- Creates a function to be executed within the code
+If/Then/Else/EndIf- Test a condition with 2 options or determines if code is executed
+For/While- Creats a specialized loop for a specific number of times if conditions are met"
+	new_pop_up.text_to_show = help_text
+	add_child(new_pop_up)
+	
 	#Display Sentence from JSON to scene
 func update_sentence():
 	var display_sentence = sentence.replace("    ", "               ")
@@ -183,17 +194,17 @@ func _on_print_button_pressed():
 			match key:
 				"int":
 					if text_to_show[key].is_valid_int():
-						text_to_display += "Integer input: " + str(text_to_show[key].to_int()) + "\n"
+						text_to_display += "[b]Integer input:[/b] " + str(text_to_show[key].to_int()) + "\n"
 					else:
-						text_to_display += "Invalid integer input!\n"
+						text_to_display += "[b]Invalid integer input![/b]\n"
 				"float":
 					if text_to_show[key].is_valid_float():
-						text_to_display += "Float input: " + str(text_to_show[key].to_float()) + "\n"
+						text_to_display += "[b]Float input:[/b] " + str(text_to_show[key].to_float()) + "\n"
 					else:
 						text_to_display += "Invalid float input!\n"
 				"char":
 					if text_to_show[key].length():
-						text_to_display += "Char input: " + text_to_show[key] + "\n"
+						text_to_display += "[b]Char input:[/b] " + text_to_show[key] + "\n"
 					else:
 						text_to_display += "Invalid char input!\n"
 
@@ -202,3 +213,6 @@ func _on_print_button_pressed():
 
 func _on_help_button_pressed():
 	help_guide()
+	
+func _on_help_button_2_pressed():
+	help_guide2()

@@ -61,5 +61,7 @@ offset_right = 824.0
 offset_bottom = 711.5
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 21
+bbcode_enabled = true
 
 [connection signal="pressed" from="TextureRect/Panel/Button" to="." method="_on_button_pressed"]

@@ -14,7 +14,7 @@ var sentence_label : Label
 var drop_boxes = []
 
 #pop up test 
-var text_to_show : String = "Help Guide:\nVariables are used to store data that can be manipulated by the program.
+var text_to_show : String = "[b]Help Guide:[/b]\nVariables are used to store data that can be manipulated by the program.
 \n To declare a variable in C, specify the type followed by the variable name. Here are the syntax rules for declaring a character, an integer, and a double:
 \nchar variableName;   // For character variables
 int variableName;    // For integer variables
@@ -66,6 +66,18 @@ func load_question(index: int):
 func help_guide(): 
 	var new_pop_up = preload("res://PopUp.tscn").instantiate()
 	new_pop_up.text_to_show = text_to_show
+	add_child(new_pop_up)
+
+func help_guide2(): 
+	var new_pop_up = preload("res://PopUp.tscn").instantiate()
+	var help_text = "[b]List of Commands:[/b] 
+Input- User inputs command into the code to be executed. 
+Output- Prints out Code
+Call- Calls a specific code to be executed 
+Function(def function)- Creates a function to be executed within the code
+If/Then/Else/EndIf- Test a condition with 2 options or determines if code is executed
+For/While- Creats a specialized loop for a specific number of times if conditions are met"
+	new_pop_up.text_to_show = help_text
 	add_child(new_pop_up)
 	
 	#Display Sentence from JSON to scene
@@ -171,3 +183,7 @@ Distance from Earth: 3.17 billion mi"
 	
 func _on_help_button_pressed():
 	help_guide()
+
+
+func _on_help_button_2_pressed():
+	help_guide2()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cvn036hwjjvod"]
+[gd_scene load_steps=13 format=3 uid="uid://cvn036hwjjvod"]
 
 [ext_resource type="Script" path="res://Level5.gd" id="1_mvgav"]
 [ext_resource type="Texture2D" uid="uid://d1cb8bwllvjyq" path="res://Images/Rhealevel.jpg" id="2_g8nlg"]
@@ -22,6 +22,12 @@ bg_color = Color(0.820145, 0.502409, 0.452796, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nbjmv"]
 bg_color = Color(0.901103, 0.655454, 0.639745, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_scio5"]
+bg_color = Color(0.819608, 0.501961, 0.45098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r86u2"]
+bg_color = Color(0.901961, 0.654902, 0.639216, 1)
 
 [node name="Level5" type="Node2D"]
 script = ExtResource("1_mvgav")
@@ -161,8 +167,20 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_nbjmv")
 text = "Help"
 metadata/_edit_use_anchors_ = true
 
+[node name="HelpButton2" type="Button" parent="."]
+offset_left = 1381.0
+offset_top = 41.0
+offset_right = 1584.0
+offset_bottom = 91.0
+theme_override_fonts/font = ExtResource("3_caf8n")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_scio5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_r86u2")
+text = "Code Commands"
+
 [connection signal="pressed" from="SubmitButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="SubmitButton" to="." method="_on_submit_button_pressed"]
 [connection signal="pressed" from="NextLevel" to="." method="_on_next_level_pressed"]
 [connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]
 [connection signal="pressed" from="HelpButton" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="HelpButton2" to="." method="_on_help_button_2_pressed"]

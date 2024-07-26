@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c41vvc6pvwi6x"]
+[gd_scene load_steps=16 format=3 uid="uid://c41vvc6pvwi6x"]
 
 [ext_resource type="Script" path="res://Level4.gd" id="1_yfyic"]
 [ext_resource type="Texture2D" uid="uid://d33drm00j78k6" path="res://Images/saturn.jpg" id="2_ed1bj"]
@@ -29,6 +29,12 @@ bg_color = Color(0.774532, 0.361124, 0.240248, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h68cp"]
 bg_color = Color(0.784314, 0.517647, 0.517647, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_45sls"]
+bg_color = Color(0.788235, 0.4, 0.439216, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lmma4"]
+bg_color = Color(0.921569, 0.6, 0.556863, 1)
 
 [node name="Level4" type="Node2D"]
 script = ExtResource("1_yfyic")
@@ -194,9 +200,21 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_h68cp")
 text = "Print"
 metadata/_edit_use_anchors_ = true
 
+[node name="HelpButton2" type="Button" parent="."]
+offset_left = 1381.0
+offset_top = 41.0
+offset_right = 1584.0
+offset_bottom = 91.0
+theme_override_fonts/font = ExtResource("3_m7oq0")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_45sls")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lmma4")
+text = "Code Commands"
+
 [connection signal="pressed" from="SubmitButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="SubmitButton" to="." method="_on_submit_button_pressed"]
 [connection signal="pressed" from="NextLevel" to="." method="_on_next_level_pressed"]
 [connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]
 [connection signal="pressed" from="HelpButton" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="PrintButton" to="." method="_on_print_button_pressed"]
+[connection signal="pressed" from="HelpButton2" to="." method="_on_help_button_2_pressed"]

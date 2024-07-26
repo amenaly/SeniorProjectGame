@@ -97,7 +97,7 @@ theme_override_fonts/font = ExtResource("3_fmv08")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_v5xom")
 theme_override_styles/hover = SubResource("StyleBoxFlat_dqn5x")
-text = "Level 1"
+text = "Output"
 
 [node name="Level2" type="Button" parent="LevelContainer"]
 layout_mode = 2
@@ -105,7 +105,7 @@ theme_override_fonts/font = ExtResource("3_fmv08")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_0u0pf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4cmtv")
-text = "Level 2"
+text = "Variables"
 
 [node name="Level3" type="Button" parent="LevelContainer"]
 layout_mode = 2
@@ -114,7 +114,7 @@ theme_override_fonts/font = ExtResource("3_fmv08")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_1ydsm")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4kkgk")
-text = "Level 3"
+text = "Input"
 
 [node name="Level4" type="Button" parent="LevelContainer"]
 layout_mode = 2
@@ -122,7 +122,7 @@ theme_override_fonts/font = ExtResource("3_fmv08")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_vr151")
 theme_override_styles/hover = SubResource("StyleBoxFlat_sfi2e")
-text = "Level 4"
+text = "Conditionals "
 
 [node name="Level5" type="Button" parent="LevelContainer"]
 layout_mode = 2
@@ -130,7 +130,7 @@ theme_override_fonts/font = ExtResource("3_fmv08")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_7dg5o")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3iimf")
-text = "Level 5"
+text = "Functions"
 
 [node name="Level6" type="Button" parent="LevelContainer"]
 layout_mode = 2
@@ -138,7 +138,7 @@ theme_override_fonts/font = ExtResource("3_fmv08")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_1yduj")
 theme_override_styles/hover = SubResource("StyleBoxFlat_tnxx5")
-text = "Level 6"
+text = "Loops"
 
 [node name="Level7" type="Button" parent="LevelContainer"]
 layout_mode = 2
@@ -146,7 +146,7 @@ theme_override_fonts/font = ExtResource("3_fmv08")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_pb1r5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_rskdo")
-text = "Level 7"
+text = "Arrays"
 
 [node name="Level8" type="Button" parent="LevelContainer"]
 layout_mode = 2
@@ -154,7 +154,7 @@ theme_override_fonts/font = ExtResource("3_fmv08")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_pb1r5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_rskdo")
-text = "Level 8"
+text = "Pointers"
 
 [node name="Level9" type="Button" parent="LevelContainer"]
 layout_mode = 2
@@ -162,7 +162,7 @@ theme_override_fonts/font = ExtResource("3_fmv08")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_pb1r5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_rskdo")
-text = "Level 9"
+text = "File I/o"
 
 [node name="ErrorLabel" type="Label" parent="."]
 layout_mode = 0

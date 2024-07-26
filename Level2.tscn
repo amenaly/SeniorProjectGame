@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dx0iq2jaeu1gp"]
+[gd_scene load_steps=16 format=3 uid="uid://dx0iq2jaeu1gp"]
 
 [ext_resource type="Script" path="res://Level2.gd" id="1_swatg"]
 [ext_resource type="Texture2D" uid="uid://bvfswxxeljugx" path="res://Images/gradient-galaxy-background_23-2148983655.jpg" id="2_0dvnr"]
@@ -28,6 +28,12 @@ bg_color = Color(0.427451, 0.603922, 0.882353, 1)
 bg_color = Color(0.345098, 0.345098, 0.705882, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d1ki1"]
+bg_color = Color(0.427451, 0.603922, 0.882353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qkeiu"]
+bg_color = Color(0.163346, 0.159561, 0.382266, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_inhx0"]
 bg_color = Color(0.427451, 0.603922, 0.882353, 1)
 
 [node name="Level2" type="Node2D"]
@@ -207,8 +213,20 @@ offset_right = 405.0
 offset_bottom = 413.0
 texture = ExtResource("5_85uw7")
 
+[node name="HelpButton2" type="Button" parent="."]
+offset_left = 1381.0
+offset_top = 41.0
+offset_right = 1584.0
+offset_bottom = 91.0
+theme_override_fonts/font = ExtResource("3_ehwrx")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_qkeiu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_inhx0")
+text = "Code Commands"
+
 [connection signal="pressed" from="SubmitButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="NextLevel" to="." method="_on_next_level_pressed"]
 [connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]
 [connection signal="pressed" from="HelpButton" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="PrintButton" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="HelpButton2" to="." method="_on_help_button_2_pressed"]

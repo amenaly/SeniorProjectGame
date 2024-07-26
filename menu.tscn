@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://bo3jbjmqtt0fu"]
+[gd_scene load_steps=13 format=3 uid="uid://bo3jbjmqtt0fu"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_4d3hv"]
 [ext_resource type="Texture2D" uid="uid://8xw2usp5jq6p" path="res://Images/gradient-galaxy-background-free-vector.jpg" id="2_6pdem"]
 [ext_resource type="FontFile" uid="uid://b7n2neqcfe60n" path="res://fonts/FutureTech.ttf" id="3_a8u4f"]
 [ext_resource type="FontFile" uid="uid://dkppgt0hpuagh" path="res://fonts/Robot Go.ttf" id="4_a17vx"]
 [ext_resource type="Texture2D" uid="uid://dh7b7ql5650hw" path="res://Images/logo_large_color_light.png" id="4_uwdmx"]
+[ext_resource type="FontFile" uid="uid://dh03pk2mxd65v" path="res://fonts/BruceForeverRegular-X3jd2.ttf" id="6_ensp8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_34nyf"]
 bg_color = Color(0.219493, 0.409617, 0.221936, 1)
@@ -115,6 +116,19 @@ offset_bottom = 923.0
 texture = ExtResource("4_uwdmx")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 501.0
+offset_top = 435.0
+offset_right = 1200.0
+offset_bottom = 594.0
+theme_override_fonts/font = ExtResource("6_ensp8")
+theme_override_font_sizes/font_size = 20
+text = "Surveyor the satellite has lost connections with Earth!
+Help re-establish satellite connection to Earth. Travel through the solar system, while learning pseudocode and  meeting friends along the way. "
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [connection signal="pressed" from="VBoxContainer/PLayer" to="." method="_on_p_layer_pressed"]
 [connection signal="pressed" from="VBoxContainer/Option" to="." method="_on_option_pressed"]

@@ -12,7 +12,7 @@ var sentence_label : Label
 var drop_boxes = []
 
 #pop up test 
-var text_to_show : String = "Help Guide:The IF statement excutes a block fo code if the condition is true.
+var text_to_show : String = "[b]Help Guide:[/b]\nThe IF statement excutes a block fo code if the condition is true.
 \nif (condition) {
 	// code to be executed if the condition is true
 }
@@ -71,10 +71,21 @@ func load_question(index: int):
 	#get_tree().change_scene_to_file("res://level1.tscn")
 	## Later add part to go to next scene here! 
 
-##WIP testing pop up help guide!!!
 func help_guide(): 
 	var new_pop_up = preload("res://PopUp.tscn").instantiate()
 	new_pop_up.text_to_show = text_to_show
+	add_child(new_pop_up)
+
+func help_guide2(): 
+	var new_pop_up = preload("res://PopUp.tscn").instantiate()
+	var help_text = "[b]List of Commands:[/b] 
+Input- User inputs command into the code to be executed. 
+Output- Prints out Code
+Call- Calls a specific code to be executed 
+Function(def function)- Creates a function to be executed within the code
+If/Then/Else/EndIf- Test a condition with 2 options or determines if code is executed
+For/While- Creats a specialized loop for a specific number of times if conditions are met"
+	new_pop_up.text_to_show = help_text
 	add_child(new_pop_up)
 	
 	#Display Sentence from JSON to scene
@@ -166,3 +177,6 @@ func unlock_next_level():
 
 func _on_help_button_pressed():
 	help_guide()
+
+func _on_help_button_2_pressed():
+	help_guide2()

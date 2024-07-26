@@ -13,7 +13,7 @@ var sentence_label : Label
 var drop_boxes = []
 
 #pop up test 
-var text_to_show : String = "Help Guide:\nYou can create ASCII art by using print statements with newline characters 
+var text_to_show : String = "[b]Help Guide:[/b]\nYou can create ASCII art by using print statements with newline characters 
 backslash n to print the graphic to the output window/screen.
 \nThe printf function is used to output text to the console. It is included in the <stdio.h> library. 
 Example: printf(Text to be printed);
@@ -64,6 +64,18 @@ func load_question(index: int):
 func help_guide(): 
 	var new_pop_up = preload("res://PopUp.tscn").instantiate()
 	new_pop_up.text_to_show = text_to_show
+	add_child(new_pop_up)
+	
+func help_guide2(): 
+	var new_pop_up = preload("res://PopUp.tscn").instantiate()
+	var help_text = "[b]List of Commands:[/b] 
+Input- User inputs command into the code to be executed. 
+Output- Prints out Code
+Call- Calls a specific code to be executed 
+Function(def function)- Creates a function to be executed within the code
+If/Then/Else/EndIf- Test a condition with 2 options or determines if code is executed
+For/While- Creats a specialized loop for a specific number of times if conditions are met"
+	new_pop_up.text_to_show = help_text
 	add_child(new_pop_up)
 	
 	#Display Sentence from JSON to scene
@@ -202,3 +214,7 @@ func _on_print_button_pressed():
 		var new_pop_up = preload("res://PopUp.tscn").instantiate()
 		new_pop_up.text_to_show = text_to_show
 		add_child(new_pop_up)
+
+
+func _on_help_button_2_pressed():
+	help_guide2()

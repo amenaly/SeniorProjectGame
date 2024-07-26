@@ -13,14 +13,14 @@ var sentence_label : Label
 var drop_boxes = []
 
 #pop up test 
-var text_to_show : String = "Help Guide:\nCharacter Arrays are used to store strings. To declare a character Array in C, you specify with type char and the number of characters it can hold
-\nExample:
+var text_to_show : String = "[b]Help Guide:[/b]\nCharacter Arrays are used to store strings. To declare a character Array in C, you specify with type char and the number of characters it can hold
+\n[b]Example:[/b]
 char arrayName[arraySize] or char name[50]
 \nTo initalize the character array you can provide a string. 
-\nExample:
+\n[b]Example:[/b]
 char name[6] = Mike
 \nTo declare multiple strings, you use the multidimensional character array
-\nExample: char arrayName[numberOfStrings][maxStringLength]
+\n[b]Example:[/b] char arrayName[numberOfStrings][maxStringLength]
 "
 
 func _ready():
@@ -61,13 +61,22 @@ func load_question(index: int):
 	
 	update_sentence()
 	create_answer_blocks()
-	#get_tree().change_scene_to_file("res://level1.tscn")
-	## Later add part to go to next scene here! 
 
-##WIP testing pop up help guide!!!
 func help_guide(): 
 	var new_pop_up = preload("res://PopUp.tscn").instantiate()
 	new_pop_up.text_to_show = text_to_show
+	add_child(new_pop_up)
+	
+func help_guide2(): 
+	var new_pop_up = preload("res://PopUp.tscn").instantiate()
+	var help_text = "[b]List of Commands:[/b] 
+Input- User inputs command into the code to be executed. 
+Output- Prints out Code
+Call- Calls a specific code to be executed 
+Function(def function)- Creates a function to be executed within the code
+If/Then/Else/EndIf- Test a condition with 2 options or determines if code is executed
+For/While- Creats a specialized loop for a specific number of times if conditions are met"
+	new_pop_up.text_to_show = help_text
 	add_child(new_pop_up)
 	
 	#Display Sentence from JSON to scene
@@ -128,8 +137,7 @@ func check_answers():
 			break
 	if all_correct:
 		print("Correct!")
-		#display_image()
-		#increments up 1
+		
 		current_question_index += 1
 		load_question(current_question_index)
 	else:
@@ -162,3 +170,6 @@ func _on_print_button_pressed():
 		var new_pop_up = preload("res://PopUp.tscn").instantiate()
 		new_pop_up.text_to_show = text_to_show
 		add_child(new_pop_up)
+
+func _on_help_button_2_pressed():
+	help_guide2()

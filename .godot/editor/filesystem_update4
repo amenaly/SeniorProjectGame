@@ -1,7 +1,3 @@
-res://LevelSelection.tscn
-res://input_box.gd
-res://LevelSelection.gd
 res://menu.tscn
-res://Level1_2.tscn
-res://Level2_2.tscn
-res://Level3.tscn
+res://input_box.gd
+res://Menu.gd
