@@ -149,10 +149,20 @@ func check_answers():
 
 
 func _on_next_level_pressed():
+	#if current_question_index >= questions.size():
+		#get_tree().change_scene_to_file("res://Level5.tscn")
+	#else:
+		#display_error("Complete all questions before moving to the next level.")
 	if current_question_index >= questions.size():
-		get_tree().change_scene_to_file("res://Level5.tscn")
+		unlock_next_level()
+		get_tree().change_scene_to_file("res://LevelSelection.tscn")
 	else:
 		display_error("Complete all questions before moving to the next level.")
+		
+func unlock_next_level():
+	var level_selection = preload("res://LevelSelection.tscn").instantiate()
+	level_selection.unlocked_levels += 4  #this relates to the unlocking of level 3 = 4 so 4 = 5 unlocked
+	level_selection.save()
 
 func display_error(message: String):
 	errorlabel.text = message

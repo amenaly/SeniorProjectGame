@@ -143,7 +143,7 @@ func check_answers():
 func _on_next_level_pressed():
 	#read the index, to see if user has completeled all questions before moving on
 	if current_question_index >= questions.size():
-		get_tree().change_scene_to_file("res://Level2b.tscn")
+		get_tree().change_scene_to_file("res://Level2_2.tscn")
 	else:
 		display_error("Complete all questions before moving to the next level.")
 		

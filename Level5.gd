@@ -148,10 +148,21 @@ func _on_submit_button_pressed():
 	check_answers()
 
 func _on_next_level_pressed():
+	#if current_question_index >= questions.size():
+		#get_tree().change_scene_to_file("res://Level6.tscn")
+	#else:
+		#display_error("Complete all questions before moving to the next level.")
+	##Code for Level Selection Update 
 	if current_question_index >= questions.size():
-		get_tree().change_scene_to_file("res://Level6.tscn")
+		unlock_next_level()
+		get_tree().change_scene_to_file("res://LevelSelection.tscn")
 	else:
 		display_error("Complete all questions before moving to the next level.")
+		
+func unlock_next_level():
+	var level_selection = preload("res://LevelSelection.tscn").instantiate()
+	level_selection.unlocked_levels += 5
+	level_selection.save()
 
 func _on_help_button_pressed():
 	help_guide()

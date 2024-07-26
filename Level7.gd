@@ -93,6 +93,7 @@ func clear_previous_blocks():
 	for block in answer_labels:
 		block.queue_free()
 	answer_labels.clear()
+	
 	#Preload blocks to answer key with answers from JSON file
 func create_answer_block(index: int, position: Vector2):
 	var answer_block = preload("res://texture_rect.tscn").instantiate() 

@@ -1,10 +1,10 @@
 [gd_scene load_steps=14 format=3 uid="uid://ddqhmxatxvfdx"]
 
-[ext_resource type="Script" path="res://Level2b.gd" id="1_8wrv6"]
-[ext_resource type="Texture2D" uid="uid://bvfswxxeljugx" path="res://Images/gradient-galaxy-background_23-2148983655.jpg" id="2_mnre1"]
-[ext_resource type="FontFile" uid="uid://dkppgt0hpuagh" path="res://fonts/Robot Go.ttf" id="3_oe6hy"]
-[ext_resource type="PackedScene" uid="uid://deyvy83bi0rnp" path="res://texture_rect.tscn" id="4_l1xpa"]
-[ext_resource type="Texture2D" uid="uid://cvaickdcfw1eo" path="res://Images/Neptune1.png" id="5_f2s42"]
+[ext_resource type="Script" path="res://Level2_2.gd" id="1_25cgu"]
+[ext_resource type="Texture2D" uid="uid://bvfswxxeljugx" path="res://Images/gradient-galaxy-background_23-2148983655.jpg" id="2_preyr"]
+[ext_resource type="FontFile" uid="uid://dkppgt0hpuagh" path="res://fonts/Robot Go.ttf" id="3_rx4rk"]
+[ext_resource type="PackedScene" uid="uid://deyvy83bi0rnp" path="res://texture_rect.tscn" id="4_e18aa"]
+[ext_resource type="Texture2D" uid="uid://cvaickdcfw1eo" path="res://Images/Neptune1.png" id="5_8wlmn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ggf0h"]
 bg_color = Color(0.235294, 0.231373, 0.521569, 1)
@@ -31,13 +31,13 @@ bg_color = Color(0.343564, 0.344292, 0.706318, 1)
 bg_color = Color(0.427451, 0.603922, 0.882353, 1)
 
 [node name="Level2" type="Node2D"]
-script = ExtResource("1_8wrv6")
+script = ExtResource("1_25cgu")
 
 [node name="Background" type="TextureRect" parent="."]
 offset_left = -124.0
 offset_right = 1670.0
 offset_bottom = 1346.0
-texture = ExtResource("2_mnre1")
+texture = ExtResource("2_preyr")
 
 [node name="LevelLabel" type="Label" parent="."]
 offset_left = 633.0
@@ -45,7 +45,7 @@ offset_top = 44.0
 offset_right = 886.0
 offset_bottom = 82.0
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("3_oe6hy")
+theme_override_fonts/font = ExtResource("3_rx4rk")
 theme_override_font_sizes/font_size = 33
 text = "Level 2
 Neptune"
@@ -80,7 +80,7 @@ offset_top = 430.0
 offset_right = 994.0
 offset_bottom = 1151.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_oe6hy")
+theme_override_fonts/font = ExtResource("3_rx4rk")
 theme_override_font_sizes/font_size = 25
 text = "Testing"
 vertical_alignment = 3
@@ -91,29 +91,29 @@ offset_left = 1272.0
 offset_top = 436.0
 offset_right = 1405.0
 offset_bottom = 480.0
-theme_override_fonts/font = ExtResource("3_oe6hy")
+theme_override_fonts/font = ExtResource("3_rx4rk")
 theme_override_font_sizes/font_size = 20
 text = "Answer Key:"
 
-[node name="Text1" parent="." instance=ExtResource("4_l1xpa")]
+[node name="Text1" parent="." instance=ExtResource("4_e18aa")]
 offset_left = 400.0
 offset_top = 715.0
 offset_right = 578.0
 offset_bottom = 763.0
 
-[node name="Text2" parent="." instance=ExtResource("4_l1xpa")]
+[node name="Text2" parent="." instance=ExtResource("4_e18aa")]
 offset_left = 503.0
 offset_top = 970.0
 offset_right = 701.0
 offset_bottom = 1014.0
 
-[node name="Text3" parent="." instance=ExtResource("4_l1xpa")]
+[node name="Text3" parent="." instance=ExtResource("4_e18aa")]
 offset_left = 674.0
 offset_top = 1051.0
 offset_right = 951.0
 offset_bottom = 1102.0
 
-[node name="Text4" parent="." instance=ExtResource("4_l1xpa")]
+[node name="Text4" parent="." instance=ExtResource("4_e18aa")]
 offset_left = 220.0
 offset_top = 1009.0
 offset_right = 416.0
@@ -124,7 +124,7 @@ offset_left = 1021.0
 offset_top = 878.0
 offset_right = 1162.0
 offset_bottom = 928.0
-theme_override_fonts/font = ExtResource("3_oe6hy")
+theme_override_fonts/font = ExtResource("3_rx4rk")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_ggf0h")
 theme_override_styles/hover = SubResource("StyleBoxFlat_krtuk")
@@ -135,7 +135,7 @@ offset_left = 1030.0
 offset_top = 424.0
 offset_right = 1171.0
 offset_bottom = 474.0
-theme_override_fonts/font = ExtResource("3_oe6hy")
+theme_override_fonts/font = ExtResource("3_rx4rk")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_8pkta")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ou0fc")
@@ -147,7 +147,7 @@ offset_top = 485.0
 offset_right = 1184.0
 offset_bottom = 604.0
 theme_override_colors/font_color = Color(0.815686, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_oe6hy")
+theme_override_fonts/font = ExtResource("3_rx4rk")
 autowrap_mode = 3
 
 [node name="HelpButton" type="Button" parent="."]
@@ -155,7 +155,7 @@ offset_left = 1388.0
 offset_top = 345.0
 offset_right = 1476.0
 offset_bottom = 395.0
-theme_override_fonts/font = ExtResource("3_oe6hy")
+theme_override_fonts/font = ExtResource("3_rx4rk")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_7ejfb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_76d0r")
@@ -166,7 +166,7 @@ offset_left = 749.0
 offset_top = 1177.0
 offset_right = 859.0
 offset_bottom = 1223.0
-theme_override_fonts/font = ExtResource("3_oe6hy")
+theme_override_fonts/font = ExtResource("3_rx4rk")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_2pq0p")
 theme_override_styles/hover = SubResource("StyleBoxFlat_rbwmk")
@@ -178,7 +178,7 @@ offset_top = 1133.0
 offset_right = 1063.0
 offset_bottom = 1252.0
 theme_override_colors/font_color = Color(0.172167, 0.278619, 0.122815, 1)
-theme_override_fonts/font = ExtResource("3_oe6hy")
+theme_override_fonts/font = ExtResource("3_rx4rk")
 autowrap_mode = 3
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -186,7 +186,7 @@ offset_left = 126.0
 offset_top = 128.0
 offset_right = 405.0
 offset_bottom = 413.0
-texture = ExtResource("5_f2s42")
+texture = ExtResource("5_8wlmn")
 
 [connection signal="pressed" from="SubmitButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="SubmitButton" to="." method="_on_submit_button_pressed"]

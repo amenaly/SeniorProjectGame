@@ -13,6 +13,7 @@ config_version=5
 config/name="SeniorProject"
 run/main_scene="res://menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+boot_splash/bg_color=Color(0.197863, 0.358677, 0.331709, 1)
 config/icon="res://Images/icon.svg"
 
 [display]

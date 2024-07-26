@@ -132,14 +132,40 @@ func check_answers():
 	else:
 		print("Incorrect! Try Again!")
 		
-
 func _on_nextquestion_pressed():
 	#read the index, to see if user has completeled all questions before moving on
+	#if current_question_index >= questions.size():
+		#get_tree().change_scene_to_file("res://Level2.tscn")
+	#else:
+		#display_error("Complete all questions before moving to the next level.")
+	#var main_menu = preload("res://LevelSelection.tscn")
+	#if current_question_index >= questions.size():
+		#save_progress()
+		#get_tree().change_scene_to_file("res://LevelSelection.tscn")
+	#else:
+		#display_error("Complete all questions before moving to the next level.")
+		#
+##To save progress so far to game file 
+#func save_progress():
+	#var save_file = FileAccess.open("user://save_game.save", FileAccess.WRITE)
+	#save_file.store_32(current_question_index + 1)
+	#save_file.close()
 	if current_question_index >= questions.size():
-		get_tree().change_scene_to_file("res://Level2.tscn")
+		unlock_next_level()
+		#save_progress()
+		get_tree().change_scene_to_file("res://LevelSelection.tscn")
 	else:
 		display_error("Complete all questions before moving to the next level.")
+		
+func unlock_next_level():
+	var level_selection = preload("res://LevelSelection.tscn").instantiate()
+	level_selection.unlocked_levels += 1
+	level_selection.save()
 
+#func save_progress():
+	#var level_selection = preload("res://LevelSelection.tscn").instantiate()
+	#level_selection.save()
+	
 func display_error(message: String):
 	errorlabel.text = message
 	

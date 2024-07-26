@@ -143,10 +143,21 @@ func _on_submit_button_pressed():
 
 func _on_next_level_2_pressed():
 	#read the index, to see if user has completeled all questions before moving on
+	#if current_question_index >= questions.size():
+		#get_tree().change_scene_to_file("res://Level4.tscn")
+	#else:
+		#display_error("Complete all questions before moving to the next level.")
+	
 	if current_question_index >= questions.size():
-		get_tree().change_scene_to_file("res://Level4.tscn")
+		unlock_next_level()
+		get_tree().change_scene_to_file("res://LevelSelection.tscn")
 	else:
 		display_error("Complete all questions before moving to the next level.")
+		
+func unlock_next_level():
+	var level_selection = preload("res://LevelSelection.tscn").instantiate()
+	level_selection.unlocked_levels += 3 #this relates to the unlocking of level 3 = 4 so 4 = 5 unlocked
+	level_selection.save()
 
 func _on_print_button_pressed():
 	#Get the text from the LineEdit 

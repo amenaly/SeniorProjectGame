@@ -8,12 +8,15 @@ func _ready():
 	$VBoxContainer/PLayer.grab_focus()
 	
 func _on_p_layer_pressed():
-	get_tree().change_scene_to_file("res://level1_2.tscn")
-
+	get_tree().change_scene_to_file("res://LevelSelection.tscn")
+	
 func _on_option_pressed():
 	var new_pop_up = preload("res://PopUp.tscn").instantiate()
 	new_pop_up.text_to_show = text_to_show
 	add_child(new_pop_up)
+	
+	# Set the position
+	new_pop_up.set_position(Vector2(-300,50)) 
 
 func _on_exit_pressed():
 	get_tree().quit()

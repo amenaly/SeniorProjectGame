@@ -1,37 +1,47 @@
 extends Node2D
-##Level 10
+##Level 2 Question 2
+
 var questions = []
 var current_question_index : float = 0
+#var unlocked_levels = 0
 
 var sentence = ""
 var answers = [] 
 var answer_labels = []
 
 var errorlabel : Label
+var errorlabel2 : Label
 var sentence_label : Label 
 var drop_boxes = []
 
 #pop up test 
-var text_to_show : String = "Help Guide:\nA pointer is a variable type that can hold addresses to places in RAM (random access memory) when a program is running. A FILE point can hold an address to a place in a storage location.
-To delcare a pointer, specify the type of data the pointer will point to.
-\nExample:
-\ntype *pointerName /*int, char,float,double, or struct
-\nThe & is used to initialize the pointer by assigning it the address of a varaible
-\nExample:
-\nint num =10
-int *pointerName =&num
-\nYou can acces the value stored at the address in the pointer by using the * operator. *pointerName = 100 "
+var text_to_show : String = "Help Guide:\nTo perform arithmetic operations such as calculating the difference between two integers using basic operators. 
+\nTo declare variables in C, specify the type followed by the variable name:
+	Example:
+int variableName1
+int variableName2
+int result
+\nAssign values to the variables using the assignment operator =:
+	Example: 
+	variableName1 = value1
+	variableName2 = value2
+\nUse the subtraction operator - to calculate the difference between two integers:
+	result = variableName1 - variableName2
+\n To print the value of a variable, use the printf function with the format specifier %d for integers:
+printf(The result is: %d, result)
+"
 
 func _ready():
 #Initialize reference 
 	sentence_label = $SentenceLabel
 	errorlabel = $ErrorNext
+	errorlabel2 = $errorlabel2
 	#read to JSON file
-	load_level_data("res://JsonFiles/Level10.json")
+	load_level_data("res://JsonFiles/Question2b.json")
 	load_question(0) #Call function
 	
 	# Initialize drop boxes
-	drop_boxes = [$Text1/Panel/Label, $Text2/Panel/Label, $Text3/Panel/Label]
+	drop_boxes = [$Text1/Panel/Label, $Text2/Panel/Label, $Text3/Panel/Label, $Text4/Panel/Label]
 	
 	#Load from JSON file
 func load_level_data(file_path: String):
@@ -59,8 +69,6 @@ func load_question(index: int):
 	
 	update_sentence()
 	create_answer_blocks()
-	#get_tree().change_scene_to_file("res://level1.tscn")
-	## Later add part to go to next scene here! 
 
 ##WIP testing pop up help guide!!!
 func help_guide(): 
@@ -82,6 +90,7 @@ func create_answer_blocks():
 		Vector2(1220, 483),
 		Vector2(1220, 655),
 		Vector2(1220, 826),
+		Vector2(1220, 1000)
 	]
 	for i in range(answers.size()):
 		create_answer_block(i, positions[i])
@@ -98,11 +107,18 @@ func create_answer_block(index: int, position: Vector2):
 	answer_block.texture = load("")  # Replace with the path to your texture
 	answer_block.answers = answers[index]  # Set the answer text
 	
+	
 	#set position 
 	answer_block.position = position
 	add_child(answer_block)
 	print("Answer block created with answer:", answers[index])  # Debugging
 	
+#func display_image():
+	#var new_pop_up = preload("res://PopUp.tscn").instantiate()
+	##new_pop_up.text_to_show = text_to_show
+	#new_pop_up.TextureRect = load("res://Images/GreenBackground.png")
+	#add_child(new_pop_up)
+
 #clear text drop box
 func clear_drop_boxes():
 	for drop_box in drop_boxes:
@@ -132,17 +148,46 @@ func check_answers():
 	else:
 		print("Incorrect! Try Again!")
 		
+func _on_next_level_pressed():
+	#if current_question_index >= questions.size():
+		#get_tree().change_scene_to_file("res://Level3.tscn")
+	#else:
+		#display_error("Complete all questions before moving to the next level.")
+	if current_question_index >= questions.size():
+		unlock_next_level()
+		#save_progress()
+		get_tree().change_scene_to_file("res://LevelSelection.tscn")
+	else:
+		display_error("Complete all questions before moving to the next level.")
+		
+func unlock_next_level():
+	var level_selection = preload("res://LevelSelection.tscn").instantiate()
+	level_selection.unlocked_levels += 2
+	level_selection.save()
+
+#func save_progress():
+	#var level_selection = preload("res://LevelSelection.tscn").instantiate()
+	#level_selection.save()
+	
 func display_error(message: String):
 	errorlabel.text = message
 
+func display_PrintError(message: String):
+	errorlabel2.text = message
+	
 func _on_submit_button_pressed():
 	check_answers()
 
-func _on_next_level_pressed():
-	if current_question_index >= questions.size():
-		get_tree().change_scene_to_file("res://Level11.tscn")
+func _on_print_button_pressed():
+	if text_to_show == "":
+		display_PrintError("Input cannot be empty!")
 	else:
-		display_error("Complete all questions before moving to the next level.")
+		display_PrintError("")
+		var text_to_show : String = "Distance between Surveyor and Earth: 1.5 billion mi
+Time for Signal Reach Earth: 2.24 hours"
+		var new_pop_up = preload("res://PopUp.tscn").instantiate()
+		new_pop_up.text_to_show = text_to_show
+		add_child(new_pop_up)
 
 func _on_help_button_pressed():
 	help_guide()
