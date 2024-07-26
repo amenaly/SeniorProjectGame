@@ -155,7 +155,6 @@ func _on_next_level_pressed():
 		#display_error("Complete all questions before moving to the next level.")
 	if current_question_index >= questions.size():
 		unlock_next_level()
-		#save_progress()
 		get_tree().change_scene_to_file("res://LevelSelection.tscn")
 	else:
 		display_error("Complete all questions before moving to the next level.")

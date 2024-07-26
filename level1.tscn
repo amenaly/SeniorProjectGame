@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://b0dmgh0r34arg"]
 
-[ext_resource type="Script" path="res://level1.gd" id="1_fcjna"]
+[ext_resource type="Script" path="res://Level1.gd" id="1_fcjna"]
 [ext_resource type="FontFile" uid="uid://dkppgt0hpuagh" path="res://fonts/Robot Go.ttf" id="2_ej3b7"]
 [ext_resource type="Texture2D" uid="uid://bw18i0qlsih4f" path="res://Images/darkgalaxy.jpg" id="2_kj60f"]
 [ext_resource type="PackedScene" uid="uid://deyvy83bi0rnp" path="res://texture_rect.tscn" id="4_g2mfi"]

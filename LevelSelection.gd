@@ -47,7 +47,8 @@ func _on_LevelButton_pressed(level_index):
 	print("Button pressed for Level:", level_index)
 	if level_index <= unlocked_levels:
 		print("Loading Level:", level_index)
-		get_tree().change_scene_to_file("res://level" + str(level_index) + ".tscn")
+		#On Export this is Case Senstive! Had to rename level1 to Level1.tscn! Now it exports and runs well with save file
+		get_tree().change_scene_to_file("res://Level" + str(level_index) + ".tscn") 
 	else:
 		display_error("This level is locked!")
 
