@@ -1,3 +1,9 @@
 res://menu.tscn
 res://input_box.gd
-res://Menu.gd
+res://LevelSelection.tscn
+res://Level1.tscn
+res://texture_rect.tscn
+res://Level3.gd
+res://PopUp.tscn
+res://Level3.tscn
+res://Level4.gd

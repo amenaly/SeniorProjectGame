@@ -201,12 +201,12 @@ func _on_print_button_pressed():
 					if text_to_show[key].is_valid_float():
 						text_to_display += "[b]Float input:[/b] " + str(text_to_show[key].to_float()) + "\n"
 					else:
-						text_to_display += "Invalid float input!\n"
+						text_to_display += "[b]Invalid float input![/b]\n"
 				"char":
 					if text_to_show[key].length():
 						text_to_display += "[b]Char input:[/b] " + text_to_show[key] + "\n"
 					else:
-						text_to_display += "Invalid char input!\n"
+						text_to_display += "[b]Invalid char input![/b]\n"
 
 		new_pop_up.text_to_show = text_to_display
 		add_child(new_pop_up)

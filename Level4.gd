@@ -200,11 +200,11 @@ func _on_print_button_pressed():
 		new_pop_up.text_to_show = text_to_show
 		
 		if text_to_show == "A":
-			new_pop_up.text_to_show = "Satellite is active and operational"
+			new_pop_up.text_to_show = "[b]Satellite is active and operational[/b]"
 		elif text_to_show == "I":
-			new_pop_up.text_to_show = "Satellite is inactive. Rebooting..."
+			new_pop_up.text_to_show = "[b]Satellite is inactive. Rebooting...[/b]"
 		else:
-			new_pop_up.text_to_show = "Satellite not in range. Please get closer!"
+			new_pop_up.text_to_show = "[b]Satellite not in range. Please get closer![/b]"
 		
 		add_child(new_pop_up)
 
